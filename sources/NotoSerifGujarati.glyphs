@@ -34,7 +34,7 @@ code = "rakar-gujarati halant-gujarati reph-gujarati reph_anusvara-gujarati anus
 name = markClass_dynamic;
 }
 );
-copyright = "Copyright 2017 Google LLC. All Rights Reserved.";
+copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gujarati)";
 customParameters = (
 {
 name = "Disable Last Change";
@@ -508,11 +508,11 @@ value = "Designed by Monotype design team.";
 },
 {
 name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
 },
 {
 name = licenseURL;
-value = "http://scripts.sil.org/OFL";
+value = "https://scripts.sil.org/OFL";
 },
 {
 name = vendorID;
@@ -556,7 +556,11 @@ value = 1;
 },
 {
 name = versionString;
-value = "Version 2.002";
+value = "Version 2.102";
+},
+{
+name = "Use Typo Metrics";
+value = 1;
 },
 {
 name = Axes;
@@ -143027,5 +143031,5 @@ background
 );
 };
 versionMajor = 2;
-versionMinor = 2;
+versionMinor = 102;
 }
