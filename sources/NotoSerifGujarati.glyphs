@@ -141166,10 +141166,6 @@ value = (
 );
 },
 {
-name = "Don't use Production Names";
-value = 1;
-},
-{
 name = xHeight;
 value = "536";
 }
