@@ -531,10 +531,6 @@ value = (
 );
 },
 {
-name = "Don't use Production Names";
-value = 1;
-},
-{
 name = "Use Typo Metrics";
 value = 1;
 },
