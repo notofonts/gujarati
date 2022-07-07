@@ -1,5 +1,5 @@
 {
-.appVersion = "1348";
+.appVersion = "3109";
 classes = (
 {
 code = "ka-gujarati kha-gujarati ga-gujarati gha-gujarati nga-gujarati ca-gujarati cha-gujarati ja-gujarati jha-gujarati nya-gujarati tta-gujarati ttha-gujarati dda-gujarati ddha-gujarati nna-gujarati nna-gujarati.calt ta-gujarati tha-gujarati da-gujarati dha-gujarati na-gujarati pa-gujarati pha-gujarati ba-gujarati bha-gujarati ma-gujarati ya-gujarati ra-gujarati la-gujarati lla-gujarati va-gujarati sha-gujarati ssa-gujarati sa-gujarati ha-gujarati zha-gujarati zh_ra-gujarati k_ra-gujarati kh_ra-gujarati g_ra-gujarati gh_ra-gujarati c_ra-gujarati j_ra-gujarati jh_ra-gujarati ny_ra-gujarati nn_ra-gujarati nn_ra-gujarati.calt t_ra-gujarati th_ra-gujarati d_ra-gujarati dh_ra-gujarati n_ra-gujarati p_ra-gujarati ph_ra-gujarati b_ra-gujarati bh_ra-gujarati m_ra-gujarati y_ra-gujarati l_ra-gujarati ll_ra-gujarati v_ra-gujarati sh_ra-gujarati ss_ra-gujarati s_ra-gujarati h_ra-gujarati k_ss_ra-gujarati j_ny_ra-gujarati k_ka-gujarati k_kha-gujarati k_da-gujarati k_pa-gujarati k_ya-gujarati k_ssa-gujarati g_na-gujarati gh_na-gujarati ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ng_ya-gujarati ch_ya-gujarati ch_va-gujarati j_ja-gujarati j_nya-gujarati j_ma-gujarati j_ya-gujarati ny_ca-gujarati ny_ja-gujarati tt_tta-gujarati tt_ttha-gujarati tt_ya-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati dd_ya-gujarati ddh_ddha-gujarati ddh_ya-gujarati t_ka-gujarati t_ta-gujarati t_t_ya-gujarati t_na-gujarati t_ma-gujarati t_ya-gujarati t_sa-gujarati th_na-gujarati d_ga-gujarati d_gha-gujarati d_da-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_ma-gujarati d_ya-gujarati d_va-gujarati dh_na-gujarati n_tta-gujarati n_na-gujarati n_sa-gujarati p_tta-gujarati p_ttha-gujarati p_ta-gujarati p_da-gujarati p_na-gujarati ph_ya-gujarati b_la-gujarati m_na-gujarati l_ka-gujarati l_ya-gujarati l_sa-gujarati ll_ya-gujarati v_da-gujarati sh_ca-gujarati sh_na-gujarati sh_la-gujarati sh_va-gujarati ss_tta-gujarati ss_ttha-gujarati s_ka-gujarati s_tta-gujarati s_ttha-gujarati s_dda-gujarati s_t_ra-gujarati s_tha-gujarati s_pha-gujarati s_ma-gujarati h_nna-gujarati h_na-gujarati h_ma-gujarati h_ya-gujarati h_la-gujarati h_va-gujarati";
@@ -503,22 +503,6 @@ uni0AFF_aivowelgujr_rephgujr,
 );
 },
 {
-name = description;
-value = "Designed by Monotype design team.";
-},
-{
-name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
-},
-{
-name = licenseURL;
-value = "https://scripts.sil.org/OFL";
-},
-{
-name = vendorID;
-value = GOOG;
-},
-{
 name = unicodeRanges;
 value = (
 0,
@@ -530,10 +514,6 @@ value = (
 38,
 45
 );
-},
-{
-name = trademark;
-value = "Noto is a trademark of Google LLC.";
 },
 {
 name = "Has WWS Names";
@@ -555,12 +535,32 @@ name = "Don't use Production Names";
 value = 1;
 },
 {
-name = versionString;
-value = "Version 2.102";
-},
-{
 name = "Use Typo Metrics";
 value = 1;
+},
+{
+name = description;
+value = "Designed by Monotype design team.";
+},
+{
+name = license;
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
+},
+{
+name = licenseURL;
+value = "https://scripts.sil.org/OFL";
+},
+{
+name = vendorID;
+value = GOOG;
+},
+{
+name = trademark;
+value = "Noto is a trademark of Google LLC.";
+},
+{
+name = versionString;
+value = "Version 2.102";
 },
 {
 name = Axes;
@@ -28838,9 +28838,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = "ra_uuMatra-gujarati";
 },
 {
+alignment = -1;
 name = "abbreviation-gujarati";
 transform = "{1, 0, 0, 1, 393, -29}";
 }
@@ -28851,6 +28853,7 @@ width = 728;
 {
 components = (
 {
+alignment = -1;
 name = "ra_uuMatra-gujarati";
 },
 {
@@ -28865,9 +28868,11 @@ width = 724;
 {
 components = (
 {
+alignment = -1;
 name = "ra_uuMatra-gujarati";
 },
 {
+alignment = -1;
 name = "abbreviation-gujarati";
 transform = "{1, 0, 0, 1, 457, -20}";
 }
@@ -28878,9 +28883,11 @@ width = 883;
 {
 components = (
 {
+alignment = -1;
 name = "ra_uuMatra-gujarati";
 },
 {
+alignment = -1;
 name = "abbreviation-gujarati";
 transform = "{1, 0, 0, 1, 430, -23}";
 }
@@ -122741,8 +122748,6 @@ nodes = (
 width = 407;
 }
 );
-leftKerningGroup = LTN_exclam_L;
-rightKerningGroup = LTN_exclam_R;
 unicode = 0021;
 script = "";
 category = Punctuation;
@@ -122851,8 +122856,6 @@ nodes = (
 width = 503;
 }
 );
-leftKerningGroup = LTN_quotesingle_L;
-rightKerningGroup = LTN_quotesingle_R;
 unicode = 0022;
 script = "";
 category = Punctuation;
@@ -123473,8 +123476,6 @@ nodes = (
 width = 285;
 }
 );
-leftKerningGroup = LTN_quotesingle_L;
-rightKerningGroup = LTN_quotesingle_R;
 unicode = 0027;
 script = "";
 category = Punctuation;
@@ -123587,8 +123588,6 @@ nodes = (
 width = 449;
 }
 );
-leftKerningGroup = LTN_parenleft_L;
-rightKerningGroup = LTN_parenleft_R;
 unicode = 0028;
 script = "";
 category = Punctuation;
@@ -123701,7 +123700,6 @@ nodes = (
 width = 469;
 }
 );
-leftKerningGroup = LTN_parenright_L;
 unicode = 0029;
 script = "";
 category = Punctuation;
@@ -123830,7 +123828,6 @@ nodes = (
 width = 511;
 }
 );
-leftKerningGroup = LTN_asterisk_L;
 unicode = 002A;
 script = "";
 category = Punctuation;
@@ -124055,8 +124052,6 @@ nodes = (
 width = 356;
 }
 );
-leftKerningGroup = LTN_comma_L;
-rightKerningGroup = LTN_period_R;
 unicode = 002C;
 script = "";
 category = Punctuation;
@@ -124129,8 +124124,6 @@ nodes = (
 width = 310;
 }
 );
-leftKerningGroup = LTN_hyphen_L;
-rightKerningGroup = LTN_hyphen_R;
 unicode = 002D;
 script = "";
 category = Punctuation;
@@ -124235,8 +124228,6 @@ nodes = (
 width = 351;
 }
 );
-leftKerningGroup = LTN_period_L;
-rightKerningGroup = LTN_period_R;
 unicode = 002E;
 script = "";
 category = Punctuation;
@@ -124309,8 +124300,6 @@ nodes = (
 width = 288;
 }
 );
-leftKerningGroup = LTN_slash_L;
-rightKerningGroup = LTN_slash_R;
 unicode = 002F;
 script = "";
 category = Punctuation;
@@ -126487,9 +126476,7 @@ nodes = (
 width = 351;
 }
 );
-leftKerningGroup = LTN_colon_L;
 leftMetricsKey = period;
-rightKerningGroup = LTN_colon_R;
 rightMetricsKey = period;
 unicode = 003A;
 script = "";
@@ -126679,9 +126666,7 @@ nodes = (
 width = 364;
 }
 );
-leftKerningGroup = LTN_semicolon_L;
 leftMetricsKey = comma;
-rightKerningGroup = LTN_colon_R;
 unicode = 003B;
 script = "";
 category = Punctuation;
@@ -127178,8 +127163,6 @@ nodes = (
 width = 554;
 }
 );
-leftKerningGroup = LTN_question_L;
-rightKerningGroup = LTN_question_R;
 unicode = 003F;
 script = "";
 category = Punctuation;
@@ -127292,8 +127275,6 @@ nodes = (
 width = 407;
 }
 );
-leftKerningGroup = PCT_bracketleft_L;
-rightKerningGroup = LTN_bracketleft_R;
 unicode = 005B;
 script = "";
 category = Punctuation;
@@ -127478,7 +127459,6 @@ nodes = (
 width = 464;
 }
 );
-leftKerningGroup = LTN_bracketleft_L;
 unicode = 005D;
 script = "";
 category = Punctuation;
@@ -127635,7 +127615,6 @@ nodes = (
 width = 459;
 }
 );
-leftKerningGroup = PCT_underscore_L;
 unicode = 005F;
 script = "";
 category = Punctuation;
@@ -127836,8 +127815,6 @@ nodes = (
 width = 502;
 }
 );
-leftKerningGroup = PCT_braceleft_L;
-rightKerningGroup = LTN_braceleft_R;
 unicode = 007B;
 script = "";
 category = Punctuation;
@@ -128110,7 +128087,6 @@ nodes = (
 width = 531;
 }
 );
-leftKerningGroup = LTN_braceleft_L;
 unicode = 007D;
 script = "";
 category = Punctuation;
@@ -128320,9 +128296,7 @@ layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 width = 310;
 }
 );
-leftKerningGroup = LTN_hyphen_L;
 widthMetricsKey = hyphen;
-rightKerningGroup = LTN_hyphen_R;
 unicode = 2010;
 script = "";
 category = Punctuation;
@@ -128369,9 +128343,7 @@ layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 width = 310;
 }
 );
-leftKerningGroup = LTN_hyphen_L;
 widthMetricsKey = hyphen;
-rightKerningGroup = LTN_hyphen_R;
 unicode = 00AD;
 script = "";
 category = Punctuation;
@@ -128444,8 +128416,6 @@ nodes = (
 width = 500;
 }
 );
-leftKerningGroup = LTN_endash_L;
-rightKerningGroup = LTN_endash_R;
 unicode = 2013;
 script = "";
 category = Punctuation;
@@ -128518,8 +128488,6 @@ nodes = (
 width = 1000;
 }
 );
-leftKerningGroup = LTN_endash_L;
-rightKerningGroup = LTN_endash_R;
 unicode = 2014;
 script = "";
 category = Punctuation;
@@ -128640,8 +128608,6 @@ nodes = (
 width = 276;
 }
 );
-leftKerningGroup = LTN_quoteleft_L;
-rightKerningGroup = LTN_quoteleft_R;
 unicode = 2018;
 script = "";
 category = Punctuation;
@@ -128762,8 +128728,6 @@ nodes = (
 width = 276;
 }
 );
-leftKerningGroup = LTN_quoteright_L;
-rightKerningGroup = LTN_quoteright_R;
 unicode = 2019;
 script = "";
 category = Punctuation;
@@ -128968,8 +128932,6 @@ nodes = (
 width = 484;
 }
 );
-leftKerningGroup = LTN_quoteleft_L;
-rightKerningGroup = LTN_quoteleft_R;
 unicode = 201C;
 script = "";
 category = Punctuation;
@@ -129174,8 +129136,6 @@ nodes = (
 width = 485;
 }
 );
-leftKerningGroup = LTN_quoteright_L;
-rightKerningGroup = LTN_quoteright_R;
 unicode = 201D;
 script = "";
 category = Punctuation;
@@ -129416,9 +129376,7 @@ nodes = (
 width = 961;
 }
 );
-leftKerningGroup = LTN_period_L;
 leftMetricsKey = period;
-rightKerningGroup = LTN_period_R;
 rightMetricsKey = period;
 unicode = 2026;
 script = "";
@@ -141197,10 +141155,6 @@ instances = (
 {
 customParameters = (
 {
-name = weightClass;
-value = 100;
-},
-{
 name = panose;
 value = (
 2,
@@ -141234,10 +141188,6 @@ weightClass = Thin;
 {
 customParameters = (
 {
-name = weightClass;
-value = 200;
-},
-{
 name = panose;
 value = (
 2,
@@ -141267,14 +141217,10 @@ instanceInterpolations = {
 "ACBF538B-D069-4B9F-8DD8-08CC286AACA9" = 0.21212;
 };
 name = ExtraLight;
-weightClass = "Extra Light";
+weightClass = ExtraLight;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 300;
-},
 {
 name = panose;
 value = (
@@ -141310,10 +141256,6 @@ weightClass = Light;
 {
 customParameters = (
 {
-name = weightClass;
-value = 400;
-},
-{
 name = panose;
 value = (
 2,
@@ -141345,10 +141287,6 @@ name = Regular;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 500;
-},
 {
 name = panose;
 value = (
@@ -141384,10 +141322,6 @@ weightClass = Medium;
 {
 customParameters = (
 {
-name = weightClass;
-value = 600;
-},
-{
 name = panose;
 value = (
 2,
@@ -141421,10 +141355,6 @@ weightClass = SemiBold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 700;
-},
 {
 name = panose;
 value = (
@@ -141461,10 +141391,6 @@ weightClass = Bold;
 {
 customParameters = (
 {
-name = weightClass;
-value = 800;
-},
-{
 name = panose;
 value = (
 2,
@@ -141498,10 +141424,6 @@ weightClass = ExtraBold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 900;
-},
 {
 name = panose;
 value = (
@@ -141557,20 +141479,20 @@ kerning = {
 "@MMK_R_GUJ_ya-L" = 20;
 };
 "@MMK_L_GUJ_ch_va-R" = {
-"@MMK_R_LTN_comma_L" = 48;
+comma = 48;
 };
 "@MMK_L_GUJ_cha-R" = {
-"@MMK_R_LTN_comma_L" = -118;
+comma = -118;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-"@MMK_R_LTN_braceleft_L" = 40;
-"@MMK_R_LTN_comma_L" = 98;
-"@MMK_R_LTN_parenright_L" = 20;
+parenright = 20;
+comma = 98;
+braceright = 40;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-"@MMK_R_LTN_braceleft_L" = 20;
-"@MMK_R_LTN_comma_L" = 84;
-"@MMK_R_LTN_parenright_L" = 4;
+parenright = 4;
+comma = 84;
+braceright = 20;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 10;
@@ -141823,7 +141745,7 @@ kerning = {
 "@MMK_L_GUJ_ja-R" = {
 "@MMK_R_GUJ_kha-L" = 30;
 "@MMK_R_GUJ_pa-L" = 30;
-"@MMK_R_LTN_comma_L" = -102;
+comma = -102;
 };
 "@MMK_L_GUJ_k-R" = {
 "@MMK_R_GUJ_ba-L" = 74;
@@ -141833,7 +141755,7 @@ kerning = {
 "@MMK_R_GUJ_va-L" = 34;
 };
 "@MMK_L_GUJ_ka-R" = {
-"@MMK_R_LTN_comma_L" = -98;
+comma = -98;
 };
 "@MMK_L_GUJ_kana-R" = {
 "@MMK_R_GUJ_d_bha-L" = 10;
@@ -141889,13 +141811,13 @@ kerning = {
 "@MMK_R_GUJ_ya-L" = 24;
 };
 "@MMK_L_GUJ_ng_ga-R" = {
-"@MMK_R_LTN_comma_L" = 20;
+comma = 20;
 };
 "@MMK_L_GUJ_ng_gha-R" = {
-"@MMK_R_LTN_comma_L" = 14;
+comma = 14;
 };
 "@MMK_L_GUJ_ng_ma-R" = {
-"@MMK_R_LTN_comma_L" = 14;
+comma = 14;
 };
 "@MMK_L_GUJ_nine-R" = {
 "@MMK_R_GUJ_five-L" = -24;
@@ -142045,7 +141967,7 @@ kerning = {
 "@MMK_R_GUJ_seven-L" = 24;
 };
 "tt_va-gujarati" = {
-"@MMK_R_LTN_comma_L" = 68;
+comma = 68;
 };
 };
 "ACBF538B-D069-4B9F-8DD8-08CC286AACA9" = {
@@ -142062,20 +141984,20 @@ kerning = {
 "@MMK_R_GUJ_ttha-L" = 10;
 };
 "@MMK_L_GUJ_ch_va-R" = {
-"@MMK_R_LTN_comma_L" = 30;
+comma = 30;
 };
 "@MMK_L_GUJ_cha-R" = {
-"@MMK_R_LTN_comma_L" = -102;
+comma = -102;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-"@MMK_R_LTN_braceleft_L" = 64;
-"@MMK_R_LTN_comma_L" = 108;
-"@MMK_R_LTN_parenright_L" = 48;
+parenright = 48;
+comma = 108;
+braceright = 64;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-"@MMK_R_LTN_braceleft_L" = 64;
-"@MMK_R_LTN_comma_L" = 108;
-"@MMK_R_LTN_parenright_L" = 48;
+parenright = 48;
+comma = 108;
+braceright = 64;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 30;
@@ -142244,7 +142166,7 @@ kerning = {
 "@MMK_R_GUJ_pa-L" = 58;
 "@MMK_R_GUJ_ssa-L" = 58;
 "@MMK_R_GUJ_ya-L" = 4;
-"@MMK_R_LTN_comma_L" = -98;
+comma = -98;
 };
 "@MMK_L_GUJ_k-R" = {
 "@MMK_R_GUJ_ba-L" = 24;
@@ -142254,7 +142176,7 @@ kerning = {
 "@MMK_R_GUJ_va-L" = 20;
 };
 "@MMK_L_GUJ_ka-R" = {
-"@MMK_R_LTN_comma_L" = -54;
+comma = -54;
 };
 "@MMK_L_GUJ_kana-R" = {
 "@MMK_R_GUJ_d_bha-L" = 20;
@@ -142265,7 +142187,8 @@ kerning = {
 "@MMK_R_GUJ_t_ta-L" = 30;
 "@MMK_R_GUJ_tth_ttha-L" = 30;
 "@MMK_R_GUJ_zha-L" = 60;
-"@MMK_R_LTN_period_L" = 20;
+period = 20;
+ellipsis = 20;
 };
 "@MMK_L_GUJ_kh-R" = {
 "@MMK_R_GUJ_da-L" = -44;
@@ -142295,7 +142218,7 @@ kerning = {
 "@MMK_R_GUJ_pa_tta-L" = -48;
 };
 "@MMK_L_GUJ_ng_gha-R" = {
-"@MMK_R_LTN_comma_L" = 14;
+comma = 14;
 };
 "@MMK_L_GUJ_nine-R" = {
 "@MMK_R_GUJ_five-L" = -30;
@@ -142380,13 +142303,13 @@ kerning = {
 "@MMK_R_GUJ_three-L" = -20;
 };
 "d_da-gujarati" = {
-"@MMK_R_LTN_braceleft_L" = 20;
+braceright = 20;
 };
 "six-gujarati" = {
 "@MMK_R_GUJ_seven-L" = 24;
 };
 "tt_va-gujarati" = {
-"@MMK_R_LTN_comma_L" = 58;
+comma = 58;
 };
 };
 "419046E3-5D27-4998-A2CB-16719C068B75" = {
@@ -142403,20 +142326,20 @@ kerning = {
 "@MMK_R_GUJ_ttha-L" = -10;
 };
 "@MMK_L_GUJ_ch_va-R" = {
-"@MMK_R_LTN_comma_L" = 34;
+comma = 34;
 };
 "@MMK_L_GUJ_cha-R" = {
-"@MMK_R_LTN_comma_L" = -108;
+comma = -108;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-"@MMK_R_LTN_braceleft_L" = 48;
-"@MMK_R_LTN_comma_L" = 102;
-"@MMK_R_LTN_parenright_L" = 64;
+parenright = 64;
+comma = 102;
+braceright = 48;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-"@MMK_R_LTN_braceleft_L" = 44;
-"@MMK_R_LTN_comma_L" = 102;
-"@MMK_R_LTN_parenright_L" = 54;
+parenright = 54;
+comma = 102;
+braceright = 44;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 40;
@@ -142565,7 +142488,7 @@ kerning = {
 "@MMK_R_GUJ_pa-L" = 64;
 "@MMK_R_GUJ_ssa-L" = 64;
 "@MMK_R_GUJ_ya-L" = 4;
-"@MMK_R_LTN_comma_L" = -118;
+comma = -118;
 };
 "@MMK_L_GUJ_k-R" = {
 "@MMK_R_GUJ_ba-L" = 20;
@@ -142575,7 +142498,7 @@ kerning = {
 "@MMK_R_GUJ_va-L" = 20;
 };
 "@MMK_L_GUJ_ka-R" = {
-"@MMK_R_LTN_comma_L" = -84;
+comma = -84;
 };
 "@MMK_L_GUJ_kana-R" = {
 "@MMK_R_GUJ_d_bha-L" = 10;
@@ -142695,13 +142618,13 @@ kerning = {
 "@MMK_R_GUJ_three-L" = -20;
 };
 "dd_ddha-gujarati" = {
-"@MMK_R_LTN_comma_L" = 34;
+comma = 34;
 };
 "six-gujarati" = {
 "@MMK_R_GUJ_seven-L" = 24;
 };
 "tt_va-gujarati" = {
-"@MMK_R_LTN_comma_L" = 68;
+comma = 68;
 };
 };
 "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5" = {
@@ -142716,20 +142639,20 @@ kerning = {
 "@MMK_R_GUJ_ttha-L" = -24;
 };
 "@MMK_L_GUJ_ch_va-R" = {
-"@MMK_R_LTN_comma_L" = 44;
+comma = 44;
 };
 "@MMK_L_GUJ_cha-R" = {
-"@MMK_R_LTN_comma_L" = -112;
+comma = -112;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-"@MMK_R_LTN_braceleft_L" = 64;
-"@MMK_R_LTN_comma_L" = 112;
-"@MMK_R_LTN_parenright_L" = 58;
+parenright = 58;
+comma = 112;
+braceright = 64;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-"@MMK_R_LTN_braceleft_L" = 58;
-"@MMK_R_LTN_comma_L" = 98;
-"@MMK_R_LTN_parenright_L" = 40;
+parenright = 40;
+comma = 98;
+braceright = 58;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 40;
@@ -142873,7 +142796,7 @@ kerning = {
 "@MMK_R_GUJ_pa-L" = 68;
 "@MMK_R_GUJ_ssa-L" = 58;
 "@MMK_R_GUJ_ya-L" = 14;
-"@MMK_R_LTN_comma_L" = -126;
+comma = -126;
 };
 "@MMK_L_GUJ_k-R" = {
 "@MMK_R_GUJ_kh_ra-L" = -40;
@@ -142881,7 +142804,7 @@ kerning = {
 "@MMK_R_GUJ_ma-L" = -14;
 };
 "@MMK_L_GUJ_ka-R" = {
-"@MMK_R_LTN_comma_L" = -78;
+comma = -78;
 };
 "@MMK_L_GUJ_kana-R" = {
 "@MMK_R_GUJ_da_ru-L" = 60;
@@ -142994,13 +142917,13 @@ kerning = {
 "@MMK_R_GUJ_ya-L" = -4;
 };
 "d_da-gujarati" = {
-"@MMK_R_LTN_braceleft_L" = 24;
+braceright = 24;
 };
 "d_gha-gujarati" = {
 "@MMK_R_GUJ_ka-L" = -64;
 };
 "dd_ddha-gujarati" = {
-"@MMK_R_LTN_comma_L" = 20;
+comma = 20;
 };
 "five-gujarati" = {
 "@MMK_R_GUJ_seven-L" = 14;
@@ -143015,7 +142938,7 @@ kerning = {
 "@MMK_R_GUJ_seven-L" = 20;
 };
 "tt_va-gujarati" = {
-"@MMK_R_LTN_comma_L" = 68;
+comma = 68;
 };
 "tta-gujarati" = {
 "@MMK_R_GUJ_d_gha-L" = -34;
