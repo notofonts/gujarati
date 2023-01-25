@@ -926,11 +926,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 </div></details><details><summary>⚠ <b>WARN:</b> Detect any interpolation issues in the font. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/interpolation_issues">com.google.fonts/check/interpolation_issues</a>)</summary><div>
 
 
-* ⚠ **WARN** Interpolation issues were found in the font: 	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f568afb5510> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f568c0fa910>
+* ⚠ **WARN** Interpolation issues were found in the font: 	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e0d0> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e1d0>
 
-	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f568afb5510> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f568b020d10> 
+	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e0d0> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d40550> 
 
-	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f568afb5510> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f568b020cd0> [code: interpolation-issues]
+	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e0d0> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d40650> [code: interpolation-issues]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
