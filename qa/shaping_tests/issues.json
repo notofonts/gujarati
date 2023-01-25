@@ -5,6 +5,12 @@
 			"expectation": "sha-gujarati=0+709|llVocalicMatra-gujarati=0@-126,0+0|space=2+299|sh_ra-gujarati=3+646|llVocalicMatra-gujarati=3@-126,0+0|space=7+299|sh_ra-gujarati=8+646|aiMatra-gujarati=8@-125,0+0",
 			"only": "NotoSerifGujarati-Regular.ttf",
 			"note": "Issue #3"
+		},
+		{
+			"input": "કૂ઼",
+			"expectation": "ka-gujarati=0+506|uuMatra-gujarati.alt=0@-244,0+0|nukta-gujarati=0@-244,-370+0",
+			"only": "NotoSerifGujarati-Regular.ttf",
+			"note": "Issue #13"
 		}
 	]
 }
