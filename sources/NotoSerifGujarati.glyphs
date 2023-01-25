@@ -1,5 +1,5 @@
 {
-.appVersion = "3109";
+.appVersion = "3169";
 classes = (
 {
 code = "ka-gujarati kha-gujarati ga-gujarati gha-gujarati nga-gujarati ca-gujarati cha-gujarati ja-gujarati jha-gujarati nya-gujarati tta-gujarati ttha-gujarati dda-gujarati ddha-gujarati nna-gujarati nna-gujarati.calt ta-gujarati tha-gujarati da-gujarati dha-gujarati na-gujarati pa-gujarati pha-gujarati ba-gujarati bha-gujarati ma-gujarati ya-gujarati ra-gujarati la-gujarati lla-gujarati va-gujarati sha-gujarati ssa-gujarati sa-gujarati ha-gujarati zha-gujarati zh_ra-gujarati k_ra-gujarati kh_ra-gujarati g_ra-gujarati gh_ra-gujarati c_ra-gujarati j_ra-gujarati jh_ra-gujarati ny_ra-gujarati nn_ra-gujarati nn_ra-gujarati.calt t_ra-gujarati th_ra-gujarati d_ra-gujarati dh_ra-gujarati n_ra-gujarati p_ra-gujarati ph_ra-gujarati b_ra-gujarati bh_ra-gujarati m_ra-gujarati y_ra-gujarati l_ra-gujarati ll_ra-gujarati v_ra-gujarati sh_ra-gujarati ss_ra-gujarati s_ra-gujarati h_ra-gujarati k_ss_ra-gujarati j_ny_ra-gujarati k_ka-gujarati k_kha-gujarati k_da-gujarati k_pa-gujarati k_ya-gujarati k_ssa-gujarati g_na-gujarati gh_na-gujarati ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ng_ya-gujarati ch_ya-gujarati ch_va-gujarati j_ja-gujarati j_nya-gujarati j_ma-gujarati j_ya-gujarati ny_ca-gujarati ny_ja-gujarati tt_tta-gujarati tt_ttha-gujarati tt_ya-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati dd_ya-gujarati ddh_ddha-gujarati ddh_ya-gujarati t_ka-gujarati t_ta-gujarati t_t_ya-gujarati t_na-gujarati t_ma-gujarati t_ya-gujarati t_sa-gujarati th_na-gujarati d_ga-gujarati d_gha-gujarati d_da-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_ma-gujarati d_ya-gujarati d_va-gujarati dh_na-gujarati n_tta-gujarati n_na-gujarati n_sa-gujarati p_tta-gujarati p_ttha-gujarati p_ta-gujarati p_da-gujarati p_na-gujarati ph_ya-gujarati b_la-gujarati m_na-gujarati l_ka-gujarati l_ya-gujarati l_sa-gujarati ll_ya-gujarati v_da-gujarati sh_ca-gujarati sh_na-gujarati sh_la-gujarati sh_va-gujarati ss_tta-gujarati ss_ttha-gujarati s_ka-gujarati s_tta-gujarati s_ttha-gujarati s_dda-gujarati s_t_ra-gujarati s_tha-gujarati s_pha-gujarati s_ma-gujarati h_nna-gujarati h_na-gujarati h_ma-gujarati h_ya-gujarati h_la-gujarati h_va-gujarati";
@@ -53474,7 +53474,7 @@ leftKerningGroup = "GUJ_kssa-L";
 rightKerningGroup = "GUJ_kss-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ny-gujarati";
@@ -53772,7 +53772,7 @@ leftKerningGroup = "GUJ_jnya-L";
 rightKerningGroup = "GUJ_jny-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_t-gujarati";
@@ -53922,7 +53922,7 @@ leftKerningGroup = "GUJ_t_ta-L";
 rightKerningGroup = "GUJ_t_ta-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_r-gujarati";
@@ -54462,7 +54462,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_ka-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "kh_ra-gujarati";
@@ -54928,7 +54928,7 @@ leftKerningGroup = "GUJ_kh_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "g_ra-gujarati";
@@ -55302,7 +55302,7 @@ leftKerningGroup = "GUJ_g_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "gh_ra-gujarati";
@@ -55732,7 +55732,7 @@ leftKerningGroup = "GUJ_gha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "c_ra-gujarati";
@@ -56170,7 +56170,7 @@ leftKerningGroup = "GUJ_ca-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ra-gujarati";
@@ -56604,7 +56604,7 @@ leftKerningGroup = "GUJ_j_ra-L";
 rightKerningGroup = "GUJ_ja-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ra_aaMatra-gujarati";
@@ -58924,7 +58924,7 @@ width = 722;
 leftKerningGroup = "GUJ_jha-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 userData = {
 com.schriftgestaltung.Glyphs.ColorIndex = 1;
 };
@@ -59377,7 +59377,7 @@ leftKerningGroup = "GUJ_nya-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "nn_ra-gujarati";
@@ -59859,7 +59859,7 @@ leftKerningGroup = "GUJ_nna-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "nn_ra-gujarati.calt";
@@ -60341,7 +60341,7 @@ leftKerningGroup = "GUJ_nna-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_ra-gujarati";
@@ -60667,7 +60667,7 @@ leftKerningGroup = "GUJ_t_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "th_ra-gujarati";
@@ -61081,7 +61081,7 @@ leftKerningGroup = "GUJ_tha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_ra-gujarati";
@@ -61422,7 +61422,7 @@ width = 500;
 leftKerningGroup = "GUJ_da_ru-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "dh_ra-gujarati";
@@ -61828,7 +61828,7 @@ leftKerningGroup = "GUJ_dha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "n_ra-gujarati";
@@ -62158,7 +62158,7 @@ leftKerningGroup = "GUJ_na-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "p_ra-gujarati";
@@ -62521,7 +62521,7 @@ note = "not sure why instances are not apearing";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ph_ra-gujarati";
@@ -62998,7 +62998,7 @@ width = 545;
 leftKerningGroup = "GUJ_ka-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "b_ra-gujarati";
@@ -63431,7 +63431,7 @@ width = 749;
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "bh_ra-gujarati";
@@ -63869,7 +63869,7 @@ leftKerningGroup = "GUJ_bha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "m_ra-gujarati";
@@ -64271,7 +64271,7 @@ leftKerningGroup = "GUJ_m_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "y_ra-gujarati";
@@ -64661,7 +64661,7 @@ leftKerningGroup = "GUJ_ya-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "l_ra-gujarati";
@@ -65047,7 +65047,7 @@ leftKerningGroup = "GUJ_la-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ll_ra-gujarati";
@@ -65453,7 +65453,7 @@ leftKerningGroup = "GUJ_lla-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "v_ra-gujarati";
@@ -65807,7 +65807,7 @@ leftKerningGroup = "GUJ_va-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "sh_ra-gujarati";
@@ -66181,7 +66181,7 @@ leftKerningGroup = "GUJ_sh_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ss_ra-gujarati";
@@ -66575,7 +66575,7 @@ leftKerningGroup = "GUJ_ssa-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_ra-gujarati";
@@ -67097,7 +67097,7 @@ leftKerningGroup = "GUJ_sa-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_ra-gujarati";
@@ -67474,7 +67474,7 @@ width = 574;
 leftKerningGroup = "GUJ_ha_ru-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_ss_ra-gujarati";
@@ -68021,7 +68021,7 @@ rightKerningGroup = "GUJ_kana-R";
 rightMetricsKey = "=aaMatra-gujarati";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ny_ra-gujarati";
@@ -68523,7 +68523,7 @@ leftKerningGroup = "GUJ_jnya-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_ka-gujarati";
@@ -69113,7 +69113,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_ka-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_kha-gujarati";
@@ -69803,7 +69803,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_da-gujarati";
@@ -70397,7 +70397,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_da-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_pa-gujarati";
@@ -71003,7 +71003,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_ya-gujarati";
@@ -71645,7 +71645,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_ssa-gujarati";
@@ -72171,7 +72171,7 @@ leftKerningGroup = "GUJ_kssa-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "g_na-gujarati";
@@ -72613,7 +72613,7 @@ leftKerningGroup = "GUJ_g_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "gh_na-gujarati";
@@ -73131,7 +73131,7 @@ leftKerningGroup = "GUJ_gha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ng_ka-gujarati";
@@ -73616,7 +73616,7 @@ width = 594;
 leftKerningGroup = "GUJ_ng_ka-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ng_ga-gujarati";
@@ -74130,7 +74130,7 @@ leftKerningGroup = "GUJ_ng_ga-L";
 rightKerningGroup = "GUJ_ng_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ng_gha-gujarati";
@@ -74744,7 +74744,7 @@ leftKerningGroup = "GUJ_ng_gha-L";
 rightKerningGroup = "GUJ_ng_gha-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ng_ma-gujarati";
@@ -75294,7 +75294,7 @@ leftKerningGroup = "GUJ_ng_ma-L";
 rightKerningGroup = "GUJ_ng_ma-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ng_ya-gujarati";
@@ -75872,7 +75872,7 @@ leftKerningGroup = "GUJ_nga-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ch_ya-gujarati";
@@ -76558,7 +76558,7 @@ leftKerningGroup = "GUJ_cha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ch_va-gujarati";
@@ -77164,7 +77164,7 @@ leftKerningGroup = "GUJ_ch_va-L";
 rightKerningGroup = "GUJ_ch_va-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ja-gujarati";
@@ -77830,7 +77830,7 @@ leftKerningGroup = "GUJ_ja-L";
 rightKerningGroup = "GUJ_ja-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_nya-gujarati";
@@ -78312,7 +78312,7 @@ leftKerningGroup = "GUJ_jnya-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ma-gujarati";
@@ -78962,7 +78962,7 @@ leftKerningGroup = "GUJ_ja-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ya-gujarati";
@@ -79592,7 +79592,7 @@ leftKerningGroup = "GUJ_ja-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ny_ca-gujarati";
@@ -80150,7 +80150,7 @@ leftKerningGroup = "GUJ_ny_ca-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ny_ja-gujarati";
@@ -80696,7 +80696,7 @@ leftKerningGroup = "GUJ_ny_ja-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "tt_tta-gujarati";
@@ -81142,7 +81142,7 @@ leftKerningGroup = "GUJ_t_ta-L";
 rightKerningGroup = "GUJ_tt_tta-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "tt_ttha-gujarati";
@@ -81647,7 +81647,7 @@ width = 512;
 leftKerningGroup = "GUJ_t_ta-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "tt_ya-gujarati";
@@ -82209,7 +82209,7 @@ leftKerningGroup = "GUJ_tta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "tt_va-gujarati";
@@ -82690,7 +82690,7 @@ width = 530;
 leftKerningGroup = "GUJ_t_ta-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "tth_ttha-gujarati";
@@ -83283,7 +83283,7 @@ width = 520;
 leftKerningGroup = "GUJ_tth_ttha-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "dd_dda-gujarati";
@@ -83692,7 +83692,7 @@ width = 491;
 leftKerningGroup = "GUJ_dd_dda-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "dd_ddha-gujarati";
@@ -84153,7 +84153,7 @@ width = 493;
 leftKerningGroup = "GUJ_dd_dda-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "dd_ya-gujarati";
@@ -84663,7 +84663,7 @@ leftKerningGroup = "GUJ_nga-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ddh_ddha-gujarati";
@@ -85197,7 +85197,7 @@ leftKerningGroup = "GUJ_ddh_ddha-L";
 rightKerningGroup = "GUJ_ddh_ddha-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ddh_ya-gujarati";
@@ -85807,7 +85807,7 @@ leftKerningGroup = "GUJ_ddha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_ka-gujarati";
@@ -86273,7 +86273,7 @@ leftKerningGroup = "GUJ_ta-L";
 rightKerningGroup = "GUJ_ka-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_ta-gujarati";
@@ -86607,7 +86607,7 @@ leftKerningGroup = "GUJ_t_ta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_t_ya-gujarati";
@@ -87129,7 +87129,7 @@ leftKerningGroup = "GUJ_t_ta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_na-gujarati";
@@ -87531,7 +87531,7 @@ leftKerningGroup = "GUJ_ta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_ma-gujarati";
@@ -88005,7 +88005,7 @@ leftKerningGroup = "GUJ_ta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_ya-gujarati";
@@ -88495,7 +88495,7 @@ leftKerningGroup = "GUJ_ta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "t_sa-gujarati";
@@ -89097,7 +89097,7 @@ leftKerningGroup = "GUJ_ta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "th_na-gujarati";
@@ -89599,7 +89599,7 @@ leftKerningGroup = "GUJ_tha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_ga-gujarati";
@@ -90001,7 +90001,7 @@ leftKerningGroup = "GUJ_da_ru-L";
 rightKerningGroup = "GUJ_d_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_gha-gujarati";
@@ -90535,7 +90535,7 @@ leftKerningGroup = "GUJ_d_gha-L";
 rightKerningGroup = "GUJ_d_gha-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_da-gujarati";
@@ -90964,7 +90964,7 @@ width = 486;
 leftKerningGroup = "GUJ_da-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_dha-gujarati";
@@ -91486,7 +91486,7 @@ leftKerningGroup = "GUJ_d_dha-L";
 rightKerningGroup = "GUJ_d_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_na-gujarati";
@@ -91896,7 +91896,7 @@ leftKerningGroup = "GUJ_da_ru-L";
 rightKerningGroup = "GUJ_d_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_ba-gujarati";
@@ -92366,7 +92366,7 @@ leftKerningGroup = "GUJ_da_ru-L";
 rightKerningGroup = "GUJ_d_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_bha-gujarati";
@@ -92864,7 +92864,7 @@ leftKerningGroup = "GUJ_d_bha-L";
 rightKerningGroup = "GUJ_d_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_ma-gujarati";
@@ -93330,7 +93330,7 @@ leftKerningGroup = "GUJ_d_ma-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_ya-gujarati";
@@ -93760,7 +93760,7 @@ leftKerningGroup = "GUJ_dha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "d_va-gujarati";
@@ -94194,7 +94194,7 @@ leftKerningGroup = "GUJ_da_ru-L";
 rightKerningGroup = "GUJ_d_ga-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "dh_na-gujarati";
@@ -94688,7 +94688,7 @@ leftKerningGroup = "GUJ_dha-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "n_tta-gujarati";
@@ -94941,7 +94941,7 @@ width = 754;
 leftKerningGroup = "GUJ_na-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "n_na-gujarati";
@@ -95334,7 +95334,7 @@ width = 618;
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "n_sa-gujarati";
@@ -95928,7 +95928,7 @@ leftKerningGroup = "GUJ_na-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "p_tta-gujarati";
@@ -96337,7 +96337,7 @@ width = 564;
 leftKerningGroup = "GUJ_pa_tta-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "p_ttha-gujarati";
@@ -96770,7 +96770,7 @@ width = 580;
 leftKerningGroup = "GUJ_pa_tta-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "p_ta-gujarati";
@@ -97168,7 +97168,7 @@ leftKerningGroup = "GUJ_pa_tta-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "p_da-gujarati";
@@ -97654,7 +97654,7 @@ leftKerningGroup = "GUJ_pa-L";
 rightKerningGroup = "GUJ_da-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "p_na-gujarati";
@@ -98108,7 +98108,7 @@ leftKerningGroup = "GUJ_p_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ph_ya-gujarati";
@@ -98834,7 +98834,7 @@ leftKerningGroup = "GUJ_ka-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "b_la-gujarati";
@@ -99396,7 +99396,7 @@ leftKerningGroup = "GUJ_ba-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "m_na-gujarati";
@@ -99866,7 +99866,7 @@ leftKerningGroup = "GUJ_m_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "l_ka-gujarati";
@@ -100368,7 +100368,7 @@ leftKerningGroup = "GUJ_la-L";
 rightKerningGroup = "GUJ_ka-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "l_ya-gujarati";
@@ -100890,7 +100890,7 @@ leftKerningGroup = "GUJ_la-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "l_sa-gujarati";
@@ -101540,7 +101540,7 @@ leftKerningGroup = "GUJ_la-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ll_ya-gujarati";
@@ -102038,7 +102038,7 @@ leftKerningGroup = "GUJ_lla-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "v_da-gujarati";
@@ -102524,7 +102524,7 @@ leftKerningGroup = "GUJ_va-L";
 rightKerningGroup = "GUJ_da-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "sh_ca-gujarati";
@@ -102990,7 +102990,7 @@ leftKerningGroup = "GUJ_sh_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "sh_na-gujarati";
@@ -103432,7 +103432,7 @@ leftKerningGroup = "GUJ_sh_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "sh_la-gujarati";
@@ -103947,7 +103947,7 @@ rightKerningGroup = "GUJ_kana-R";
 rightMetricsKey = "la-gujarati";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "sh_va-gujarati";
@@ -104393,7 +104393,7 @@ leftKerningGroup = "GUJ_sh_ra-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ss_tta-gujarati";
@@ -104834,7 +104834,7 @@ width = 564;
 leftKerningGroup = "GUJ_pa_tta-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "ss_ttha-gujarati";
@@ -105299,7 +105299,7 @@ width = 580;
 leftKerningGroup = "GUJ_pa_tta-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_ka-gujarati";
@@ -105921,7 +105921,7 @@ leftKerningGroup = "GUJ_sa-L";
 rightKerningGroup = "GUJ_ka-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_tta-gujarati";
@@ -106506,7 +106506,7 @@ width = 912;
 leftKerningGroup = "GUJ_sa-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_ttha-gujarati";
@@ -107147,7 +107147,7 @@ width = 919;
 leftKerningGroup = "GUJ_sa-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_dda-gujarati";
@@ -107716,7 +107716,7 @@ width = 899;
 leftKerningGroup = "GUJ_sa-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_t_ra-gujarati";
@@ -108330,7 +108330,7 @@ leftKerningGroup = "GUJ_sa-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_tha-gujarati";
@@ -109008,7 +109008,7 @@ leftKerningGroup = "GUJ_sa-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_pha-gujarati";
@@ -109721,7 +109721,7 @@ width = 923;
 leftKerningGroup = "GUJ_sa-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "s_ma-gujarati";
@@ -110387,7 +110387,7 @@ leftKerningGroup = "GUJ_sa-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_nna-gujarati";
@@ -110893,7 +110893,7 @@ leftKerningGroup = "GUJ_ha_ru-L";
 rightKerningGroup = "GUJ_h_nna-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_na-gujarati";
@@ -111379,7 +111379,7 @@ leftKerningGroup = "GUJ_ha_ru-L";
 rightKerningGroup = "GUJ_h_nna-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_ma-gujarati";
@@ -111897,7 +111897,7 @@ leftKerningGroup = "GUJ_ha_ru-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_ya-gujarati";
@@ -112411,7 +112411,7 @@ leftKerningGroup = "GUJ_ha_ru-L";
 rightKerningGroup = "GUJ_kana-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_la-gujarati";
@@ -112953,7 +112953,7 @@ leftKerningGroup = "GUJ_ha_ru-L";
 rightKerningGroup = "GUJ_h_nna-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "h_va-gujarati";
@@ -113483,7 +113483,7 @@ leftKerningGroup = "GUJ_ha_ru-L";
 rightKerningGroup = "GUJ_h_nna-R";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "k_r-gujarati";
@@ -119963,7 +119963,7 @@ width = 483;
 leftKerningGroup = "GUJ_kssa-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "j_ny_r-gujarati";
@@ -120296,7 +120296,7 @@ width = 548;
 leftKerningGroup = "GUJ_jnya-L";
 script = gujarati;
 category = Letter;
-subCategory = Ligature;
+subCategory = Other;
 },
 {
 glyphname = "danda-deva";
@@ -141445,14 +141445,14 @@ comma = 48;
 comma = -118;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-parenright = 20;
-comma = 98;
 braceright = 40;
+comma = 98;
+parenright = 20;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-parenright = 4;
-comma = 84;
 braceright = 20;
+comma = 84;
+parenright = 4;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 10;
@@ -141950,14 +141950,14 @@ comma = 30;
 comma = -102;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-parenright = 48;
-comma = 108;
 braceright = 64;
+comma = 108;
+parenright = 48;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-parenright = 48;
-comma = 108;
 braceright = 64;
+comma = 108;
+parenright = 48;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 30;
@@ -142147,8 +142147,8 @@ comma = -54;
 "@MMK_R_GUJ_t_ta-L" = 30;
 "@MMK_R_GUJ_tth_ttha-L" = 30;
 "@MMK_R_GUJ_zha-L" = 60;
-period = 20;
 ellipsis = 20;
+period = 20;
 };
 "@MMK_L_GUJ_kh-R" = {
 "@MMK_R_GUJ_da-L" = -44;
@@ -142292,14 +142292,14 @@ comma = 34;
 comma = -108;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-parenright = 64;
-comma = 102;
 braceright = 48;
+comma = 102;
+parenright = 64;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-parenright = 54;
-comma = 102;
 braceright = 44;
+comma = 102;
+parenright = 54;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 40;
@@ -142605,14 +142605,14 @@ comma = 44;
 comma = -112;
 };
 "@MMK_L_GUJ_d_ga-R" = {
-parenright = 58;
-comma = 112;
 braceright = 64;
+comma = 112;
+parenright = 58;
 };
 "@MMK_L_GUJ_d_gha-R" = {
-parenright = 40;
-comma = 98;
 braceright = 58;
+comma = 98;
+parenright = 40;
 };
 "@MMK_L_GUJ_da-R" = {
 "@MMK_R_GUJ_dd_dda-L" = 40;
