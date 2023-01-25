@@ -634,6 +634,26 @@ Got: <svg class="shaping-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25
 </svg>
 
 
+</div>
+<div class="shaping">
+
+<li>Shaping did not match: <span class="tf">કૂ઼</span> (Issue #13)</li>
+
+
+<pre>Expected: None</pre>
+
+
+
+<pre>Got     : uni0A95=0+506|uni0AC2.alt=0@-244,0+0|uni0ABC=0@-244,-370+0</pre>
+
+
+Got: <svg class="shaping-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 506 2447" transform="matrix(1 0 0 -1 0 0)">
+<path d="M112.0,216.0L68.0,288.0L220.0,324.0Q183.0,345.0 154.0,381.0Q125.0,417.0 125.0,464.0Q125.0,509.0 149.5,540.0Q174.0,571.0 216.0,587.0Q258.0,603.0 309.0,603.0Q325.0,603.0 341.0,601.5Q357.0,600.0 371.0,598.0L389.0,521.0Q377.0,523.0 362.5,524.0Q348.0,525.0 333.0,525.0Q277.0,525.0 241.5,504.0Q206.0,483.0 206.0,438.0Q206.0,407.0 223.5,381.5Q241.0,356.0 267.0,336.0L445.0,382.0L488.0,311.0L340.0,276.0Q366.0,265.0 392.0,246.0Q418.0,227.0 435.5,198.0Q453.0,169.0 453.0,129.0Q453.0,68.0 408.5,31.0Q364.0,-6.0 284.0,-6.0Q217.0,-6.0 162.5,21.5Q108.0,49.0 70.0,82.0L95.0,119.0Q128.0,91.0 166.0,73.0Q204.0,55.0 248.0,55.0Q306.0,55.0 335.0,81.5Q364.0,108.0 364.0,148.0Q364.0,183.0 342.0,213.0Q320.0,243.0 289.0,263.0L112.0,216.0Z"  transform="translate(0, 950)"/>
+<path d="M210.0,-286.0Q165.0,-224.0 132.5,-185.0Q100.0,-146.0 74.0,-127.5Q48.0,-109.0 20.0,-109.0Q-23.0,-109.0 -45.5,-130.0Q-68.0,-151.0 -68.0,-180.0Q-68.0,-218.0 -25.0,-218.0Q-7.0,-218.0 13.5,-214.0Q34.0,-210.0 63.0,-192.0L85.0,-259.0Q64.0,-268.0 48.0,-272.5Q32.0,-277.0 11.0,-277.0Q-17.0,-277.0 -44.0,-261.5Q-71.0,-246.0 -93.0,-225.0Q-111.0,-208.0 -122.0,-190.0Q-133.0,-172.0 -133.0,-149.0Q-133.0,-123.0 -119.0,-99.0Q-105.0,-75.0 -77.0,-59.5Q-49.0,-44.0 -9.0,-44.0Q27.0,-44.0 55.0,-57.5Q83.0,-71.0 110.0,-98.0Q137.0,-125.0 171.0,-164.5Q205.0,-204.0 253.0,-256.0L210.0,-286.0Z"  transform="translate(262, 950)"/>
+<path d="M0.0,-57.0Q-22.0,-57.0 -37.5,-44.5Q-53.0,-32.0 -53.0,0.0Q-53.0,32.0 -37.5,44.5Q-22.0,57.0 0.0,57.0Q22.0,57.0 37.5,44.5Q53.0,32.0 53.0,0.0Q53.0,-32.0 37.5,-44.5Q22.0,-57.0 0.0,-57.0Z"  transform="translate(262, 580)"/>
+</svg>
+
+
 </div> [code: shaping-regression]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
@@ -926,11 +946,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 </div></details><details><summary>⚠ <b>WARN:</b> Detect any interpolation issues in the font. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/interpolation_issues">com.google.fonts/check/interpolation_issues</a>)</summary><div>
 
 
-* ⚠ **WARN** Interpolation issues were found in the font: 	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e0d0> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e1d0>
+* ⚠ **WARN** Interpolation issues were found in the font: 	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f7118753c10> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f7118753d10>
 
-	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e0d0> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d40550> 
+	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f7118753c10> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f7118753d50> 
 
-	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d2e0d0> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f60f3d40650> [code: interpolation-issues]
+	- Contour 1 start point differs in glyph 'k_ss_rgujarati' between location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f7118753c10> and location <fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f711872a110> [code: interpolation-issues]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
