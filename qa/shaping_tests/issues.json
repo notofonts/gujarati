@@ -1,0 +1,10 @@
+{
+	"tests": [
+		{
+			"input": "શૣ શ્રૣ શ્રૈ",
+			"expectation": "sha-gujarati=0+709|llVocalicMatra-gujarati=0@-126,0+0|space=2+299|sh_ra-gujarati=3+646|llVocalicMatra-gujarati=3@-126,0+0|space=7+299|sh_ra-gujarati=8+646|aiMatra-gujarati=8@-125,0+0",
+			"only": "NotoSerifGujarati-Regular.ttf",
+			"note": "Issue #3"
+		}
+	]
+}
