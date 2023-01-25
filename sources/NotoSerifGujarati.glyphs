@@ -1,5 +1,10 @@
 {
 .appVersion = "3169";
+DisplayStrings = (
+"/ka-gujarati/nukta-gujarati",
+"/tha-gujarati",
+"/uuMatra-gujarati.alt/space/uMatra-gujarati.alt"
+);
 classes = (
 {
 code = "ka-gujarati kha-gujarati ga-gujarati gha-gujarati nga-gujarati ca-gujarati cha-gujarati ja-gujarati jha-gujarati nya-gujarati tta-gujarati ttha-gujarati dda-gujarati ddha-gujarati nna-gujarati nna-gujarati.calt ta-gujarati tha-gujarati da-gujarati dha-gujarati na-gujarati pa-gujarati pha-gujarati ba-gujarati bha-gujarati ma-gujarati ya-gujarati ra-gujarati la-gujarati lla-gujarati va-gujarati sha-gujarati ssa-gujarati sa-gujarati ha-gujarati zha-gujarati zh_ra-gujarati k_ra-gujarati kh_ra-gujarati g_ra-gujarati gh_ra-gujarati c_ra-gujarati j_ra-gujarati jh_ra-gujarati ny_ra-gujarati nn_ra-gujarati nn_ra-gujarati.calt t_ra-gujarati th_ra-gujarati d_ra-gujarati dh_ra-gujarati n_ra-gujarati p_ra-gujarati ph_ra-gujarati b_ra-gujarati bh_ra-gujarati m_ra-gujarati y_ra-gujarati l_ra-gujarati ll_ra-gujarati v_ra-gujarati sh_ra-gujarati ss_ra-gujarati s_ra-gujarati h_ra-gujarati k_ss_ra-gujarati j_ny_ra-gujarati k_ka-gujarati k_kha-gujarati k_da-gujarati k_pa-gujarati k_ya-gujarati k_ssa-gujarati g_na-gujarati gh_na-gujarati ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ng_ya-gujarati ch_ya-gujarati ch_va-gujarati j_ja-gujarati j_nya-gujarati j_ma-gujarati j_ya-gujarati ny_ca-gujarati ny_ja-gujarati tt_tta-gujarati tt_ttha-gujarati tt_ya-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati dd_ya-gujarati ddh_ddha-gujarati ddh_ya-gujarati t_ka-gujarati t_ta-gujarati t_t_ya-gujarati t_na-gujarati t_ma-gujarati t_ya-gujarati t_sa-gujarati th_na-gujarati d_ga-gujarati d_gha-gujarati d_da-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_ma-gujarati d_ya-gujarati d_va-gujarati dh_na-gujarati n_tta-gujarati n_na-gujarati n_sa-gujarati p_tta-gujarati p_ttha-gujarati p_ta-gujarati p_da-gujarati p_na-gujarati ph_ya-gujarati b_la-gujarati m_na-gujarati l_ka-gujarati l_ya-gujarati l_sa-gujarati ll_ya-gujarati v_da-gujarati sh_ca-gujarati sh_na-gujarati sh_la-gujarati sh_va-gujarati ss_tta-gujarati ss_ttha-gujarati s_ka-gujarati s_tta-gujarati s_ttha-gujarati s_dda-gujarati s_t_ra-gujarati s_tha-gujarati s_pha-gujarati s_ma-gujarati h_nna-gujarati h_na-gujarati h_ma-gujarati h_ya-gujarati h_la-gujarati h_va-gujarati";
@@ -597,7 +602,7 @@ code = "script gjr2 ;\012lookup rakaarForms {\012lookupflag UseMarkFilteringSet 
 name = rkrf;
 },
 {
-code = "script gujr ;\012lookup belowBaseForm_gujr {\012	sub ra-gujarati halant-gujarati by rakar-gujarati;\012} belowBaseForm_gujr ;\012\012script gjr2 ;\012lookup belowBaseForm_gjr2 {\012	sub halant-gujarati ra-gujarati by rakar-gujarati;\012} belowBaseForm_gjr2 ;\012";
+code = "script gujr ;\012lookup belowBaseForm_gujr {\012	sub ra-gujarati halant-gujarati by rakar-gujarati;\012} belowBaseForm_gujr ;\012\012script gjr2 ;\012lookup belowBaseForm_gjr2 {\012	sub halant-gujarati ra-gujarati by rakar-gujarati;\012} belowBaseForm_gjr2 ;\012\012";
 name = blwf;
 },
 {
@@ -617,7 +622,7 @@ code = "script gujr ;\012# 2020\012lookup splitVowels {\012     sub [e-gujarati 
 name = abvs;
 },
 {
-code = "script gujr ;\012lookup alternateUkars {\012lookupflag UseMarkFilteringSet @bottomMarks ;\012	sub [ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ch_va-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati ddh_ddha-gujarati d_ga-gujarati d_gha-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_va-gujarati pha-gujarati ph_ra-gujarati s_pha-gujarati d_da-gujarati] [uMatra-gujarati uuMatra-gujarati]' by [uMatra-gujarati.alt uuMatra-gujarati.alt];\012} alternateUkars ;\012\012lookup compositeMarksBelow {\012lookupflag 0;\012	sub rakar-gujarati uMatra-gujarati by rakar_uMatra-gujarati;\012	sub rakar-gujarati uuMatra-gujarati by rakar_uuMatra-gujarati;\012	sub rakar-gujarati rVocalicMatra-gujarati by rakar_rVocalicMatra-gujarati;\012	sub rakar-gujarati rrVocalicMatra-gujarati by rakar_rrVocalicMatra-gujarati;\012	sub rakar-gujarati halant-gujarati by rakar_halant-gujarati;\012	sub rakar-gujarati lVocalicMatra-gujarati by rakar_lVocalicMatra-gujarati;\012	sub rakar-gujarati llVocalicMatra-gujarati by rakar_llVocalicMatra-gujarati;\012} compositeMarksBelow ;\012\012script gjr2 ;\012lookup alternateUkars ;\012lookup compositeMarksBelow ;\012";
+code = "script gujr ;\012lookup alternateUkars {\012lookupflag UseMarkFilteringSet @bottomMarks ;\012	sub [ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ch_va-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati ddh_ddha-gujarati d_ga-gujarati d_gha-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_va-gujarati pha-gujarati ph_ra-gujarati s_pha-gujarati d_da-gujarati ka-gujarati] [uMatra-gujarati uuMatra-gujarati]' by [uMatra-gujarati.alt uuMatra-gujarati.alt];\012} alternateUkars ;\012\012lookup compositeMarksBelow {\012lookupflag 0;\012	sub rakar-gujarati uMatra-gujarati by rakar_uMatra-gujarati;\012	sub rakar-gujarati uuMatra-gujarati by rakar_uuMatra-gujarati;\012	sub rakar-gujarati rVocalicMatra-gujarati by rakar_rVocalicMatra-gujarati;\012	sub rakar-gujarati rrVocalicMatra-gujarati by rakar_rrVocalicMatra-gujarati;\012	sub rakar-gujarati halant-gujarati by rakar_halant-gujarati;\012	sub rakar-gujarati lVocalicMatra-gujarati by rakar_lVocalicMatra-gujarati;\012	sub rakar-gujarati llVocalicMatra-gujarati by rakar_llVocalicMatra-gujarati;\012} compositeMarksBelow ;\012\012script gjr2 ;\012lookup alternateUkars ;\012lookup compositeMarksBelow ;\012";
 name = blws;
 },
 {
@@ -30536,6 +30541,10 @@ anchors = (
 {
 name = _bottom;
 position = "{0, 0}";
+},
+{
+name = bottomleft;
+position = "{0, -370}";
 }
 );
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
@@ -30582,6 +30591,10 @@ anchors = (
 {
 name = _bottom;
 position = "{0, 0}";
+},
+{
+name = bottomleft;
+position = "{0, -340}";
 }
 );
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
@@ -30628,6 +30641,10 @@ anchors = (
 {
 name = _bottom;
 position = "{0, 0}";
+},
+{
+name = bottomleft;
+position = "{0, -400}";
 }
 );
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
@@ -30674,6 +30691,10 @@ anchors = (
 {
 name = _bottom;
 position = "{0, 0}";
+},
+{
+name = bottomleft;
+position = "{0, -406}";
 }
 );
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
