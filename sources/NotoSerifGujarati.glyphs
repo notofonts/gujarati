@@ -561,7 +561,7 @@ value = "Noto is a trademark of Google LLC.";
 },
 {
 name = versionString;
-value = "Version 2.102";
+value = "Version 2.103";
 },
 {
 name = Axes;
@@ -142935,5 +142935,5 @@ background
 );
 };
 versionMajor = 2;
-versionMinor = 102;
+versionMinor = 103;
 }
