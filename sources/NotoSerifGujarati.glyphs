@@ -3,7 +3,7 @@
 DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
-"/uuMatra-gujarati.alt/space/uMatra-gujarati.alt"
+"/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt"
 );
 classes = (
 {
@@ -561,7 +561,7 @@ value = "Noto is a trademark of Google LLC.";
 },
 {
 name = versionString;
-value = "Version 2.103";
+value = "Version 2.104";
 },
 {
 name = Axes;
@@ -622,7 +622,7 @@ code = "script gujr ;\012# 2020\012lookup splitVowels {\012     sub [e-gujarati 
 name = abvs;
 },
 {
-code = "script gujr ;\012lookup alternateUkars {\012lookupflag UseMarkFilteringSet [uMatra-gujarati uuMatra-gujarati nukta-gujarati] ;\012	sub [ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ch_va-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati ddh_ddha-gujarati d_ga-gujarati d_gha-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_va-gujarati pha-gujarati ph_ra-gujarati s_pha-gujarati d_da-gujarati] [uMatra-gujarati uuMatra-gujarati]' by [uMatra-gujarati.alt uuMatra-gujarati.alt];\012	sub @baseGlyphs [uMatra-gujarati uuMatra-gujarati]' nukta-gujarati by [uMatra-gujarati.alt uuMatra-gujarati.alt];\012} alternateUkars ;\012\012lookup compositeMarksBelow {\012lookupflag 0;\012	sub rakar-gujarati uMatra-gujarati by rakar_uMatra-gujarati;\012	sub rakar-gujarati uuMatra-gujarati by rakar_uuMatra-gujarati;\012	sub rakar-gujarati rVocalicMatra-gujarati by rakar_rVocalicMatra-gujarati;\012	sub rakar-gujarati rrVocalicMatra-gujarati by rakar_rrVocalicMatra-gujarati;\012	sub rakar-gujarati halant-gujarati by rakar_halant-gujarati;\012	sub rakar-gujarati lVocalicMatra-gujarati by rakar_lVocalicMatra-gujarati;\012	sub rakar-gujarati llVocalicMatra-gujarati by rakar_llVocalicMatra-gujarati;\012} compositeMarksBelow ;\012\012script gjr2 ;\012lookup alternateUkars ;\012lookup compositeMarksBelow ;\012";
+code = "script gujr ;\012lookup alternateUkars {\012lookupflag UseMarkFilteringSet [uMatra-gujarati uuMatra-gujarati nukta-gujarati] ;\012	sub [ng_ka-gujarati ng_ga-gujarati ng_gha-gujarati ng_ma-gujarati ch_va-gujarati tt_va-gujarati tth_ttha-gujarati dd_dda-gujarati dd_ddha-gujarati ddh_ddha-gujarati d_ga-gujarati d_gha-gujarati d_dha-gujarati d_na-gujarati d_ba-gujarati d_bha-gujarati d_va-gujarati pha-gujarati ph_ra-gujarati s_pha-gujarati d_da-gujarati] [uMatra-gujarati uuMatra-gujarati]' by [uMatra-gujarati.alt uuMatra-gujarati.alt];\012	ignore sub 	ra-gujarati [uMatra-gujarati uuMatra-gujarati]' nukta-gujarati;\012	sub @baseGlyphs [uMatra-gujarati uuMatra-gujarati]' nukta-gujarati by [uMatra-gujarati.alt uuMatra-gujarati.alt];\012} alternateUkars ;\012\012lookup compositeMarksBelow {\012lookupflag 0;\012	sub rakar-gujarati uMatra-gujarati by rakar_uMatra-gujarati;\012	sub rakar-gujarati uuMatra-gujarati by rakar_uuMatra-gujarati;\012	sub rakar-gujarati rVocalicMatra-gujarati by rakar_rVocalicMatra-gujarati;\012	sub rakar-gujarati rrVocalicMatra-gujarati by rakar_rrVocalicMatra-gujarati;\012	sub rakar-gujarati halant-gujarati by rakar_halant-gujarati;\012	sub rakar-gujarati lVocalicMatra-gujarati by rakar_lVocalicMatra-gujarati;\012	sub rakar-gujarati llVocalicMatra-gujarati by rakar_llVocalicMatra-gujarati;\012} compositeMarksBelow ;\012\012script gjr2 ;\012lookup alternateUkars ;\012lookup compositeMarksBelow ;\012";
 name = blws;
 },
 {
@@ -45437,6 +45437,10 @@ layers = (
 {
 anchors = (
 {
+name = bottomleft;
+position = "{87, -93}";
+},
+{
 name = topright;
 position = "{211, 592}";
 }
@@ -45526,6 +45530,10 @@ width = 435;
 },
 {
 anchors = (
+{
+name = bottomleft;
+position = "{87, -93}";
+},
 {
 name = topright;
 position = "{212, 592}";
@@ -45617,6 +45625,10 @@ width = 422;
 {
 anchors = (
 {
+name = bottomleft;
+position = "{87, -93}";
+},
+{
 name = topright;
 position = "{259, 592}";
 }
@@ -45706,6 +45718,10 @@ width = 494;
 },
 {
 anchors = (
+{
+name = bottomleft;
+position = "{87, -93}";
+},
 {
 name = topright;
 position = "{238, 592}";
@@ -142935,5 +142951,5 @@ background
 );
 };
 versionMajor = 2;
-versionMinor = 103;
+versionMinor = 104;
 }
