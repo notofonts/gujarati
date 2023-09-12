@@ -4,7 +4,7 @@ DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
 "/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt",
-"/b-gujarati/bh-gujarati/m-gujarati/y-gujarati/r-gujarati/l-gujarati/ll-gujarati/v-gujarati/sh-gujarati/ss-gujarati/s-gujarati/h-gujarati/ha-gujarati/zh-gujarati"
+"/zh_ra_aaMatra-gujarati/b-gujarati/bh-gujarati/m-gujarati/y-gujarati/r-gujarati/l-gujarati/ll-gujarati/v-gujarati/sh-gujarati/ss-gujarati/s-gujarati/zha_aaMatra-gujarati/ha-gujarati"
 );
 classes = (
 {
@@ -627,7 +627,7 @@ code = "script gujr ;\012lookup alternateUkars {\012lookupflag UseMarkFilteringS
 name = blws;
 },
 {
-code = "script gujr ;\012\012lookup decomposeMatras_ja {\012	sub [ja-gujarati j_ra-gujarati zha-gujarati zh_ra-gujarati] [oCandraMatra-gujarati oMatra-gujarati auMatra-gujarati]' lookup decomposeMatras;\012} decomposeMatras_ja ;\012\012lookup postBase_consonantVowelLigatures {\012	sub ja-gujarati aaMatra-gujarati by ja_aaMatra-gujarati;\012	sub j_ra-gujarati aaMatra-gujarati by j_ra_aaMatra-gujarati;\012	sub ja-gujarati iiMatra-gujarati by ja_iiMatra-gujarati;\012	sub j_ra-gujarati iiMatra-gujarati by j_ra_iiMatra-gujarati;\012	sub zha-gujarati aaMatra-gujarati by zha_aaMatra-gujarati;\012	sub zh_ra-gujarati aaMatra-gujarati by zh_ra_aaMatra-gujarati;\012	sub zha-gujarati iiMatra-gujarati by zha_iiMatra-gujarati;\012	sub zh_ra-gujarati iiMatra-gujarati by zh_ra_iiMatra-gujarati;\012} postBase_consonantVowelLigatures ;\012\012lookup rukar {\012	sub da-gujarati rVocalicMatra-gujarati by da_rVocalicMatra-gujarati;\012	sub ha-gujarati rVocalicMatra-gujarati by ha_rVocalicMatra-gujarati;\012} rukar ;\012\012lookup belowBase_consonantVowelLigatures {\012	sub ra-gujarati uMatra-gujarati by ra_uMatra-gujarati;\012	sub ra-gujarati uuMatra-gujarati by ra_uuMatra-gujarati;\012} belowBase_consonantVowelLigatures ;\012\012script gjr2 ;\012lookup decomposeMatras_ja ;\012lookup postBase_consonantVowelLigatures ;\012lookup rukar ;\012lookup belowBase_consonantVowelLigatures ;\012";
+code = "script gujr ;\012\012lookup decomposeMatras_ja {\012	sub [ja-gujarati j_ra-gujarati zha-gujarati zh_ra-gujarati] [oCandraMatra-gujarati oMatra-gujarati auMatra-gujarati]' lookup decomposeMatras;\012} decomposeMatras_ja ;\012\012lookup postBase_consonantVowelLigatures {\012	lookupflag IgnoreMarks;\012	sub ja-gujarati aaMatra-gujarati by ja_aaMatra-gujarati;\012	sub j_ra-gujarati aaMatra-gujarati by j_ra_aaMatra-gujarati;\012	sub ja-gujarati iiMatra-gujarati by ja_iiMatra-gujarati;\012	sub j_ra-gujarati iiMatra-gujarati by j_ra_iiMatra-gujarati;\012	sub zha-gujarati aaMatra-gujarati by zha_aaMatra-gujarati;\012	sub zh_ra-gujarati aaMatra-gujarati by zh_ra_aaMatra-gujarati;\012	sub zha-gujarati iiMatra-gujarati by zha_iiMatra-gujarati;\012	sub zh_ra-gujarati iiMatra-gujarati by zh_ra_iiMatra-gujarati;\012} postBase_consonantVowelLigatures ;\012\012lookup rukar {\012	sub da-gujarati rVocalicMatra-gujarati by da_rVocalicMatra-gujarati;\012	sub ha-gujarati rVocalicMatra-gujarati by ha_rVocalicMatra-gujarati;\012} rukar ;\012\012lookup belowBase_consonantVowelLigatures {\012	sub ra-gujarati uMatra-gujarati by ra_uMatra-gujarati;\012	sub ra-gujarati uuMatra-gujarati by ra_uuMatra-gujarati;\012} belowBase_consonantVowelLigatures ;\012\012script gjr2 ;\012lookup decomposeMatras_ja ;\012lookup postBase_consonantVowelLigatures ;\012lookup rukar ;\012lookup belowBase_consonantVowelLigatures ;\012";
 name = psts;
 },
 {
@@ -42324,6 +42324,12 @@ subCategory = Other;
 glyphname = "zha_aaMatra-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{182, -192}";
+}
+);
 components = (
 {
 name = "ja_aaMatra-gujarati";
@@ -42386,6 +42392,12 @@ nodes = (
 width = 816;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{182, -230}";
+}
+);
 components = (
 {
 alignment = -1;
@@ -42449,6 +42461,12 @@ nodes = (
 width = 881;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{182, -230}";
+}
+);
 components = (
 {
 alignment = -1;
@@ -42512,6 +42530,12 @@ nodes = (
 width = 943;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{192, -230}";
+}
+);
 components = (
 {
 alignment = -1;
@@ -43784,6 +43808,12 @@ subCategory = Other;
 glyphname = "zh_ra_aaMatra-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{244, -197}";
+}
+);
 components = (
 {
 name = "j_ra_aaMatra-gujarati";
@@ -43846,6 +43876,12 @@ nodes = (
 width = 917;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{264, -227}";
+}
+);
 components = (
 {
 name = "j_ra_aaMatra-gujarati";
@@ -43908,6 +43944,12 @@ nodes = (
 width = 950;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{254, -227}";
+}
+);
 components = (
 {
 name = "j_ra_aaMatra-gujarati";
@@ -43970,6 +44012,12 @@ nodes = (
 width = 1001;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{264, -227}";
+}
+);
 components = (
 {
 name = "j_ra_aaMatra-gujarati";
