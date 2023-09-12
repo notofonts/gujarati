@@ -1,9 +1,10 @@
 {
-.appVersion = "3180";
+.appVersion = "3205";
 DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
-"/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt"
+"/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt",
+"/b-gujarati/bh-gujarati/m-gujarati/y-gujarati/r-gujarati/l-gujarati/ll-gujarati/v-gujarati/sh-gujarati/ss-gujarati/s-gujarati/h-gujarati/ha-gujarati/zh-gujarati"
 );
 classes = (
 {
@@ -47252,6 +47253,12 @@ subCategory = Halfform;
 glyphname = "gh-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{277, 0}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -47311,6 +47318,12 @@ nodes = (
 width = 366;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{247, 0}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -47370,6 +47383,12 @@ nodes = (
 width = 352;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{263, 0}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -47429,6 +47448,12 @@ nodes = (
 width = 349;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{268, 0}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -47560,6 +47585,12 @@ subCategory = Halfform;
 glyphname = "c-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{161, 49}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -47621,6 +47652,12 @@ nodes = (
 width = 386;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{169, 49}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -47682,6 +47719,12 @@ nodes = (
 width = 376;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{166, 49}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -47743,6 +47786,12 @@ nodes = (
 width = 413;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{164, 49}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -48211,6 +48260,12 @@ subCategory = Halfform;
 glyphname = "ny-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{192, 0}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -48270,6 +48325,12 @@ nodes = (
 width = 456;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{242, 34}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -48329,6 +48390,12 @@ nodes = (
 width = 448;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{210, 0}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -48388,6 +48455,12 @@ nodes = (
 width = 458;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{203, 0}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -48730,6 +48803,12 @@ subCategory = Halfform;
 glyphname = "nn-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{252, -82}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -48797,6 +48876,12 @@ nodes = (
 width = 578;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{251, -82}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -48864,6 +48949,12 @@ nodes = (
 width = 543;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{302, -82}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -48931,6 +49022,12 @@ nodes = (
 width = 655;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{282, -82}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -49007,6 +49104,12 @@ subCategory = Halfform;
 glyphname = "t-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{185, -105}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -49038,6 +49141,12 @@ nodes = (
 width = 318;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{186, -76}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -49069,6 +49178,12 @@ nodes = (
 width = 306;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{191, -105}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -49100,6 +49215,12 @@ nodes = (
 width = 338;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{189, -105}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -49141,6 +49262,12 @@ subCategory = Halfform;
 glyphname = "th-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{189, 44}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -49196,6 +49323,12 @@ nodes = (
 width = 367;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{226, 44}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -49251,6 +49384,12 @@ nodes = (
 width = 324;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{178, 44}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -49306,6 +49445,12 @@ nodes = (
 width = 361;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{183, 44}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -49435,6 +49580,12 @@ subCategory = Halfform;
 glyphname = "dh-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{209, 9}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -49488,6 +49639,12 @@ nodes = (
 width = 353;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{208, 9}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -49541,6 +49698,12 @@ nodes = (
 width = 344;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{203, 9}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -49594,6 +49757,12 @@ nodes = (
 width = 357;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 9}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -49657,6 +49826,12 @@ subCategory = Halfform;
 glyphname = "n-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{175, 83}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -49686,6 +49861,12 @@ nodes = (
 width = 293;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{174, 93}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -49715,6 +49896,12 @@ nodes = (
 width = 264;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 54}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -49744,6 +49931,12 @@ nodes = (
 width = 302;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{192, 66}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -49783,6 +49976,12 @@ subCategory = Halfform;
 glyphname = "p-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{209, 63}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -49825,6 +50024,12 @@ nodes = (
 width = 327;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{208, 63}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -49867,6 +50072,12 @@ nodes = (
 width = 314;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{297, 63}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -49909,6 +50120,12 @@ nodes = (
 width = 342;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{260, 63}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -50355,6 +50572,12 @@ subCategory = Halfform;
 glyphname = "b-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{267, 24}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -50410,6 +50633,12 @@ nodes = (
 width = 476;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{268, 24}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -50465,6 +50694,12 @@ nodes = (
 width = 466;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{256, 24}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -50520,6 +50755,12 @@ nodes = (
 width = 476;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{261, 24}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -50585,6 +50826,12 @@ subCategory = Halfform;
 glyphname = "bh-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{389, 49}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -50641,6 +50888,12 @@ nodes = (
 width = 525;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{390, 49}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -50697,6 +50950,12 @@ nodes = (
 width = 493;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{410, 49}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -50753,6 +51012,12 @@ nodes = (
 width = 557;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{402, 49}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -50819,6 +51084,12 @@ subCategory = Halfform;
 glyphname = "m-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{215, 29}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -50866,6 +51137,12 @@ nodes = (
 width = 356;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{178, 29}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -50913,6 +51190,12 @@ nodes = (
 width = 331;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{260, 0}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -50960,6 +51243,12 @@ nodes = (
 width = 356;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{241, 12}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -51017,6 +51306,12 @@ subCategory = Halfform;
 glyphname = "y-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 44}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -51066,6 +51361,12 @@ nodes = (
 width = 340;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{249, 44}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -51115,6 +51416,12 @@ nodes = (
 width = 340;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{213, 15}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -51164,6 +51471,12 @@ nodes = (
 width = 359;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{211, 27}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -51289,6 +51602,12 @@ subCategory = Halfform;
 glyphname = "l-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{174, -18}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -51332,6 +51651,12 @@ nodes = (
 width = 413;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{164, -18}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -51375,6 +51700,12 @@ nodes = (
 width = 381;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{184, -18}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -51418,6 +51749,12 @@ nodes = (
 width = 409;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{180, -18}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -51471,6 +51808,12 @@ subCategory = Halfform;
 glyphname = "ll-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{254, 29}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -51526,6 +51869,12 @@ nodes = (
 width = 467;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{255, 29}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -51581,6 +51930,12 @@ nodes = (
 width = 475;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{275, 29}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -51636,6 +51991,12 @@ nodes = (
 width = 510;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{267, 29}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -51701,6 +52062,12 @@ subCategory = Halfform;
 glyphname = "v-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 44}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -51741,6 +52108,12 @@ nodes = (
 width = 329;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 44}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -51781,6 +52154,12 @@ nodes = (
 width = 334;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 44}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -51821,6 +52200,12 @@ nodes = (
 width = 336;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{205, 44}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -51871,6 +52256,12 @@ subCategory = Halfform;
 glyphname = "sh-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{176, -44}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -51929,6 +52320,12 @@ nodes = (
 width = 470;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{147, -44}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -51987,6 +52384,12 @@ nodes = (
 width = 426;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{177, -44}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -52045,6 +52448,12 @@ nodes = (
 width = 491;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{177, -44}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -52113,6 +52522,12 @@ subCategory = Halfform;
 glyphname = "ss-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{209, 59}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -52168,6 +52583,12 @@ nodes = (
 width = 348;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{242, 63}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -52223,6 +52644,12 @@ nodes = (
 width = 358;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{318, 63}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -52278,6 +52705,12 @@ nodes = (
 width = 365;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{272, 62}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -52343,6 +52776,12 @@ subCategory = Halfform;
 glyphname = "s-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{135, 9}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -52420,6 +52859,12 @@ nodes = (
 width = 434;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{136, 9}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -52497,6 +52942,12 @@ nodes = (
 width = 441;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{157, 9}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -52574,6 +53025,12 @@ nodes = (
 width = 462;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{148, 9}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -52661,6 +53118,12 @@ subCategory = Halfform;
 glyphname = "h-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{156, -159}";
+}
+);
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
 paths = (
 {
@@ -52717,6 +53180,12 @@ nodes = (
 width = 437;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{166, -155}";
+}
+);
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
 paths = (
 {
@@ -52773,6 +53242,12 @@ nodes = (
 width = 425;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{189, -227}";
+}
+);
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
 paths = (
 {
@@ -52829,6 +53304,12 @@ nodes = (
 width = 518;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{175, -221}";
+}
+);
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
 paths = (
 {
@@ -52895,6 +53376,12 @@ subCategory = Halfform;
 glyphname = "zh-gujarati";
 layers = (
 {
+anchors = (
+{
+name = bottomleft;
+position = "{155, -210}";
+}
+);
 components = (
 {
 name = "j-gujarati";
@@ -52957,6 +53444,12 @@ nodes = (
 width = 651;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{155, -210}";
+}
+);
 components = (
 {
 name = "j-gujarati";
@@ -53019,6 +53512,12 @@ nodes = (
 width = 672;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{155, -210}";
+}
+);
 components = (
 {
 name = "j-gujarati";
@@ -53081,6 +53580,12 @@ nodes = (
 width = 699;
 },
 {
+anchors = (
+{
+name = bottomleft;
+position = "{155, -210}";
+}
+);
 components = (
 {
 name = "j-gujarati";
