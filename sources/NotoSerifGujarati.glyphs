@@ -4,7 +4,7 @@ DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
 "/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt",
-"/uni0AFD_uni0AFC"
+"/nukta-gujarati"
 );
 classes = (
 {
@@ -19715,6 +19715,10 @@ anchors = (
 {
 name = _bottomleft;
 position = "{0, 0}";
+},
+{
+name = bottom;
+position = "{0, -57}";
 }
 );
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
@@ -19744,6 +19748,10 @@ anchors = (
 {
 name = _bottomleft;
 position = "{0, 0}";
+},
+{
+name = bottom;
+position = "{0, -33}";
 }
 );
 layerId = "07EDFDFD-5D57-4B5D-B56C-4C47BCD544BF";
@@ -19773,6 +19781,10 @@ anchors = (
 {
 name = _bottomleft;
 position = "{0, 0}";
+},
+{
+name = bottom;
+position = "{0, -71}";
 }
 );
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
@@ -19802,6 +19814,10 @@ anchors = (
 {
 name = _bottomleft;
 position = "{0, 0}";
+},
+{
+name = bottom;
+position = "{0, -65}";
 }
 );
 layerId = "419046E3-5D27-4998-A2CB-16719C068B75";
