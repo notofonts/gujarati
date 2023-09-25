@@ -25,15 +25,15 @@ Noto Sans Gujarati UI: 954
 Noto Sans Gujarati UI SemiBold: 954
 Noto Sans Gujarati UI Thin: 954 [code: sTypoAscender-mismatch]
 * 🔥 **FAIL** usWinAscent is not the same across the family:
-Noto Sans Gujarati Black: 896
-Noto Sans Gujarati Bold: 896
-Noto Sans Gujarati ExtraBold: 896
-Noto Sans Gujarati ExtraLight: 896
-Noto Sans Gujarati Light: 896
-Noto Sans Gujarati Medium: 896
-Noto Sans Gujarati: 896
-Noto Sans Gujarati SemiBold: 896
-Noto Sans Gujarati Thin: 896
+Noto Sans Gujarati Black: 1076
+Noto Sans Gujarati Bold: 1076
+Noto Sans Gujarati ExtraBold: 1076
+Noto Sans Gujarati ExtraLight: 1076
+Noto Sans Gujarati Light: 1076
+Noto Sans Gujarati Medium: 1076
+Noto Sans Gujarati: 1076
+Noto Sans Gujarati SemiBold: 1076
+Noto Sans Gujarati Thin: 1076
 Noto Sans Gujarati UI Black: 954
 Noto Sans Gujarati UI Bold: 954
 Noto Sans Gujarati UI ExtraBold: 954
@@ -88,158 +88,10 @@ Noto Sans Gujarati UI Thin: 954 [code: ascent-mismatch]
   - NotoSansGujaratiUI-Regular.ttf (nameID 1)
   - NotoSansGujaratiUI-SemiBold.ttf (nameID 16)
   - NotoSansGujaratiUI-Thin.ttf (nameID 16) [code: inconsistent-family-name]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujarati-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansGujarati-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -249,25 +101,25 @@ Noto Sans Gujarati UI Thin: 954 [code: ascent-mismatch]
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -720,6 +572,7 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	* uanusvaragujr
 	* ugujr
 	* uni0AF1
+	* uni20B9.gujr
 	* uniA837
 	* uuanusvaragujr
 	* uugujr
@@ -763,6 +616,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -801,8 +658,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -851,12 +706,23 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 586 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 318:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
 
 	* ampersand (U+0026): X=391.5,Y=-2.0 (should be at baseline 0?)
+
+	* three (U+0033): X=129.0,Y=0.5 (should be at baseline 0?)
 
 	* C (U+0043): X=490.5,Y=-0.5 (should be at baseline 0?)
 
@@ -1088,159 +954,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[12] NotoSansGujarati-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[10] NotoSansGujarati-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -1250,25 +968,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -1631,6 +1349,7 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	* uanusvaragujr
 	* ugujr
 	* uni0AF1
+	* uni20B9.gujr
 	* uniA837
 	* uuanusvaragujr
 	* uugujr
@@ -1656,6 +1375,10 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -1694,8 +1417,6 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -1744,6 +1465,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -1787,159 +1517,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujarati-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[12] NotoSansGujarati-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -1949,25 +1531,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -2370,6 +1952,7 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	* uanusvaragujr
 	* ugujr
 	* uni0AF1
+	* uni20B9.gujr
 	* uniA837
 	* uuanusvaragujr
 	* uugujr
@@ -2402,6 +1985,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -2440,8 +2027,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -2490,12 +2075,29 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 578 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 320:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
 
 	* ampersand (U+0026): X=275.5,Y=591.5 (should be at cap-height 592?)
+
+	* comma (U+002C): X=57.5,Y=2.0 (should be at baseline 0?)
+
+	* six (U+0036): X=403.0,Y=590.0 (should be at cap-height 592?)
+
+	* semicolon (U+003B): X=57.5,Y=2.0 (should be at baseline 0?)
+
+	* question (U+003F): X=231.0,Y=590.0 (should be at cap-height 592?)
 
 	* C (U+0043): X=485.5,Y=-1.0 (should be at baseline 0?)
 
@@ -2544,6 +2146,10 @@ The following glyphs do not have the recommended number of contours:
 	* ecircumflex (U+00EA): X=441.5,Y=-0.5 (should be at baseline 0?)
 
 	* edieresis (U+00EB): X=441.5,Y=-0.5 (should be at baseline 0?)
+
+	* divide (U+00F7): X=238.0,Y=593.0 (should be at cap-height 592?)
+
+	* divide (U+00F7): X=338.5,Y=593.0 (should be at cap-height 592?)
 
 	* Cacute (U+0106): X=485.5,Y=-1.0 (should be at baseline 0?)
 
@@ -2713,159 +2319,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[13] NotoSansGujarati-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[11] NotoSansGujarati-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -2875,25 +2333,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -2912,6 +2370,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -2950,8 +2412,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -3000,6 +2460,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 570 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -3015,159 +2484,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[13] NotoSansGujarati-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[11] NotoSansGujarati-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -3177,25 +2498,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -3226,6 +2547,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -3264,8 +2589,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -3314,6 +2637,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 571 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -3329,159 +2661,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[13] NotoSansGujarati-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[10] NotoSansGujarati-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -3491,25 +2675,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -3803,6 +2987,7 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	* tthayastemgujr
 	* twogujr
 	* uni0AF1
+	* uni20B9.gujr
 	* varagujr
 	* varanuktagujr
 	* varanuktaprehalfgujr
@@ -3828,6 +3013,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -3866,8 +3055,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -3916,206 +3103,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
-</div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
 
 
-* ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
 
-	* at (U+0040): X=293.5,Y=594.0 (should be at cap-height 592?)
-
-	* at (U+0040): X=552.5,Y=-0.5 (should be at baseline 0?)
-
-	* at (U+0040): X=169.5,Y=590.5 (should be at cap-height 592?)
-
-	* C (U+0043): X=561.0,Y=590.0 (should be at cap-height 592?)
-
-	* G (U+0047): X=534.5,Y=-0.5 (should be at baseline 0?)
-
-	* G (U+0047): X=605.0,Y=591.0 (should be at cap-height 592?)
-
-	* P (U+0050): X=412.0,Y=591.5 (should be at cap-height 592?)
-
-	* S (U+0053): X=137.5,Y=-0.5 (should be at baseline 0?)
-
-	* a (U+0061): X=188.5,Y=535.5 (should be at x-height 536?)
-
-	* c (U+0063): X=383.0,Y=-2.0 (should be at baseline 0?)
-
-	* e (U+0065): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* s (U+0073): X=124.5,Y=-1.5 (should be at baseline 0?)
-
-	* w (U+0077): X=278.0,Y=1.0 (should be at baseline 0?)
-
-	* w (U+0077): X=160.0,Y=1.0 (should be at baseline 0?)
-
-	* w (U+0077): X=645.0,Y=1.0 (should be at baseline 0?)
-
-	* w (U+0077): X=524.0,Y=1.0 (should be at baseline 0?)
-
-	* Ccedilla (U+00C7): X=561.0,Y=590.0 (should be at cap-height 592?)
-
-	* Thorn (U+00DE): X=203.0,Y=594.0 (should be at cap-height 592?)
-
-	* Thorn (U+00DE): X=296.0,Y=594.0 (should be at cap-height 592?)
-
-	* germandbls (U+00DF): X=332.0,Y=-1.5 (should be at baseline 0?)
-
-	* ae (U+00E6): X=724.5,Y=-1.0 (should be at baseline 0?)
-
-	* ccedilla (U+00E7): X=383.0,Y=-2.0 (should be at baseline 0?)
-
-	* egrave (U+00E8): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* eacute (U+00E9): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* ecircumflex (U+00EA): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* edieresis (U+00EB): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* Cacute (U+0106): X=561.0,Y=590.0 (should be at cap-height 592?)
-
-	* cacute (U+0107): X=383.0,Y=-2.0 (should be at baseline 0?)
-
-	* Cdotaccent (U+010A): X=561.0,Y=590.0 (should be at cap-height 592?)
-
-	* cdotaccent (U+010B): X=383.0,Y=-2.0 (should be at baseline 0?)
-
-	* Ccaron (U+010C): X=561.0,Y=590.0 (should be at cap-height 592?)
-
-	* ccaron (U+010D): X=383.0,Y=-2.0 (should be at baseline 0?)
-
-	* emacron (U+0113): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* edotaccent (U+0117): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* ecaron (U+011B): X=415.0,Y=-1.0 (should be at baseline 0?)
-
-	* Gbreve (U+011E): X=534.5,Y=-0.5 (should be at baseline 0?)
-
-	* Gbreve (U+011E): X=605.0,Y=591.0 (should be at cap-height 592?)
-
-	* Gdotaccent (U+0120): X=534.5,Y=-0.5 (should be at baseline 0?)
-
-	* Gdotaccent (U+0120): X=605.0,Y=591.0 (should be at cap-height 592?)
-
-	* Gcommaaccent (U+0122): X=534.5,Y=-0.5 (should be at baseline 0?)
-
-	* Gcommaaccent (U+0122): X=605.0,Y=591.0 (should be at cap-height 592?)
-
-	* Eng (U+014A): X=583.0,Y=1.0 (should be at baseline 0?)
-
-	* oe (U+0153): X=798.5,Y=-1.0 (should be at baseline 0?)
-
-	* Sacute (U+015A): X=137.5,Y=-0.5 (should be at baseline 0?)
-
-	* sacute (U+015B): X=124.5,Y=-1.5 (should be at baseline 0?)
-
-	* Scedilla (U+015E): X=137.5,Y=-0.5 (should be at baseline 0?)
-
-	* scedilla (U+015F): X=124.5,Y=-1.5 (should be at baseline 0?)
-
-	* Scaron (U+0160): X=137.5,Y=-0.5 (should be at baseline 0?)
-
-	* scaron (U+0161): X=124.5,Y=-1.5 (should be at baseline 0?)
-
-	* wcircumflex (U+0175): X=278.0,Y=1.0 (should be at baseline 0?)
-
-	* wcircumflex (U+0175): X=160.0,Y=1.0 (should be at baseline 0?)
-
-	* wcircumflex (U+0175): X=645.0,Y=1.0 (should be at baseline 0?)
-
-	* wcircumflex (U+0175): X=524.0,Y=1.0 (should be at baseline 0?)
-
-	* Scommaaccent (U+0218): X=137.5,Y=-0.5 (should be at baseline 0?)
-
-	* scommaaccent (U+0219): X=124.5,Y=-1.5 (should be at baseline 0?)
-
-	* ugujr (U+0A89): X=324.5,Y=593.0 (should be at cap-height 592?)
-
-	* uugujr (U+0A8A): X=324.5,Y=593.0 (should be at cap-height 592?)
-
-	* lvocalicgujr (U+0A8C): X=647.5,Y=1.0 (should be at baseline 0?)
-
-	* ngagujr (U+0A99): X=400.0,Y=591.0 (should be at cap-height 592?)
-
-	* jhagujr (U+0A9D): X=289.5,Y=0.5 (should be at baseline 0?)
-
-	* tthagujr (U+0AA0): X=425.0,Y=591.0 (should be at cap-height 592?)
-
-	* ddagujr (U+0AA1): X=400.0,Y=591.0 (should be at cap-height 592?)
-
-	* dagujr (U+0AA6): X=395.0,Y=2.0 (should be at baseline 0?)
-
-	* bhagujr (U+0AAD): X=342.0,Y=590.5 (should be at cap-height 592?)
-
-	* yagujr (U+0AAF): X=519.0,Y=593.0 (should be at cap-height 592?)
-
-	* ragujr (U+0AB0): X=107.5,Y=593.5 (should be at cap-height 592?)
-
-	* llagujr (U+0AB3): X=510.0,Y=593.0 (should be at cap-height 592?)
-
-	* ssagujr (U+0AB7): X=15.0,Y=593.0 (should be at cap-height 592?)
-
-	* ssagujr (U+0AB7): X=25.0,Y=593.0 (should be at cap-height 592?)
-
-	* sagujr (U+0AB8): X=105.5,Y=593.5 (should be at cap-height 592?)
-
-	* hagujr (U+0AB9): X=537.0,Y=591.0 (should be at cap-height 592?)
-
-	* hagujr (U+0AB9): X=525.0,Y=0.5 (should be at baseline 0?)
-
-	* aavowelsigngujr (U+0ABE): X=182.0,Y=593.0 (should be at cap-height 592?)
-
-	* ocandravowelsigngujr (U+0AC9): X=182.0,Y=593.0 (should be at cap-height 592?)
-
-	* ovowelsigngujr (U+0ACB): X=182.0,Y=593.0 (should be at cap-height 592?)
-
-	* auvowelsigngujr (U+0ACC): X=182.0,Y=593.0 (should be at cap-height 592?)
-
-	* omgujr (U+0AD0): X=168.0,Y=593.5 (should be at cap-height 592?)
-
-	* onegujr (U+0AE7): X=320.0,Y=593.5 (should be at cap-height 592?)
-
-	* twogujr (U+0AE8): X=154.5,Y=593.0 (should be at cap-height 592?)
-
-	* threegujr (U+0AE9): X=189.5,Y=593.5 (should be at cap-height 592?)
-
-	* ninegujr (U+0AEF): X=449.5,Y=-1.0 (should be at baseline 0?)
-
-	* uni0AF1 (U+0AF1): X=123.5,Y=593.5 (should be at cap-height 592?)
-
-	* uni0AF1 (U+0AF1): X=253.0,Y=-2.0 (should be at baseline 0?)
-
-	* wgrave (U+1E81): X=278.0,Y=1.0 (should be at baseline 0?)
-
-	* wgrave (U+1E81): X=160.0,Y=1.0 (should be at baseline 0?)
-
-	* wgrave (U+1E81): X=645.0,Y=1.0 (should be at baseline 0?)
-
-	* wgrave (U+1E81): X=524.0,Y=1.0 (should be at baseline 0?)
-
-	* wacute (U+1E83): X=278.0,Y=1.0 (should be at baseline 0?)
-
-	* wacute (U+1E83): X=160.0,Y=1.0 (should be at baseline 0?)
-
-	* wacute (U+1E83): X=645.0,Y=1.0 (should be at baseline 0?)
-
-	* wacute (U+1E83): X=524.0,Y=1.0 (should be at baseline 0?)
-
-	* wdieresis (U+1E85): X=278.0,Y=1.0 (should be at baseline 0?)
-
-	* wdieresis (U+1E85): X=160.0,Y=1.0 (should be at baseline 0?)
-
-	* wdieresis (U+1E85): X=645.0,Y=1.0 (should be at baseline 0?)
-
-	* wdieresis (U+1E85): X=524.0,Y=1.0 (should be at baseline 0?)
-
-	* Germandbls (U+1E9E): X=339.0,Y=-1.5 (should be at baseline 0?)
-
-	* euro (U+20AC): X=520.0,Y=593.0 (should be at cap-height 592?)
-
-	* euro (U+20AC): X=470.0,Y=-1.5 (should be at baseline 0?) [code: found-misalignments]
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Shaping Checks>.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
 
 
@@ -4125,159 +3121,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[11] NotoSansGujarati-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[9] NotoSansGujarati-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -4287,25 +3135,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -4511,6 +3359,10 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -4549,8 +3401,6 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -4599,6 +3449,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Shaping Checks>.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
 
 
@@ -4608,159 +3467,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujarati-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[12] NotoSansGujarati-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -4770,25 +3481,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
@@ -5113,6 +3824,7 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	* tthayastemgujr
 	* twogujr
 	* uni0AF1
+	* uni20B9.gujr
 	* uniA837
 	* varagujr
 	* varanuktagujr
@@ -5143,6 +3855,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -5181,8 +3897,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -5231,10 +3945,25 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+
+	* two (U+0032): X=353.0,Y=592.5 (should be at cap-height 592?)
+
+	* three (U+0033): X=135.0,Y=-0.5 (should be at baseline 0?)
+
+	* nine (U+0039): X=90.0,Y=-2.0 (should be at baseline 0?)
 
 	* at (U+0040): X=168.0,Y=590.5 (should be at cap-height 592?)
 
@@ -5243,6 +3972,8 @@ The following glyphs do not have the recommended number of contours:
 	* G (U+0047): X=531.0,Y=0.5 (should be at baseline 0?)
 
 	* S (U+0053): X=210.0,Y=592.5 (should be at cap-height 592?)
+
+	* asciicircum (U+005E): X=275.0,Y=590.0 (should be at cap-height 592?)
 
 	* c (U+0063): X=388.5,Y=-1.0 (should be at baseline 0?)
 
@@ -5442,159 +4173,11 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[13] NotoSansGujarati-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[11] NotoSansGujarati-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -5604,25 +4187,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -5636,6 +4219,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -5674,8 +4261,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -5724,6 +4309,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 570 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -5734,6 +4328,10 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
+
+	* exclam (U+0021): L<<100.0,174.0>--<98.0,714.0>>
+
+	* exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>>
 
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>>
 
@@ -5747,144 +4345,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujaratiUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[13] NotoSansGujaratiUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -5892,14 +4354,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -5909,25 +4363,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -5941,6 +4395,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -5979,8 +4437,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -6029,6 +4485,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 586 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 318:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -6040,6 +4505,8 @@ The following glyphs do not have the recommended number of contours:
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
 
 	* ampersand (U+0026): X=391.5,Y=-2.0 (should be at baseline 0?)
+
+	* three (U+0033): X=129.0,Y=0.5 (should be at baseline 0?)
 
 	* C (U+0043): X=490.5,Y=-0.5 (should be at baseline 0?)
 
@@ -6207,144 +4674,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[12] NotoSansGujaratiUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[11] NotoSansGujaratiUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -6352,14 +4683,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -6369,31 +4692,35 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -6432,8 +4759,6 @@ Or you can add the above codepoints to one of the subsets supported by the font:
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -6482,6 +4807,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -6530,144 +4864,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujaratiUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[13] NotoSansGujaratiUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -6675,14 +4873,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -6692,25 +4882,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -6724,6 +4914,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -6762,8 +4956,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -6812,6 +5004,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 578 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 320:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -6823,6 +5024,14 @@ The following glyphs do not have the recommended number of contours:
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
 
 	* ampersand (U+0026): X=275.5,Y=591.5 (should be at cap-height 592?)
+
+	* comma (U+002C): X=57.5,Y=2.0 (should be at baseline 0?)
+
+	* six (U+0036): X=403.0,Y=590.0 (should be at cap-height 592?)
+
+	* semicolon (U+003B): X=57.5,Y=2.0 (should be at baseline 0?)
+
+	* question (U+003F): X=231.0,Y=590.0 (should be at cap-height 592?)
 
 	* C (U+0043): X=485.5,Y=-1.0 (should be at baseline 0?)
 
@@ -6871,6 +5080,10 @@ The following glyphs do not have the recommended number of contours:
 	* ecircumflex (U+00EA): X=441.5,Y=-0.5 (should be at baseline 0?)
 
 	* edieresis (U+00EB): X=441.5,Y=-0.5 (should be at baseline 0?)
+
+	* divide (U+00F7): X=238.0,Y=593.0 (should be at cap-height 592?)
+
+	* divide (U+00F7): X=338.5,Y=593.0 (should be at cap-height 592?)
 
 	* Cacute (U+0106): X=485.5,Y=-1.0 (should be at baseline 0?)
 
@@ -7018,144 +5231,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujaratiUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[13] NotoSansGujaratiUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -7163,14 +5240,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -7180,25 +5249,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -7212,6 +5281,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -7250,8 +5323,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -7300,6 +5371,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 570 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -7309,6 +5389,34 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+
+	* exclam (U+0021): X=141.5,Y=1.5 (should be at baseline 0?)
+
+	* exclam (U+0021): X=90.0,Y=1.5 (should be at baseline 0?)
+
+	* comma (U+002C): X=72.0,Y=0.5 (should be at baseline 0?)
+
+	* period (U+002E): X=141.5,Y=1.5 (should be at baseline 0?)
+
+	* period (U+002E): X=90.0,Y=1.5 (should be at baseline 0?)
+
+	* three (U+0033): X=136.5,Y=1.5 (should be at baseline 0?)
+
+	* five (U+0035): X=149.5,Y=1.5 (should be at baseline 0?)
+
+	* nine (U+0039): X=95.0,Y=1.0 (should be at baseline 0?)
+
+	* colon (U+003A): X=141.5,Y=1.5 (should be at baseline 0?)
+
+	* colon (U+003A): X=90.0,Y=1.5 (should be at baseline 0?)
+
+	* less (U+003C): X=515.0,Y=590.0 (should be at cap-height 592?)
+
+	* greater (U+003E): X=55.0,Y=590.0 (should be at cap-height 592?)
+
+	* question (U+003F): X=189.0,Y=1.5 (should be at baseline 0?)
+
+	* question (U+003F): X=137.5,Y=1.5 (should be at baseline 0?)
 
 	* C (U+0043): X=491.0,Y=-1.5 (should be at baseline 0?)
 
@@ -7466,6 +5574,18 @@ The following glyphs do not have the recommended number of contours:
 
 	* Germandbls (U+1E9E): X=305.0,Y=1.5 (should be at baseline 0?)
 
+	* ellipsis (U+2026): X=141.5,Y=1.5 (should be at baseline 0?)
+
+	* ellipsis (U+2026): X=90.0,Y=1.5 (should be at baseline 0?)
+
+	* ellipsis (U+2026): X=374.5,Y=1.5 (should be at baseline 0?)
+
+	* ellipsis (U+2026): X=323.0,Y=1.5 (should be at baseline 0?)
+
+	* ellipsis (U+2026): X=607.5,Y=1.5 (should be at baseline 0?)
+
+	* ellipsis (U+2026): X=556.0,Y=1.5 (should be at baseline 0?)
+
 	* euro (U+20AC): X=471.5,Y=-1.5 (should be at baseline 0?) [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
@@ -7482,144 +5602,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujaratiUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[13] NotoSansGujaratiUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -7627,14 +5611,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -7644,25 +5620,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -7676,6 +5652,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -7714,8 +5694,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -7764,6 +5742,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 571 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -7773,6 +5760,14 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+
+	* five (U+0035): X=147.5,Y=1.0 (should be at baseline 0?)
+
+	* six (U+0036): X=185.0,Y=590.0 (should be at cap-height 592?)
+
+	* nine (U+0039): X=98.0,Y=1.0 (should be at baseline 0?)
+
+	* semicolon (U+003B): X=66.5,Y=-1.5 (should be at baseline 0?)
 
 	* C (U+0043): X=491.0,Y=-2.0 (should be at baseline 0?)
 
@@ -7954,144 +5949,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[12] NotoSansGujaratiUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[11] NotoSansGujaratiUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -8099,14 +5958,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -8116,25 +5967,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -8148,6 +5999,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -8186,8 +6041,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -8236,6 +6089,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -8250,144 +6112,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[12] NotoSansGujaratiUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[11] NotoSansGujaratiUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -8395,14 +6121,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -8412,25 +6130,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -8444,6 +6162,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -8482,8 +6204,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -8532,6 +6252,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -8546,144 +6275,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujaratiUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[13] NotoSansGujaratiUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -8691,14 +6284,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -8708,25 +6293,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -8740,6 +6325,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -8778,8 +6367,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -8828,6 +6415,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -8838,6 +6434,12 @@ The following glyphs do not have the recommended number of contours:
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
 
+	* two (U+0032): X=353.0,Y=592.5 (should be at cap-height 592?)
+
+	* three (U+0033): X=135.0,Y=-0.5 (should be at baseline 0?)
+
+	* nine (U+0039): X=90.0,Y=-2.0 (should be at baseline 0?)
+
 	* at (U+0040): X=168.0,Y=590.5 (should be at cap-height 592?)
 
 	* C (U+0043): X=485.5,Y=-2.0 (should be at baseline 0?)
@@ -8845,6 +6447,8 @@ The following glyphs do not have the recommended number of contours:
 	* G (U+0047): X=531.0,Y=0.5 (should be at baseline 0?)
 
 	* S (U+0053): X=210.0,Y=592.5 (should be at cap-height 592?)
+
+	* asciicircum (U+005E): X=275.0,Y=590.0 (should be at cap-height 592?)
 
 	* c (U+0063): X=388.5,Y=-1.0 (should be at baseline 0?)
 
@@ -9038,144 +6642,8 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
-</div></details><br></div></details><details><summary><b>[14] NotoSansGujaratiUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0030 (DIGIT ZERO)
-
-
-	- 0x0031 (DIGIT ONE)
-
-
-	- 0x0032 (DIGIT TWO)
-
-
-	- 0x0033 (DIGIT THREE)
-
-
-	- 0x0034 (DIGIT FOUR)
-
-
-	- 0x0035 (DIGIT FIVE)
-
-
-	- 0x0036 (DIGIT SIX)
-
-
-	- 0x0037 (DIGIT SEVEN)
-
-
-	- 0x0038 (DIGIT EIGHT)
-
-
-	- 0x0039 (DIGIT NINE)
-
-
-	- 0x00A0 (NO-BREAK SPACE)
-
-
-	- 0x003A (COLON)
-
-
-	- 0x2026 (HORIZONTAL ELLIPSIS)
-
-
-	- 0x0021 (EXCLAMATION MARK)
-
-
-	- 0x002A (ASTERISK)
-
-
-	- 0x0023 (NUMBER SIGN)
-
-
-	- 0x002F (SOLIDUS)
-
-
-	- 0x005C (REVERSE SOLIDUS)
-
-
-	- 0x002D (HYPHEN-MINUS)
-
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-
-	- 0x007B (LEFT CURLY BRACKET)
-
-
-	- 0x007D (RIGHT CURLY BRACKET)
-
-
-	- 0x005B (LEFT SQUARE BRACKET)
-
-
-	- 0x005D (RIGHT SQUARE BRACKET)
-
-
-	- 0x201C (LEFT DOUBLE QUOTATION MARK)
-
-
-	- 0x0022 (QUOTATION MARK)
-
-
-	- 0x0027 (APOSTROPHE)
-
-
-	- 0x007C (VERTICAL LINE)
-
-
-	- 0x002B (PLUS SIGN)
-
-
-	- 0x00D7 (MULTIPLICATION SIGN)
-
-
-	- 0x00F7 (DIVISION SIGN)
-
-
-	- 0x003D (EQUALS SIGN)
-
-
-	- 0x003E (GREATER-THAN SIGN)
-
-
-	- 0x003C (LESS-THAN SIGN)
-
-
-	- 0x0025 (PERCENT SIGN)
-
-
-	- 0x002C (COMMA)
-
-
-	- 0x003B (SEMICOLON)
-
-
-	- 0x2013 (EN DASH)
-
-
-	- 0x2014 (EM DASH)
-
-
-	- 0x005F (LOW LINE)
-
-
-	- 0x2212 (MINUS SIGN)
-
-
-	- 0x007E (TILDE)
-
-
-	- 0x005E (CIRCUMFLEX ACCENT)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
+</div></details><br></div></details><details><summary><b>[13] NotoSansGujaratiUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
@@ -9183,14 +6651,6 @@ Your font does *not* cover the following languages that require the soft-dotted 
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1076, but got 954 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure indic fonts have the Indian Rupee Sign glyph. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/rupee">com.google.fonts/check/rupee</a>)</summary><div>
-
-
-* 🔥 **FAIL** Please add a glyph for Indian Rupee Sign (₹) at codepoint U+20B9. [code: missing-rupee]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -9200,25 +6660,25 @@ Your font does *not* cover the following languages that require the soft-dotted 
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi
+ * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
  * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
  * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
  * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee
- * U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh
- * U+0307 COMBINING DOT ABOVE: try adding one of: math, canadian-aboriginal, tifinagh, tai-le, syriac, malayalam, coptic, old-permic
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math
+ * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, old-permic, tifinagh, math, tai-le, canadian-aboriginal, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
- * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee
- * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
+ * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
+ * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
  * U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: devanagari, tirhuta, grantha, telugu, sharada
- * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, tirhuta, grantha, telugu
- * U+2010 HYPHEN: try adding one of: sora-sompeng, kharoshthi, kaithi, syloti-nagri, yi, sundanese, kayah-li, cham, lisu, coptic
+ * U+0951 DEVANAGARI STRESS SIGN UDATTA: try adding one of: grantha, devanagari, sharada, tirhuta, telugu
+ * U+0952 DEVANAGARI STRESS SIGN ANUDATTA: try adding one of: devanagari, telugu, tirhuta, grantha
+ * U+2010 HYPHEN: try adding one of: yi, kaithi, kayah-li, cham, lisu, sora-sompeng, kharoshthi, coptic, syloti-nagri, sundanese
 
 Or you can add the above codepoints to one of the subsets supported by the font: `gujarati`, `latin`, `latin-ext` [code: unreachable-subsetting]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -9232,6 +6692,10 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
+</div></details><details><summary>⚠ <b>WARN:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
+
+
+* ⚠ **WARN** Glyph 0x00A0 is called "nbspace": Change to "uni00A0" [code: not-recommended-00a0]
 </div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
 
 
@@ -9270,8 +6734,6 @@ Please take a look at the conversation at https://github.com/fonttools/fontbaker
 	- pharanuktauuvowelgujr
 
 	- pharanuktauvowelgujr
-
-	- question
 
 	- raragujr
 
@@ -9320,6 +6782,15 @@ The following glyphs do not have the recommended number of contours:
 
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
  [code: contour-count]
+</div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
+
+
+* ⚠ **WARN** The most common width is 570 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:
+
+Width = 322:
+minus
+ [code: width-outliers]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
 
@@ -9336,6 +6807,10 @@ The following glyphs do not have the recommended number of contours:
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
+	* exclam (U+0021): L<<100.0,174.0>--<98.0,714.0>>
+
+	* exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>>
+
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>>
 
 	* exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
@@ -9348,15 +6823,15 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]
+Your font does *not* cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]
 </div></details><br></div></details>
 
 ### Summary
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 92 | 147 | 2153 | 110 | 1691 | 0 |
-| 0% | 2% | 4% | 51% | 3% | 40% | 0% |
+| 0 | 29 | 182 | 2117 | 110 | 1755 | 0 |
+| 0% | 1% | 4% | 50% | 3% | 42% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
