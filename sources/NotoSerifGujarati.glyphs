@@ -1,10 +1,10 @@
 {
-.appVersion = "3205";
+.appVersion = "3221";
 DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
 "/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt",
-"/nukta-gujarati"
+"/nukta-gujarati/space/rVocalicMatra-gujarati"
 );
 classes = (
 {
@@ -19719,6 +19719,10 @@ position = "{0, 0}";
 {
 name = bottom;
 position = "{0, -57}";
+},
+{
+name = bottomright;
+position = "{0, -57}";
 }
 );
 layerId = "ACBF538B-D069-4B9F-8DD8-08CC286AACA9";
@@ -19751,6 +19755,10 @@ position = "{0, 0}";
 },
 {
 name = bottom;
+position = "{0, -33}";
+},
+{
+name = bottomright;
 position = "{0, -33}";
 }
 );
@@ -19785,6 +19793,10 @@ position = "{0, 0}";
 {
 name = bottom;
 position = "{0, -71}";
+},
+{
+name = bottomright;
+position = "{0, -71}";
 }
 );
 layerId = "939FCF6B-2DD7-48E5-8D7B-BBFD097386C5";
@@ -19817,6 +19829,10 @@ position = "{0, 0}";
 },
 {
 name = bottom;
+position = "{0, -65}";
+},
+{
+name = bottomright;
 position = "{0, -65}";
 }
 );
