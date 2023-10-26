@@ -4,7 +4,7 @@ DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
 "/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt",
-"/nukta-gujarati/space/rVocalicMatra-gujarati"
+"/k_ss_r-gujarati"
 );
 classes = (
 {
@@ -562,7 +562,7 @@ value = "Noto is a trademark of Google LLC.";
 },
 {
 name = versionString;
-value = "Version 2.105";
+value = "Version 2.106";
 },
 {
 name = Axes;
@@ -120388,10 +120388,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"620 192 LINE",
 "605 214 LINE",
 "456 141 LINE",
-"471 117 LINE",
-"620 192 LINE"
+"471 117 LINE"
 );
 }
 );
@@ -120480,10 +120480,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"736 181 LINE",
 "667 271 LINE",
 "462 175 LINE",
-"526 74 LINE",
-"736 181 LINE"
+"526 74 LINE"
 );
 }
 );
@@ -120572,10 +120572,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"636 143 LINE",
 "671 231 LINE",
 "534 204 LINE",
-"495 110 LINE",
-"636 143 LINE"
+"495 110 LINE"
 );
 }
 );
@@ -143240,5 +143240,5 @@ background
 );
 };
 versionMajor = 2;
-versionMinor = 105;
+versionMinor = 106;
 }
