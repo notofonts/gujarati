@@ -4,7 +4,7 @@ DisplayStrings = (
 "/ka-gujarati/nukta-gujarati",
 "/tha-gujarati",
 "/ra_uMatra-gujarati/ka-gujarati/space/uMatra-gujarati.alt",
-"/nukta-gujarati/space/rVocalicMatra-gujarati"
+"/k_ss_r-gujarati"
 );
 classes = (
 {
@@ -562,7 +562,7 @@ value = "Noto is a trademark of Google LLC.";
 },
 {
 name = versionString;
-value = "Version 2.105";
+value = "Version 2.106";
 },
 {
 name = Axes;
@@ -627,7 +627,7 @@ code = "script gujr ;\012lookup alternateUkars {\012lookupflag UseMarkFilteringS
 name = blws;
 },
 {
-code = "script gujr ;\012\012lookup decomposeMatras_ja {\012	sub [ja-gujarati j_ra-gujarati zha-gujarati zh_ra-gujarati] [oCandraMatra-gujarati oMatra-gujarati auMatra-gujarati]' lookup decomposeMatras;\012} decomposeMatras_ja ;\012\012lookup postBase_consonantVowelLigatures {\012	lookupflag IgnoreMarks;\012	sub ja-gujarati aaMatra-gujarati by ja_aaMatra-gujarati;\012	sub j_ra-gujarati aaMatra-gujarati by j_ra_aaMatra-gujarati;\012	sub ja-gujarati iiMatra-gujarati by ja_iiMatra-gujarati;\012	sub j_ra-gujarati iiMatra-gujarati by j_ra_iiMatra-gujarati;\012	sub zha-gujarati aaMatra-gujarati by zha_aaMatra-gujarati;\012	sub zh_ra-gujarati aaMatra-gujarati by zh_ra_aaMatra-gujarati;\012	sub zha-gujarati iiMatra-gujarati by zha_iiMatra-gujarati;\012	sub zh_ra-gujarati iiMatra-gujarati by zh_ra_iiMatra-gujarati;\012} postBase_consonantVowelLigatures ;\012\012lookup rukar {\012	sub da-gujarati rVocalicMatra-gujarati by da_rVocalicMatra-gujarati;\012	sub ha-gujarati rVocalicMatra-gujarati by ha_rVocalicMatra-gujarati;\012} rukar ;\012\012lookup belowBase_consonantVowelLigatures {\012	sub ra-gujarati uMatra-gujarati by ra_uMatra-gujarati;\012	sub ra-gujarati uuMatra-gujarati by ra_uuMatra-gujarati;\012} belowBase_consonantVowelLigatures ;\012\012script gjr2 ;\012lookup decomposeMatras_ja ;\012lookup postBase_consonantVowelLigatures ;\012lookup rukar ;\012lookup belowBase_consonantVowelLigatures ;\012";
+code = "script gujr ;\012\012lookup decomposeMatras_ja {\012	sub [ja-gujarati j_ra-gujarati zha-gujarati zh_ra-gujarati] [oCandraMatra-gujarati oMatra-gujarati auMatra-gujarati]' lookup decomposeMatras;\012} decomposeMatras_ja ;\012\012lookup postBase_consonantVowelLigatures {\012	lookupflag IgnoreMarks;\012	sub ja-gujarati aaMatra-gujarati by ja_aaMatra-gujarati;\012	sub j_ra-gujarati aaMatra-gujarati by j_ra_aaMatra-gujarati;\012	sub ja-gujarati iiMatra-gujarati by ja_iiMatra-gujarati;\012	sub j_ra-gujarati iiMatra-gujarati by j_ra_iiMatra-gujarati;\012	sub zha-gujarati aaMatra-gujarati by zha_aaMatra-gujarati;\012	sub zh_ra-gujarati aaMatra-gujarati by zh_ra_aaMatra-gujarati;\012	sub zha-gujarati iiMatra-gujarati by zha_iiMatra-gujarati;\012	sub zh_ra-gujarati iiMatra-gujarati by zh_ra_iiMatra-gujarati;\012} postBase_consonantVowelLigatures ;\012\012lookup rukar {\012	lookupflag 0;\012	sub da-gujarati rVocalicMatra-gujarati by da_rVocalicMatra-gujarati;\012	sub ha-gujarati rVocalicMatra-gujarati by ha_rVocalicMatra-gujarati;\012} rukar ;\012\012lookup belowBase_consonantVowelLigatures {\012	lookupflag 0;\012	sub ra-gujarati uMatra-gujarati by ra_uMatra-gujarati;\012	sub ra-gujarati uuMatra-gujarati by ra_uuMatra-gujarati;\012} belowBase_consonantVowelLigatures ;\012\012script gjr2 ;\012lookup decomposeMatras_ja ;\012lookup postBase_consonantVowelLigatures ;\012lookup rukar ;\012lookup belowBase_consonantVowelLigatures ;\012";
 name = psts;
 },
 {
@@ -120388,10 +120388,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"620 192 LINE",
 "605 214 LINE",
 "456 141 LINE",
-"471 117 LINE",
-"620 192 LINE"
+"471 117 LINE"
 );
 }
 );
@@ -120480,10 +120480,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"736 181 LINE",
 "667 271 LINE",
 "462 175 LINE",
-"526 74 LINE",
-"736 181 LINE"
+"526 74 LINE"
 );
 }
 );
@@ -120572,10 +120572,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"636 143 LINE",
 "671 231 LINE",
 "534 204 LINE",
-"495 110 LINE",
-"636 143 LINE"
+"495 110 LINE"
 );
 }
 );
@@ -143240,5 +143240,5 @@ background
 );
 };
 versionMajor = 2;
-versionMinor = 105;
+versionMinor = 106;
 }
