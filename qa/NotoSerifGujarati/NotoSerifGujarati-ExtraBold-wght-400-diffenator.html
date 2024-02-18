@@ -1,0 +1,3903 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attr-before{
+                color: red;
+                cursor: text;
+            }
+            .attr-after{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSerifGujarati-ExtraBold.ttf);
+    font-family: "old font";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSerifGujarati-ExtraBold.ttf);
+    font-family: "new font";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-wght-400{
+    font-family: "old font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	    .new-wght-400{
+    font-family: "new font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	
+.cell{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 50pt;
+  line-height: 48.0px;
+}
+.cell-word{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  line-height: 48.0px;
+}
+.cat-strings .cell {
+  clear: both;
+  position: static;
+  float: none;
+  text-align: left;
+}
+.box-title {
+  clear: both;
+}
+
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Diffenator</b>
+</h2>
+	
+  
+    <div class="box">
+    <div class="box-title">Tables</div>
+      <div data-path="root" data-open="0" id="difftable"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+      <div class="box">
+        <div class="box-title">Modified encoded Glyphs</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        |<br>
+        <span class="tooltiptext">
+            name: VERTICAL LINE<br>
+            unicode: U+007C<br>
+            changed pixels: 6.47%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ꠰<br>
+        <span class="tooltiptext">
+            name: NORTH INDIC FRACTION ONE QUARTER<br>
+            unicode: U+A830<br>
+            changed pixels: 5.64%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        (<br>
+        <span class="tooltiptext">
+            name: LEFT PARENTHESIS<br>
+            unicode: U+0028<br>
+            changed pixels: 4.84%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        3<br>
+        <span class="tooltiptext">
+            name: DIGIT THREE<br>
+            unicode: U+0033<br>
+            changed pixels: 3.74%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        8<br>
+        <span class="tooltiptext">
+            name: DIGIT EIGHT<br>
+            unicode: U+0038<br>
+            changed pixels: 2.92%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        7<br>
+        <span class="tooltiptext">
+            name: DIGIT SEVEN<br>
+            unicode: U+0037<br>
+            changed pixels: 2.78%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        2<br>
+        <span class="tooltiptext">
+            name: DIGIT TWO<br>
+            unicode: U+0032<br>
+            changed pixels: 2.77%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        !<br>
+        <span class="tooltiptext">
+            name: EXCLAMATION MARK<br>
+            unicode: U+0021<br>
+            changed pixels: 2.58%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        *<br>
+        <span class="tooltiptext">
+            name: ASTERISK<br>
+            unicode: U+002A<br>
+            changed pixels: 2.55%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ॒<br>
+        <span class="tooltiptext">
+            name: DEVANAGARI STRESS SIGN ANUDATTA<br>
+            unicode: U+0952<br>
+            changed pixels: 2.34%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૈ<br>
+        <span class="tooltiptext">
+            name: GUJARATI VOWEL SIGN AI<br>
+            unicode: U+0AC8<br>
+            changed pixels: 2.29%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૡ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER VOCALIC LL<br>
+            unicode: U+0AE1<br>
+            changed pixels: 2.26%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ;<br>
+        <span class="tooltiptext">
+            name: SEMICOLON<br>
+            unicode: U+003B<br>
+            changed pixels: 2.23%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૹ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER ZHA<br>
+            unicode: U+0AF9<br>
+            changed pixels: 2.16%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        જ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER JA<br>
+            unicode: U+0A9C<br>
+            changed pixels: 2.03%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        1<br>
+        <span class="tooltiptext">
+            name: DIGIT ONE<br>
+            unicode: U+0031<br>
+            changed pixels: 2.02%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        9<br>
+        <span class="tooltiptext">
+            name: DIGIT NINE<br>
+            unicode: U+0039<br>
+            changed pixels: 1.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ઌ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER VOCALIC L<br>
+            unicode: U+0A8C<br>
+            changed pixels: 1.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        6<br>
+        <span class="tooltiptext">
+            name: DIGIT SIX<br>
+            unicode: U+0036<br>
+            changed pixels: 1.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૢ<br>
+        <span class="tooltiptext">
+            name: GUJARATI VOWEL SIGN VOCALIC L<br>
+            unicode: U+0AE2<br>
+            changed pixels: 1.98%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ×<br>
+        <span class="tooltiptext">
+            name: MULTIPLICATION SIGN<br>
+            unicode: U+00D7<br>
+            changed pixels: 1.93%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        0<br>
+        <span class="tooltiptext">
+            name: DIGIT ZERO<br>
+            unicode: U+0030<br>
+            changed pixels: 1.85%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૧<br>
+        <span class="tooltiptext">
+            name: GUJARATI DIGIT ONE<br>
+            unicode: U+0AE7<br>
+            changed pixels: 1.78%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ,<br>
+        <span class="tooltiptext">
+            name: COMMA<br>
+            unicode: U+002C<br>
+            changed pixels: 1.77%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        #<br>
+        <span class="tooltiptext">
+            name: NUMBER SIGN<br>
+            unicode: U+0023<br>
+            changed pixels: 1.71%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ><br>
+        <span class="tooltiptext">
+            name: GREATER-THAN SIGN<br>
+            unicode: U+003E<br>
+            changed pixels: 1.63%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૣ<br>
+        <span class="tooltiptext">
+            name: GUJARATI VOWEL SIGN VOCALIC LL<br>
+            unicode: U+0AE3<br>
+            changed pixels: 1.62%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        5<br>
+        <span class="tooltiptext">
+            name: DIGIT FIVE<br>
+            unicode: U+0035<br>
+            changed pixels: 1.62%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ઐ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER AI<br>
+            unicode: U+0A90<br>
+            changed pixels: 1.52%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        "<br>
+        <span class="tooltiptext">
+            name: QUOTATION MARK<br>
+            unicode: U+0022<br>
+            changed pixels: 1.41%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૬<br>
+        <span class="tooltiptext">
+            name: GUJARATI DIGIT SIX<br>
+            unicode: U+0AEC<br>
+            changed pixels: 1.37%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ણ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER NNA<br>
+            unicode: U+0AA3<br>
+            changed pixels: 1.32%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        :<br>
+        <span class="tooltiptext">
+            name: COLON<br>
+            unicode: U+003A<br>
+            changed pixels: 1.30%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ઔ<br>
+        <span class="tooltiptext">
+            name: GUJARATI LETTER AU<br>
+            unicode: U+0A94<br>
+            changed pixels: 1.29%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        4<br>
+        <span class="tooltiptext">
+            name: DIGIT FOUR<br>
+            unicode: U+0034<br>
+            changed pixels: 1.18%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        …<br>
+        <span class="tooltiptext">
+            name: HORIZONTAL ELLIPSIS<br>
+            unicode: U+2026<br>
+            changed pixels: 1.10%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ^<br>
+        <span class="tooltiptext">
+            name: CIRCUMFLEX ACCENT<br>
+            unicode: U+005E<br>
+            changed pixels: 1.10%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ?<br>
+        <span class="tooltiptext">
+            name: QUESTION MARK<br>
+            unicode: U+003F<br>
+            changed pixels: 1.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        )<br>
+        <span class="tooltiptext">
+            name: RIGHT PARENTHESIS<br>
+            unicode: U+0029<br>
+            changed pixels: 1.01%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ઑ<br>
+        <span class="tooltiptext">
+            name: GUJARATI VOWEL CANDRA O<br>
+            unicode: U+0A91<br>
+            changed pixels: 1.00%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ૱<br>
+        <span class="tooltiptext">
+            name: GUJARATI RUPEE SIGN<br>
+            unicode: U+0AF1<br>
+            changed pixels: 1.00%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ં<br>
+        <span class="tooltiptext">
+            name: GUJARATI SIGN ANUSVARA<br>
+            unicode: U+0A82<br>
+            changed pixels: 0.93%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        “<br>
+        <span class="tooltiptext">
+            name: LEFT DOUBLE QUOTATION MARK<br>
+            unicode: U+201C<br>
+            changed pixels: 0.92%
+        </span>
+    </div>
+</div>
+            </div>
+          
+          </div>
+      </div>
+    
+
+    
+      <div class="box">
+        <div class="box-title">Misshapen Common words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+              <div class="cell-word" style="font-feature-settings:  'dnom' 1 " lang="None">
+    <div class="tooltip">
+        0123456789<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=376, pos=(0, 0, 564, 0)<br>gid=377, pos=(0, 0, 564, 0)<br>gid=378, pos=(0, 0, 564, 0)<br>gid=379, pos=(0, 0, 564, 0)<br>gid=380, pos=(0, 0, 564, 0)<br>gid=381, pos=(0, 0, 564, 0)<br>gid=382, pos=(0, 0, 564, 0)<br>gid=383, pos=(0, 0, 564, 0)<br>gid=384, pos=(0, 0, 564, 0)<br>gid=385, pos=(0, 0, 564, 0)<br>
+            feats=('dnom',)
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=376, pos=(0, 0, 567, 0)<br>gid=377, pos=(0, 0, 567, 0)<br>gid=378, pos=(0, 0, 567, 0)<br>gid=379, pos=(0, 0, 567, 0)<br>gid=380, pos=(0, 0, 567, 0)<br>gid=381, pos=(0, 0, 567, 0)<br>gid=382, pos=(0, 0, 567, 0)<br>gid=383, pos=(0, 0, 567, 0)<br>gid=384, pos=(0, 0, 567, 0)<br>gid=385, pos=(0, 0, 567, 0)<br>
+            feats=('dnom',)
+        </div>
+        <div>
+            changed pixels: 5.75%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings:  'frac' 1 " lang="None">
+    <div class="tooltip">
+        1/234<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=377, pos=(0, 0, 564, 0)<br>gid=375, pos=(0, 0, 288, 0)<br>gid=378, pos=(0, 0, 564, 0)<br>gid=379, pos=(0, 0, 564, 0)<br>gid=380, pos=(0, 0, 564, 0)<br>
+            feats=('frac',)
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=377, pos=(0, 0, 567, 0)<br>gid=375, pos=(0, 0, 288, 0)<br>gid=378, pos=(0, 0, 567, 0)<br>gid=379, pos=(0, 0, 567, 0)<br>gid=380, pos=(0, 0, 567, 0)<br>
+            feats=('frac',)
+        </div>
+        <div>
+            changed pixels: 4.67%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings:  'zero' 1 " lang="None">
+    <div class="tooltip">
+        0<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=376, pos=(0, 0, 564, 0)<br>
+            feats=('zero',)
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=376, pos=(0, 0, 567, 0)<br>
+            feats=('zero',)
+        </div>
+        <div>
+            changed pixels: 1.85%
+        </div>
+        </span>
+    </div>
+</div>
+          
+        </div>
+      </div>
+    
+      <div class="box">
+        <div class="box-title">Misshapen Gujarati words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        જૈૈૈન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=29, pos=(0, 0, 775, 0)<br>gid=69, pos=(-87, 0, 0, 0)<br>gid=69, pos=(65, 0, 0, 0)<br>gid=69, pos=(217, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=29, pos=(0, 0, 773, 0)<br>gid=69, pos=(-87, 0, 0, 0)<br>gid=69, pos=(68, 0, 0, 0)<br>gid=69, pos=(223, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.63%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતરરાષ્ટ્રીયમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=73, pos=(-228, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.57%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ફેેેરફારો<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 542, 0)<br>gid=68, pos=(-185, 0, 0, 0)<br>gid=68, pos=(-110, 50, 0, 0)<br>gid=68, pos=(-35, 100, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=44, pos=(0, 0, 542, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 543, 0)<br>gid=68, pos=(-186, 0, 0, 0)<br>gid=68, pos=(-115, 50, 0, 0)<br>gid=68, pos=(-44, 100, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=44, pos=(0, 0, 543, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.03%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        જઁગલોનો<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=29, pos=(0, 0, 775, 0)<br>gid=5, pos=(-300, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=29, pos=(0, 0, 773, 0)<br>gid=5, pos=(-300, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.00%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ફેેેેેરવાઈ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 542, 0)<br>gid=68, pos=(-185, 0, 0, 0)<br>gid=68, pos=(-110, 50, 0, 0)<br>gid=68, pos=(-35, 100, 0, 0)<br>gid=68, pos=(40, 150, 0, 0)<br>gid=68, pos=(115, 200, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=11, pos=(0, 0, 637, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 543, 0)<br>gid=68, pos=(-186, 0, 0, 0)<br>gid=68, pos=(-115, 50, 0, 0)<br>gid=68, pos=(-44, 100, 0, 0)<br>gid=68, pos=(27, 150, 0, 0)<br>gid=68, pos=(98, 200, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=11, pos=(0, 0, 637, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.80%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        જેેમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=29, pos=(0, 0, 775, 0)<br>gid=68, pos=(-87, 0, 0, 0)<br>gid=68, pos=(-12, 50, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=29, pos=(0, 0, 773, 0)<br>gid=68, pos=(-87, 0, 0, 0)<br>gid=68, pos=(-16, 50, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.66%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        જાગૄત<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=29, pos=(0, 0, 775, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=66, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=29, pos=(0, 0, 773, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=66, pos=(-151, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.63%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંડરડેવલપમેન્ટ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=68, pos=(-148, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=68, pos=(-169, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=68, pos=(-148, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=68, pos=(-169, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.26%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અમૅરિકાની<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=67, pos=(-169, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=67, pos=(-169, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.22%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આર્કિટૈક્ચરલ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=69, pos=(-148, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=27, pos=(0, 0, 699, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=69, pos=(-151, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=27, pos=(0, 0, 699, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.20%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આર્મેનિય઼ાનું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=68, pos=(-169, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=58, pos=(-426, 20, 0, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=68, pos=(-169, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=58, pos=(-426, 21, 0, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.20%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અજહૂઁ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=64, pos=(-235, 0, 0, 0)<br>gid=5, pos=(-245, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=64, pos=(-235, 0, 0, 0)<br>gid=5, pos=(-245, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.19%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અરડૂસીનાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=64, pos=(-219, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=64, pos=(-218, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.18%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અરૈખીક<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=69, pos=(-142, 0, 0, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=69, pos=(-144, 0, 0, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.14%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઍસજૅવીઍન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=16, pos=(0, 0, 929, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=67, pos=(-300, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=16, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=16, pos=(0, 0, 929, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=67, pos=(-300, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=16, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.10%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ય઼ૂરોપમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=48, pos=(0, 0, 638, 0)<br>gid=58, pos=(-426, 20, 0, 0)<br>gid=64, pos=(-426, -48, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=48, pos=(0, 0, 637, 0)<br>gid=58, pos=(-426, 21, 0, 0)<br>gid=64, pos=(-426, -47, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.07%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        હરિઃૐ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=56, pos=(0, 0, 637, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=7, pos=(0, 0, 272, 0)<br>gid=74, pos=(0, 0, 922, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=56, pos=(0, 0, 637, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=7, pos=(0, 0, 271, 0)<br>gid=74, pos=(0, 0, 922, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.00%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અકર્મણ્યતાના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=73, pos=(-130, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=73, pos=(-130, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.99%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંટેરમેન્શ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=68, pos=(-148, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=68, pos=(-169, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=53, pos=(0, 0, 781, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=68, pos=(-151, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=68, pos=(-169, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=53, pos=(0, 0, 780, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.99%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        રૅયુનિઑઁ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=49, pos=(0, 0, 469, 0)<br>gid=67, pos=(-237, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=19, pos=(0, 0, 1249, 0)<br>gid=5, pos=(1, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=49, pos=(0, 0, 472, 0)<br>gid=67, pos=(-240, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=19, pos=(0, 0, 1249, 0)<br>gid=5, pos=(1, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.94%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        પુન૰નિર્માણનું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=43, pos=(0, 0, 630, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=89, pos=(0, 0, 409, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 630, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=89, pos=(0, 0, 409, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.94%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અજ઼્કબાન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=58, pos=(-596, 105, 0, 0)<br>gid=73, pos=(-596, 37, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=58, pos=(-596, 106, 0, 0)<br>gid=73, pos=(-596, 38, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.93%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજનકુંડ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=63, pos=(-257, 0, 0, 0)<br>gid=6, pos=(-235, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=63, pos=(-257, 0, 0, 0)<br>gid=6, pos=(-235, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.90%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતર્વૈયક્તિક<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=69, pos=(-170, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=69, pos=(-170, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.85%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઐઁ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=18, pos=(0, 0, 929, 0)<br>gid=5, pos=(-61, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=18, pos=(0, 0, 929, 0)<br>gid=5, pos=(-62, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.84%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજૈયા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=69, pos=(-87, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=69, pos=(-87, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.83%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આજીવસૃષ્ટિના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=65, pos=(-171, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=65, pos=(-171, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.83%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ધૈર્યમહોત્સવમહો<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=41, pos=(0, 0, 640, 0)<br>gid=69, pos=(-170, 16, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=41, pos=(0, 0, 640, 0)<br>gid=69, pos=(-170, 18, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.82%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        છેેે<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=28, pos=(0, 0, 694, 0)<br>gid=68, pos=(-225, 0, 0, 0)<br>gid=68, pos=(-150, 50, 0, 0)<br>gid=68, pos=(-75, 100, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=28, pos=(0, 0, 694, 0)<br>gid=68, pos=(-225, 0, 0, 0)<br>gid=68, pos=(-154, 50, 0, 0)<br>gid=68, pos=(-83, 100, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.81%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજીરવૃક્ષ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=65, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=65, pos=(-151, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.79%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગુસ્ટીફોલિયા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=44, pos=(0, 0, 542, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=63, pos=(-151, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=44, pos=(0, 0, 543, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.79%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        પરઁપરા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=43, pos=(0, 0, 630, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=5, pos=(-237, 0, 0, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 630, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=5, pos=(-240, 0, 0, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.78%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ફ્રૅંકના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 542, 0)<br>gid=73, pos=(-261, -136, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=67, pos=(-237, 0, 0, 0)<br>gid=6, pos=(101, 53, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 543, 0)<br>gid=73, pos=(-263, -139, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=67, pos=(-240, 0, 0, 0)<br>gid=6, pos=(99, 53, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.78%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અરૃંધતિને<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=65, pos=(-218, 0, 0, 0)<br>gid=6, pos=(-237, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=65, pos=(-221, 0, 0, 0)<br>gid=6, pos=(-240, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.76%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકસંજ્ઞા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=73, pos=(-291, 0, 0, 0)<br>gid=31, pos=(0, 0, 751, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=73, pos=(-291, 0, 0, 0)<br>gid=31, pos=(0, 0, 750, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.75%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        શોટઁ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=53, pos=(0, 0, 781, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=5, pos=(-237, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=53, pos=(0, 0, 780, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=5, pos=(-231, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.74%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કૈજ઼ુએરિના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=69, pos=(-179, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=58, pos=(-596, 105, 0, 0)<br>gid=63, pos=(-596, 37, 0, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=69, pos=(-179, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=58, pos=(-596, 106, 0, 0)<br>gid=63, pos=(-596, 38, 0, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.72%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકુરથી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=63, pos=(-257, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=63, pos=(-257, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.71%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ંસ્વરૂપ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=64, pos=(-229, 0, 0, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=64, pos=(-227, 0, 0, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.70%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજરુન્સ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=63, pos=(-229, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=63, pos=(-227, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.69%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંડરબર્ડસ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.67%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        પૄષ્ઠ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=43, pos=(0, 0, 630, 0)<br>gid=66, pos=(-171, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 630, 0)<br>gid=66, pos=(-152, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.66%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અજંતામાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=6, pos=(-300, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=6, pos=(-300, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.65%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        વરાપ્પુષ઼ા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=52, pos=(0, 0, 621, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=58, pos=(-354, 63, 0, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=52, pos=(0, 0, 621, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=58, pos=(-354, 62, 0, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.64%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતઃસ્ફુરણાની<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=7, pos=(0, 0, 272, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=44, pos=(0, 0, 542, 0)<br>gid=63, pos=(-261, -136, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=7, pos=(0, 0, 271, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=44, pos=(0, 0, 543, 0)<br>gid=63, pos=(-263, -139, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.64%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતરપૃષ્ઠ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=65, pos=(-171, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=65, pos=(-152, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.64%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજરૅલા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=67, pos=(-237, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=67, pos=(-240, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.62%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ટૅંજરીન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=32, pos=(0, 0, 524, 0)<br>gid=67, pos=(-237, 0, 0, 0)<br>gid=6, pos=(101, 53, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=32, pos=(0, 0, 524, 0)<br>gid=67, pos=(-231, 0, 0, 0)<br>gid=6, pos=(108, 53, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.61%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઇવારીકૈના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=10, pos=(0, 0, 636, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=69, pos=(-179, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=10, pos=(0, 0, 636, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=69, pos=(-179, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.61%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અનુમૈત્રિક<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=69, pos=(-169, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=69, pos=(-169, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.58%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંધેરીમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=68, pos=(-170, 16, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=68, pos=(-170, 18, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.58%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અલંકારસૌંદર્ય<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=72, pos=(0, 0, 320, 0)<br>gid=6, pos=(-17, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=72, pos=(0, 0, 320, 0)<br>gid=6, pos=(-15, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.57%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કૅસબ્લૅંકામાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=67, pos=(-235, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=67, pos=(-171, 0, 0, 0)<br>gid=6, pos=(167, 53, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=67, pos=(-235, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=67, pos=(-171, 0, 0, 0)<br>gid=6, pos=(168, 53, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.54%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઓૈદ્યોગિકૃત<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=20, pos=(0, 0, 1249, 0)<br>gid=69, pos=(0, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=73, pos=(-166, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=65, pos=(-250, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=20, pos=(0, 0, 1249, 0)<br>gid=69, pos=(0, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=73, pos=(-168, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=65, pos=(-250, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.53%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અત્રિઋષિના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=14, pos=(0, 0, 911, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=14, pos=(0, 0, 910, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.53%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકૂરણની<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=64, pos=(-257, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=64, pos=(-257, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.53%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગભંગીમાઓ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.53%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગૂઠાનું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=64, pos=(-171, 0, 0, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=64, pos=(-151, 0, 0, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.52%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતરંગમાંથી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=6, pos=(-237, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=6, pos=(-240, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.52%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજેદાન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=68, pos=(-87, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=68, pos=(-87, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.51%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અમસ્ટરડૅમઃ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=67, pos=(-194, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=7, pos=(0, 0, 272, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=67, pos=(-194, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=7, pos=(0, 0, 271, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.43%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતર્બાહ્ય<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=73, pos=(-235, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=73, pos=(-235, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.42%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        સ્ટુ઼ડિયો<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=63, pos=(-229, 0, 0, 0)<br>gid=58, pos=(-230, -125, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=63, pos=(-228, 0, 0, 0)<br>gid=58, pos=(-228, -125, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.41%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અર્જૂની<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=64, pos=(-291, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=64, pos=(-291, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.41%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગલોંગ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=6, pos=(-95, 49, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=6, pos=(-100, 49, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.41%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અતિભયંકરભૈરવી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=69, pos=(-170, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=69, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.40%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અઠ્ઠાવીસમા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>gid=73, pos=(-240, 0, 0, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>gid=73, pos=(-243, 0, 0, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.39%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કૅંગબૂક<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=67, pos=(-235, 0, 0, 0)<br>gid=6, pos=(103, 53, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=64, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=67, pos=(-235, 0, 0, 0)<br>gid=6, pos=(104, 53, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=64, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.39%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અફૈર્સ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=44, pos=(0, 0, 542, 0)<br>gid=69, pos=(-185, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=44, pos=(0, 0, 543, 0)<br>gid=69, pos=(-186, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.38%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંતબિંદુઓને<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=6, pos=(594, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=63, pos=(-166, 0, 0, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=6, pos=(596, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=63, pos=(-168, 0, 0, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.38%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ંઅર્ચ્<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=27, pos=(0, 0, 699, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=8, pos=(0, 0, 929, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=27, pos=(0, 0, 699, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.37%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંડરલાયીંગ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=6, pos=(-70, 50, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=6, pos=(-70, 50, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.37%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ંહતું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.35%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        સાઢ઼ૂ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=55, pos=(0, 0, 751, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=35, pos=(0, 0, 540, 0)<br>gid=58, pos=(-239, -125, 0, 0)<br>gid=64, pos=(-239, -193, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=55, pos=(0, 0, 750, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=35, pos=(0, 0, 540, 0)<br>gid=58, pos=(-242, -125, 0, 0)<br>gid=64, pos=(-242, -193, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.34%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અબ્રો઼ડ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=58, pos=(0, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=58, pos=(0, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.33%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આૈદ્યોગીક<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=69, pos=(-193, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=73, pos=(-166, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=69, pos=(-193, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=73, pos=(-168, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.33%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઈઁગ્લેન્ડમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=11, pos=(0, 0, 637, 0)<br>gid=5, pos=(-373, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=11, pos=(0, 0, 637, 0)<br>gid=5, pos=(-373, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.33%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આઈઆરસીઓઍન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=11, pos=(0, 0, 637, 0)<br>gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>gid=16, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=11, pos=(0, 0, 637, 0)<br>gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>gid=16, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.33%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અલ્ટરનૅટિવ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=67, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=67, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.32%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        હતુ઼ં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=56, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=58, pos=(-417, -105, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=56, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=58, pos=(-417, -105, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.32%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        સિદ઼ધાંતોનો<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=55, pos=(0, 0, 751, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=58, pos=(-167, -125, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=55, pos=(0, 0, 750, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=58, pos=(-168, -125, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.32%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઘણુ઼ખરૂ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=25, pos=(0, 0, 644, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=63, pos=(-130, 0, 0, 0)<br>gid=58, pos=(-637, -82, 0, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=64, pos=(-229, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=25, pos=(0, 0, 645, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=63, pos=(-130, 0, 0, 0)<br>gid=58, pos=(-637, -82, 0, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=64, pos=(-227, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.31%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંજુમનના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=63, pos=(-291, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=63, pos=(-291, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.30%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        મૅંગ્લોરના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=47, pos=(0, 0, 637, 0)<br>gid=67, pos=(-169, 0, 0, 0)<br>gid=6, pos=(169, 53, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=47, pos=(0, 0, 638, 0)<br>gid=67, pos=(-169, 0, 0, 0)<br>gid=6, pos=(170, 53, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.30%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગેઆરોપ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=68, pos=(-170, 0, 0, 0)<br>gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.28%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આૅગસ્ટથી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=67, pos=(-193, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=67, pos=(-193, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.28%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઓંકારનાથના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=20, pos=(0, 0, 1249, 0)<br>gid=6, pos=(-77, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=20, pos=(0, 0, 1249, 0)<br>gid=6, pos=(-77, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.27%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        મદરેેસા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=47, pos=(0, 0, 637, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=68, pos=(-142, 0, 0, 0)<br>gid=68, pos=(-67, 50, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=47, pos=(0, 0, 638, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=68, pos=(-144, 0, 0, 0)<br>gid=68, pos=(-73, 50, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.27%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        આરઇેસયુએમિ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=10, pos=(0, 0, 636, 0)<br>gid=68, pos=(-396, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1249, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=10, pos=(0, 0, 636, 0)<br>gid=68, pos=(-396, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.26%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગણું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=63, pos=(-130, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=63, pos=(-130, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.25%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અલેઝૈન્ડ્રી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=30, pos=(0, 0, 732, 0)<br>gid=69, pos=(-195, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=73, pos=(-219, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=30, pos=(0, 0, 732, 0)<br>gid=69, pos=(-195, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=73, pos=(-218, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.24%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અગ્રબાહુ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=63, pos=(-235, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=56, pos=(0, 0, 637, 0)<br>gid=63, pos=(-235, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.22%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ફ઼ુરાત<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 542, 0)<br>gid=58, pos=(-262, -261, 0, 0)<br>gid=63, pos=(-262, -329, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 543, 0)<br>gid=58, pos=(-263, -264, 0, 0)<br>gid=63, pos=(-263, -332, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.22%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ંઅંદિરોના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=6, pos=(0, 0, 0, 0)<br>gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.21%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        મુદૄત<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=47, pos=(0, 0, 637, 0)<br>gid=63, pos=(-170, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=66, pos=(-183, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=47, pos=(0, 0, 638, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=66, pos=(-182, 0, 0, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.21%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઃઓઉઅલ્લ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=7, pos=(0, 0, 272, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>gid=12, pos=(0, 0, 612, 0)<br>gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=7, pos=(0, 0, 271, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>gid=12, pos=(0, 0, 612, 0)<br>gid=8, pos=(0, 0, 929, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.21%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકગણિતથી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.19%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગમુદ્રાઓ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=63, pos=(-170, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=73, pos=(-166, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=73, pos=(-168, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=20, pos=(0, 0, 1249, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.16%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અવધારણાએં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=6, pos=(-61, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=6, pos=(-62, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.15%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        શત્રૄને<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=53, pos=(0, 0, 781, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=66, pos=(-218, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=53, pos=(0, 0, 780, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=66, pos=(-221, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.15%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અગાઊથી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=13, pos=(0, 0, 906, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=13, pos=(0, 0, 905, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.14%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગુઠલા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=63, pos=(-151, 0, 0, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.12%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકવ્યવસ્થાનો<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=39, pos=(0, 0, 651, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.10%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગ્રેજૉનું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=68, pos=(-142, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=70, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=68, pos=(-144, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=70, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.10%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકલેશ્વરમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=53, pos=(0, 0, 781, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>gid=53, pos=(0, 0, 780, 0)<br>gid=73, pos=(-170, 0, 0, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.09%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઉછૈયા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=12, pos=(0, 0, 612, 0)<br>gid=28, pos=(0, 0, 694, 0)<br>gid=69, pos=(-225, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=12, pos=(0, 0, 612, 0)<br>gid=28, pos=(0, 0, 694, 0)<br>gid=69, pos=(-225, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.09%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કારખ઼ાના<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=58, pos=(-599, 36, 0, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=58, pos=(-599, 36, 0, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.09%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        દેેરાસર<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=40, pos=(0, 0, 456, 0)<br>gid=68, pos=(-152, 0, 0, 0)<br>gid=68, pos=(-77, 50, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 456, 0)<br>gid=68, pos=(-152, 0, 0, 0)<br>gid=68, pos=(-81, 50, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.08%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઘ઼ડતરમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=25, pos=(0, 0, 644, 0)<br>gid=58, pos=(-379, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=25, pos=(0, 0, 645, 0)<br>gid=58, pos=(-379, 0, 0, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.07%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ધાર઼ણા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=58, pos=(-332, 7, 0, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=58, pos=(-337, 9, 0, 0)<br>gid=36, pos=(0, 0, 930, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.07%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કઠૂમર<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>gid=64, pos=(-240, 0, 0, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>gid=64, pos=(-243, 0, 0, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.06%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંકુશકારોએ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=63, pos=(-257, 0, 0, 0)<br>gid=53, pos=(0, 0, 781, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=63, pos=(-257, 0, 0, 0)<br>gid=53, pos=(0, 0, 780, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.05%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગરખું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=63, pos=(-170, 0, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=23, pos=(0, 0, 844, 0)<br>gid=63, pos=(-170, 0, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.05%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અુગામી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=63, pos=(0, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=63, pos=(0, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.04%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંધાંધૂંધીભર્યા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=64, pos=(-170, 0, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=73, pos=(-229, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=64, pos=(-170, 0, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=41, pos=(0, 0, 640, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=46, pos=(0, 0, 833, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=73, pos=(-227, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.03%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગ્રેજ઼ી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=68, pos=(-142, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=58, pos=(-596, 105, 0, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=68, pos=(-144, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=58, pos=(-596, 106, 0, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.03%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંંગ્રેજીમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=68, pos=(-142, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=68, pos=(-144, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.01%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંગછેદન<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=28, pos=(0, 0, 694, 0)<br>gid=68, pos=(-225, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=28, pos=(0, 0, 694, 0)<br>gid=68, pos=(-225, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.00%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઇન્ફ઼્લુએંશલ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=10, pos=(0, 0, 636, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=44, pos=(0, 0, 542, 0)<br>gid=58, pos=(-262, -261, 0, 0)<br>gid=73, pos=(-262, -329, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=6, pos=(-61, 0, 0, 0)<br>gid=53, pos=(0, 0, 781, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=10, pos=(0, 0, 636, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=44, pos=(0, 0, 543, 0)<br>gid=58, pos=(-263, -264, 0, 0)<br>gid=73, pos=(-263, -332, 0, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=17, pos=(0, 0, 929, 0)<br>gid=6, pos=(-62, 0, 0, 0)<br>gid=53, pos=(0, 0, 780, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.00%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કઢ્યું<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=35, pos=(0, 0, 540, 0)<br>gid=73, pos=(-238, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=35, pos=(0, 0, 540, 0)<br>gid=73, pos=(-242, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=63, pos=(-171, 0, 0, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.99%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઢૂઁઢ઼ને<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=35, pos=(0, 0, 540, 0)<br>gid=64, pos=(-238, 0, 0, 0)<br>gid=5, pos=(-194, 0, 0, 0)<br>gid=35, pos=(0, 0, 540, 0)<br>gid=58, pos=(-239, -125, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=35, pos=(0, 0, 540, 0)<br>gid=64, pos=(-242, 0, 0, 0)<br>gid=5, pos=(-194, 0, 0, 0)<br>gid=35, pos=(0, 0, 540, 0)<br>gid=58, pos=(-242, -125, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.99%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        કડૈયા<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=69, pos=(-148, 0, 0, 0)<br>gid=48, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 558, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=69, pos=(-148, 0, 0, 0)<br>gid=48, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.99%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અનઔપચારિક<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=21, pos=(0, 0, 1249, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=27, pos=(0, 0, 699, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=21, pos=(0, 0, 1249, 0)<br>gid=43, pos=(0, 0, 630, 0)<br>gid=27, pos=(0, 0, 699, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.98%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઑંગ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=19, pos=(0, 0, 1249, 0)<br>gid=6, pos=(1, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=19, pos=(0, 0, 1249, 0)<br>gid=6, pos=(1, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.96%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંક્ષાંસે<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=22, pos=(0, 0, 558, 0)<br>gid=73, pos=(-257, 0, 0, 0)<br>gid=54, pos=(0, 0, 651, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.96%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ઓઁગોલે<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=20, pos=(0, 0, 1249, 0)<br>gid=5, pos=(-77, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=20, pos=(0, 0, 1249, 0)<br>gid=5, pos=(-77, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=71, pos=(0, 0, 320, 0)<br>gid=50, pos=(0, 0, 715, 0)<br>gid=68, pos=(-171, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.95%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અંદૂનાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-171, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=64, pos=(-166, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>gid=40, pos=(0, 0, 456, 0)<br>gid=64, pos=(-168, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.95%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ખ઼ૂબસૂરત<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=23, pos=(0, 0, 844, 0)<br>gid=58, pos=(-599, 36, 0, 0)<br>gid=64, pos=(-599, -32, 0, 0)<br>gid=45, pos=(0, 0, 762, 0)<br>gid=55, pos=(0, 0, 751, 0)<br>gid=64, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=23, pos=(0, 0, 844, 0)<br>gid=58, pos=(-599, 36, 0, 0)<br>gid=64, pos=(-599, -32, 0, 0)<br>gid=45, pos=(0, 0, 761, 0)<br>gid=55, pos=(0, 0, 750, 0)<br>gid=64, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.95%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અઁગ્રેજી<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=5, pos=(-171, 0, 0, 0)<br>gid=24, pos=(0, 0, 710, 0)<br>gid=73, pos=(-171, 0, 0, 0)<br>gid=49, pos=(0, 0, 469, 0)<br>gid=68, pos=(-142, 0, 0, 0)<br>gid=29, pos=(0, 0, 775, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=5, pos=(-170, 0, 0, 0)<br>gid=24, pos=(0, 0, 709, 0)<br>gid=73, pos=(-151, 0, 0, 0)<br>gid=49, pos=(0, 0, 472, 0)<br>gid=68, pos=(-144, 0, 0, 0)<br>gid=29, pos=(0, 0, 773, 0)<br>gid=62, pos=(0, 0, 290, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.93%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અડફેટમાં<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=44, pos=(0, 0, 542, 0)<br>gid=68, pos=(-185, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=47, pos=(0, 0, 637, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-169, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=34, pos=(0, 0, 521, 0)<br>gid=44, pos=(0, 0, 543, 0)<br>gid=68, pos=(-186, 0, 0, 0)<br>gid=32, pos=(0, 0, 524, 0)<br>gid=47, pos=(0, 0, 638, 0)<br>gid=60, pos=(0, 0, 320, 0)<br>gid=6, pos=(-170, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.93%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        અઠુનવઈતિ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=33, pos=(0, 0, 516, 0)<br>gid=63, pos=(-240, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=11, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=8, pos=(0, 0, 929, 0)<br>gid=33, pos=(0, 0, 517, 0)<br>gid=63, pos=(-243, 0, 0, 0)<br>gid=42, pos=(0, 0, 610, 0)<br>gid=52, pos=(0, 0, 621, 0)<br>gid=11, pos=(0, 0, 637, 0)<br>gid=38, pos=(0, 0, 607, 0)<br>gid=61, pos=(0, 0, 320, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 0.92%
+        </div>
+        </span>
+    </div>
+</div>
+          
+        </div>
+      </div>
+    
+    
+    <div class="box">
+      <div class="box-title">Misshapen user strings</div>
+      <div class="box-text old-wght-400" style="font-size: 32pt">
+        
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+  
+<script>var fontdiff = {"OS/2": {"sCapHeight": [602, 600]}, "hmtx": {"metrics": {"error": ["There are 206 changes, check manually!", ""]}}, "hhea": {"advanceWidthMax": [1378, 1377], "xMaxExtent": [1754, 1763], "caretSlopeRise": [1, 1000], "minLeftSideBearing": [-995, -986], "minRightSideBearing": [-1434, -1443]}, "glyf": {"glyphs": {"error": ["There are 434 changes, check manually!", ""]}}, "maxp": {"maxCompositePoints": [134, 131]}, "head": {"xMax": [1754, 1763], "xMin": [-995, -986], "modified": [3781161097, 3791104750], "checkSumAdjustment": [2419746196, 2492330780], "yMax": [1067, 1070]}};</script>
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+  class Table {
+      constructor(data) {
+          this.data = {"root": data}
+          this.open("root")
+      }
+
+      createNode(key, label) {
+          let childElem = document.createElement("div")
+          let childKey = key
+          childElem.dataset.path = childKey
+          childElem.dataset.open = "0"
+          childElem.innerHTML = label
+          childElem.classList.add("node")
+          return childElem
+      }
+
+      close(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          let label = htmlParent.childNodes[0].nodeValue
+          htmlParent.replaceChildren()
+          htmlParent.textContent = label
+          htmlParent.dataset.open = "0"
+      }
+
+      open(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          htmlParent.dataset.open = "1"
+
+          // traverse to correct data level based on data-path
+          let path = key.split(".")
+          let data = this.data
+          for (var i=0; i<path.length; i++) {
+              data = data[path[i]];
+
+          }
+
+          // arrays containing two values are used as leaf nodes.
+          // The first item is the before value and the second
+          // is for after value.
+          if (Array.isArray(data)) {
+              let childElem = this.createNode("", "")
+              let before = document.createElement("span")
+              before.classList.add("attr-before")
+              before.textContent = String(data[0]) + " "
+              let after = document.createElement("span")
+              after.classList.add("attr-after")
+              after.textContent = String(data[1])
+              childElem.appendChild(before)
+              childElem.appendChild(after)
+              htmlParent.appendChild(childElem)
+              return
+          }
+          // Create next child nodes
+          for (var i in data) {
+              let childKey = key + "." + i
+              let childElem = this.createNode(childKey, i)
+              htmlParent.appendChild(childElem);
+              var that = this
+
+              // Toggle whether to open or close a node
+              childElem.addEventListener("click", function() {
+                  if (this.dataset.open === "0") {
+                      that.open(childKey)
+                      event.stopPropagation()
+                  } else {
+                      that.close(childKey)
+                      event.stopPropagation()
+                  }
+              })
+          }
+      }
+  }
+
+  let t = new Table(fontdiff, document.getElementById("difftable"))
+
+
+function wordBreaks() {
+  words = document.getElementsByClassName("cell-word")
+  res = []
+  prevTop = 0
+  for (i=0; i<words.length; i++) {
+      var word = words[i]
+      currentTop = word.getBoundingClientRect().top
+      if (currentTop > prevTop) {
+          res.push(i)
+      }
+      prevTop = currentTop
+  }
+  return res
+}
+
+async function insertBreaks() {
+  switchFonts()
+  await sleep(1)
+  breaksBefore = wordBreaks()
+  switchFonts()
+  await sleep(1)
+  breaksAfter = wordBreaks()
+
+
+  console.log(breaksBefore.length, breaksAfter.length)
+
+  if (breaksBefore.length >= breaksAfter.length) {
+    breaks = breaksBefore
+  } else {
+    breaks = breaksAfter
+  }
+
+  words = document.getElementsByClassName("cell-word")
+  breaks.forEach(function(i) {
+    if (i != 0) {
+      i = i
+    }
+    word = words[i]
+    spacer = document.createElement("div")
+    spacer.className = "spacer"
+    word.parentNode.insertBefore(spacer, word)
+  })
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
+insertBreaks()
+
+
+    </script>
+</html>
