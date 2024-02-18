@@ -7,7 +7,7 @@ DisplayStrings = (
 "ટ/ttanuktagujr",
 "/charanuktagujr",
 "/kanuktagujr",
-"/uuvowelsignnuktagujr"
+"/iianusvaragujr/ianusvaragujr ંએ"
 );
 axes = (
 {
@@ -4335,7 +4335,7 @@ unicode = 2689;
 {
 category = Mark;
 glyphname = anusvaragujr;
-lastChange = "2021-10-13 13:12:44 +0000";
+lastChange = "2024-02-18 12:39:22 +0000";
 layers = (
 {
 anchors = (
@@ -4370,7 +4370,7 @@ width = 0;
 anchors = (
 {
 name = _t.candrabindugujr;
-pos = (-134,603);
+pos = (-129,592);
 }
 );
 layerId = "E837EE1F-8268-496F-836F-3DC25D441D7C";
@@ -146825,7 +146825,7 @@ subCategory = Nonspacing;
 },
 {
 glyphname = uanusvaragujr;
-lastChange = "2021-10-13 09:53:05 +0000";
+lastChange = "2024-02-18 12:43:43 +0000";
 layers = (
 {
 anchors = (
@@ -146840,7 +146840,7 @@ shapes = (
 ref = ugujr;
 },
 {
-pos = (278,75);
+pos = (732,-77);
 ref = anusvaragujr;
 }
 );
@@ -146859,7 +146859,7 @@ shapes = (
 ref = ugujr;
 },
 {
-pos = (234,77);
+pos = (675,-56);
 ref = anusvaragujr;
 }
 );
@@ -146878,11 +146878,11 @@ shapes = (
 ref = ugujr;
 },
 {
-pos = (256,36);
+pos = (879,-149);
 ref = anusvaragujr;
 }
 );
-width = 703;
+width = 813;
 },
 {
 anchors = (
@@ -146897,7 +146897,7 @@ shapes = (
 ref = ugujr;
 },
 {
-pos = (174,85);
+pos = (503,-50);
 ref = anusvaragujr;
 }
 );
@@ -146916,11 +146916,11 @@ shapes = (
 ref = ugujr;
 },
 {
-pos = (212,41);
+pos = (702,-144);
 ref = anusvaragujr;
 }
 );
-width = 571;
+width = 661;
 },
 {
 anchors = (
@@ -146935,14 +146935,13 @@ shapes = (
 ref = ugujr;
 },
 {
-pos = (221,79);
+pos = (551,-84);
 ref = anusvaragujr;
 }
 );
 width = 494;
 }
 );
-metricWidth = ugujr;
 script = gujarati;
 },
 {
@@ -147069,7 +147068,7 @@ script = gujarati;
 },
 {
 glyphname = ianusvaragujr;
-lastChange = "2021-10-13 09:53:05 +0000";
+lastChange = "2024-02-18 14:58:13 +0000";
 layers = (
 {
 anchors = (
@@ -147084,11 +147083,11 @@ shapes = (
 ref = igujr;
 },
 {
-pos = (399,0);
+pos = (708,-199);
 ref = anusvaragujr;
 }
 );
-width = 634;
+width = 654;
 },
 {
 anchors = (
@@ -147103,7 +147102,7 @@ shapes = (
 ref = igujr;
 },
 {
-pos = (385,0);
+pos = (645,-159);
 ref = anusvaragujr;
 }
 );
@@ -147122,11 +147121,11 @@ shapes = (
 ref = igujr;
 },
 {
-pos = (439,0);
+pos = (876,-259);
 ref = anusvaragujr;
 }
 );
-width = 691;
+width = 826;
 },
 {
 anchors = (
@@ -147141,7 +147140,7 @@ shapes = (
 ref = igujr;
 },
 {
-pos = (294,0);
+pos = (502,-165);
 ref = anusvaragujr;
 }
 );
@@ -147160,11 +147159,11 @@ shapes = (
 ref = igujr;
 },
 {
-pos = (359,0);
+pos = (746,-232);
 ref = anusvaragujr;
 }
 );
-width = 575;
+width = 725;
 },
 {
 anchors = (
@@ -147179,19 +147178,18 @@ shapes = (
 ref = igujr;
 },
 {
-pos = (339,0);
+pos = (588,-221);
 ref = anusvaragujr;
 }
 );
-width = 509;
+width = 549;
 }
 );
-metricWidth = igujr;
 script = gujarati;
 },
 {
 glyphname = iianusvaragujr;
-lastChange = "2021-10-13 09:53:05 +0000";
+lastChange = "2024-02-18 14:57:43 +0000";
 layers = (
 {
 anchors = (
@@ -147206,7 +147204,7 @@ shapes = (
 ref = iigujr;
 },
 {
-pos = (327,0);
+pos = (681,-99);
 ref = anusvaragujr;
 }
 );
@@ -147225,7 +147223,7 @@ shapes = (
 ref = iigujr;
 },
 {
-pos = (312,0);
+pos = (631,-6);
 ref = anusvaragujr;
 }
 );
@@ -147244,11 +147242,11 @@ shapes = (
 ref = iigujr;
 },
 {
-pos = (353,0);
+pos = (874,-192);
 ref = anusvaragujr;
 }
 );
-width = 691;
+width = 781;
 },
 {
 anchors = (
@@ -147263,7 +147261,7 @@ shapes = (
 ref = iigujr;
 },
 {
-pos = (235,0);
+pos = (482,-13);
 ref = anusvaragujr;
 }
 );
@@ -147282,11 +147280,11 @@ shapes = (
 ref = iigujr;
 },
 {
-pos = (273,0);
+pos = (732,-199);
 ref = anusvaragujr;
 }
 );
-width = 575;
+width = 685;
 },
 {
 anchors = (
@@ -147301,14 +147299,13 @@ shapes = (
 ref = iigujr;
 },
 {
-pos = (257,0);
+pos = (551,-108);
 ref = anusvaragujr;
 }
 );
 width = 511;
 }
 );
-metricWidth = iigujr;
 script = gujarati;
 },
 {
@@ -196257,7 +196254,7 @@ script = gujarati;
 },
 {
 glyphname = halastemgujr;
-lastChange = "2021-10-16 08:46:01 +0000";
+lastChange = "2024-02-18 12:39:27 +0000";
 layers = (
 {
 anchors = (
@@ -232482,7 +232479,7 @@ script = gujarati;
 {
 category = Mark;
 glyphname = uvowelsignnarrowgujr;
-lastChange = "2021-10-12 15:11:00 +0000";
+lastChange = "2024-02-18 12:40:01 +0000";
 layers = (
 {
 anchors = (
@@ -232744,7 +232741,7 @@ width = 0;
 }
 );
 script = gujarati;
-subCategory = Matra;
+subCategory = Nonspacing;
 },
 {
 category = Mark;
