@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Diffenator3</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+	<style type="text/css">
+		@font-face {
+      font-family: "Font Before";
+      src: url();
+    }
+
+    @font-face {
+      font-family: "Font After";
+      src: url();
+    }
+
+    .font-before, .font-after {
+      font-variation-settings: "wght" 400, "wdth" 100;
+    }
+
+    .font-before {
+      font-family: "Font Before", "Adobe Notdef";
+    }
+
+    .font-after {
+      font-family: "Font After", "Adobe Notdef";
+    }
+
+	:root {
+	--node-pt-size: 40px;
+	}
+
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #b3d4f5 !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+    background-color: #ced9e4 !important;
+}
+.nav-item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+.nav-pills .nav-link{
+    background-color: #9fcaf5 !important;
+}
+h4 {
+    color: #6f7882 !important;
+}
+
+@font-face {
+    font-family: "Adobe NotDef";
+    src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+}
+
+.box-title {
+    width: 100%;
+    font-size: 8pt;
+    font-weight: 700;
+    border-top: 1px solid black;
+    padding-top: 5px;
+    margin-bottom: 10pt;
+    display: block;
+}
+
+.box {
+    margin-bottom: 20pt;
+    width: 100%;
+    float: left;
+}
+
+.box-text {}
+
+#ui-nav {
+    position: fixed;
+    right: 20px;
+    z-index: 100;
+}
+
+#font-toggle {}
+
+.ui-nav-item {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+    text-align: center;
+    color: white;
+    background-color: black;
+    display: block;
+    font-size: 14pt;
+    padding: 5px;
+    margin: 2px;
+}
+
+/* Stuff needed for the table differ */
+body {
+    font-family: Helvetica;
+}
+
+.node {
+    font-family: courier;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+    padding: 5px;
+    display: block;
+    border: 1px dashed grey;
+    background-color: #e9e9ee;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.attr-before {
+    color: green;
+    cursor: text;
+}
+
+.attr-after {
+    color: red;
+    cursor: text;
+}
+
+.leaf {
+    font-weight: bold;
+}
+
+.old .cell .new {
+    display: none;
+}
+
+.new .cell .old {
+    display: none;
+}
+
+.both .cell .old {
+    opacity: 0.75;
+    color: red;
+}
+
+.both .cell .new {
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    color: green;
+}
+
+.spacer {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#ot-panel {
+    max-height: 400px;
+    overflow-y: scroll;
+    background: white;
+    padding: 10px;
+    display: none;
+   }
+
+   .cell{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    width: 50pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+  }
+  .cell-word{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .cell-glyph{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    border-radius: 5pt;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5pt;
+    margin: 5pt;
+    width: calc(var(--node-pt-size) * 2);
+    min-height: calc(var(--node-pt-size) * 2);
+    font-size: var(--node-pt-size);
+  }
+  .cell-glyph.font-before, .cell-word.font-before {
+    background: #eff6f2;
+  }
+  .cell-glyph.font-after, .cell-word.font-after {
+    background: #f7f4f4;
+  }
+
+  .cell-glyph:hover {
+    box-shadow: none;
+    background: #f0f0f5;
+  }
+  .cat-strings .cell {
+    clear: both;
+    position: static;
+    float: none;
+    text-align: left;
+  }
+  .codepoint {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10pt;
+    line-height: 10pt;
+  }
+  .box-title {
+    clear: both;
+  }
+  .node.closed::before {
+    content: "+";
+    margin-right: 5pt;
+  }
+  .node.open::before {
+    content: "-";
+    margin-right: 5pt;
+  }
+
+  .tooltip pre {
+    background-color: #6f7882;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .tooltip {
+    line-height: 1em;
+  }
+  .tooltip-inner {
+    max-width: 300px;
+  }
+
+  h1,h2,h3,h4,h5 {
+    clear: both;
+  }
+
+  #locationnav li {
+    white-space: wrap;
+  }
+
+  #userdefined div { width: 100%; }
+  
+/* The following rules are used in the WASM version, not in the CLI version.
+   But we keep them here so we can share them between the two versions. */
+
+   .modal-dialog {
+    max-width: 100% !important;
+    margin: 0 !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+  }
+
+  .fontdrop {
+    padding: 30px;
+    border-radius: 20px;
+    outline: 3px dashed #ffffffff;
+    outline-offset: -20px;
+  }
+
+  #fontbefore {
+    background-color: #ddffdddd;
+  }
+
+  #fontafter {
+    background-color: #ffdddddd;
+  }
+
+  .dragging {
+    background-image: linear-gradient(rgb(0 0 0/5%) 0 0);
+    outline: 5px dashed #ffffffff;
+  }
+
+  #diffkerns {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+		</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+		<div id="ui-nav">
+		  <div class="ui-nav-item" id="fonttoggle">Old</div>
+		  <div class="ui-nav-item" id="fontanimate">Animate</div>
+		  <div id="axes">
+		  </div>
+		</div>
+	
+	<div class="row">
+		<div class="col-2">
+			<ul class="nav nav-pills" id="locationnav">
+			</ul>
+		</div>
+		<div class="col-9 mt-3">
+			<div id="title"></div>
+			<div id="cmapdiff"> </div>
+			<div id="main"></div>
+			<div id="userdefined">
+				<h4>User defined sample text</h4>
+				<div contenteditable="true" class="font-before cell-word">
+					You can type your own text here to see it previewed in the fonts.
+				</div>
+				<div style="clear: both"></div>
+			</div>
+			<div id="diffkerns"> </div>
+			<div id="difftable"> </div>
+		</div>
+	</div>
+	<script type="module">
+		function renderTableDiff(node, toplevel) {
+  var wrapper = $("<div> </div>");
+  if (!node) {
+    return wrapper;
+  }
+  if (Array.isArray(node) && node.length == 2) {
+    var before = $("<span/>");
+    before.addClass("attr-before");
+    before.html(" " + node[0] + " ");
+    var after = $("<span/>");
+    after.addClass("attr-after");
+    after.append(renderTableDiff(node[1], true).children());
+    wrapper.append(before);
+    wrapper.append(after);
+    return wrapper;
+  }
+  if (node.constructor != Object) {
+    var thing = $("<span/>");
+    thing.html(node);
+    wrapper.append(thing);
+    return wrapper;
+  }
+  for (const [key, value] of Object.entries(node)) {
+    var display = $("<div/>");
+    display.addClass("node");
+    if (!toplevel) {
+      display.hide();
+    }
+    display.append(key);
+    display.append(renderTableDiff(value, false).children());
+    if (display.children(".node").length > 0) {
+      display.addClass("closed");
+    }
+    wrapper.append(display);
+  }
+  return wrapper;
+}
+
+function addAGlyph(glyph, where) {
+  let title = "";
+  if (glyph.name) {
+    title = "name: " + glyph.name;
+  }
+  let cp =
+    "<br>U+" +
+    glyph.string.codePointAt(0).toString(16).padStart(4, "0").toUpperCase();
+  where.append(`
+        <div class="cell-glyph font-before">
+        <div data-toggle="tooltip" data-html="true" data-title="${glyph.differing_pixels} pixels"> ${glyph.string}
+        <div class="codepoint" data-toggle="tooltip" data-html="true" data-title="${title}">
+		${cp}
+        </div>
+        </div>
+    `);
+}
+
+function addAWord(diff, where) {
+  if (!diff.buffer_b) {
+    diff.buffer_b = diff.buffer_a;
+  }
+  where.append(`
+		<div class="cell-word font-before">
+		<span data-toggle="tooltip" data-html="true" data-title="Before: <pre>${diff.buffer_a}</pre>After: <pre>${diff.buffer_b}</pre><br>difference: ${diff.differing_pixels} pixels">
+		${diff.word}
+		</span>
+		</div>
+	`);
+}
+
+function diffTables(report) {
+  $("#difftable").empty();
+  $("#difftable").append(`<h4 class="mt-2 box-title">Table-level details</h4>`);
+  $("#difftable").append(
+    renderTableDiff({ tables: report["tables"] }, true).children()
+  );
+  $("#difftable .node").on("click", function (e) {
+    $(this).toggleClass("closed open");
+    $(this).children(".node").toggle();
+    e.stopPropagation();
+  });
+}
+function diffKerns(report) {
+  $("#diffkerns").empty();
+  $("#diffkerns").append(`<h4 class="mt-2">Modified Kerns</h4>`);
+  $("#diffkerns").append(
+    `<table class="table table-striped" id="diffkerns"><tr><th>Pair</th><th>Old</old><th>New</th></table>`
+  );
+  for (let [pair, value] of Object.entries(report["kerns"])) {
+    if (pair == "error") {
+      $("#diffkerns").append(`<p class="text-danger">Error: ${value}</p>`);
+      continue;
+    } else {
+      let row = $("<tr>");
+      row.append(`<td>${pair}</td>`);
+      row.append(`<td>${serializeKernBefore(value)}</td>`);
+      row.append(`<td>${serializeKernAfter(value)}</td>`);
+      $("#diffkerns table").append(row);
+    }
+  }
+}
+
+function serializeKernBefore(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[0], -1);
+  }
+  return serializeKern(kern, 0);
+}
+
+function serializeKernAfter(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[1], -1);
+  }
+  return serializeKern(kern, 1);
+}
+
+function serializeKern(kern, index) {
+  let string = "";
+  if (kern === null || kern === undefined) {
+    return "(null)";
+  }
+  if (kern.x) {
+    string += serializeKernValue(kern.x, index);
+  } else if (kern.y) {
+    string = "0";
+  }
+
+  if (kern.y) {
+    string += "," + serializeKernValue(kern.y, index);
+  }
+  if (!kern.x_placement && !kern.y_placement) {
+    return string;
+  }
+  string += "@";
+  if (kern.x_placement) {
+    string += serializeKernValue(kern.x_placement, index);
+  } else if (kern.y_placement) {
+    string += "0";
+  }
+  if (kern.y_placement) {
+    string += "," + serializeKernValue(kern.y_placement, index);
+  }
+  return string;
+}
+
+function serializeKernValue(kern, index) {
+  if (typeof kern == "number") {
+    return kern;
+  }
+  let string = "(";
+  let verybig = Object.entries(kern).length > 5;
+  for (let [key, value] of Object.entries(kern)) {
+    if (key == "default") {
+      string += value[index] + " ";
+    } else {
+      string += value[index] + "@" + key + " ";
+    }
+    if (verybig) {
+      string += "<br>";
+    }
+  }
+  return string.trim() + ")";
+}
+
+function cmapDiff(report) {
+  if (report.cmap_diff && (report.cmap_diff.new || report.cmap_diff.missing)) {
+    $("#cmapdiff").append(
+      `<h4 class="mt-2">Added and Removed Encoded Glyphs</h4>`
+    );
+    if (report["cmap_diff"]["new"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Added Glyphs</h4>`);
+      let added = $("<div>");
+      for (let glyph of report["cmap_diff"]["new"]) {
+        addAGlyph(glyph, added);
+      }
+      $("#cmapdiff").append(added);
+    }
+
+    if (report["cmap_diff"]["missing"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Removed Glyphs</h4>`);
+      let missing = $("<div>");
+      for (let glyph of report["cmap_diff"]["missing"]) {
+        addAGlyph(glyph, missing);
+      }
+      $("#cmapdiff").append(missing);
+    }
+  } else {
+    $("#cmapdiff").append(`<p>No changes to encoded glyphs</p>`);
+  }
+}
+
+function setupAnimation() {
+  $("#fonttoggle").click(function () {
+    if ($(this).text() == "Old") {
+      $(this).text("New");
+      $(".font-before").removeClass("font-before").addClass("font-after");
+    } else {
+      $(this).text("Old");
+      $(".font-after").removeClass("font-after").addClass("font-before");
+    }
+  });
+
+  let animationHandle;
+  function animate() {
+    $("#fonttoggle").click();
+    animationHandle = setTimeout(animate, 1000);
+  }
+  $("#fontanimate").click(function () {
+    if ($(this).text() == "Animate") {
+      $(this).text("Stop");
+      animate();
+    } else {
+      $(this).text("Animate");
+      clearTimeout(animationHandle);
+    }
+  });
+}
+
+export {
+  renderTableDiff,
+  addAGlyph,
+  addAWord,
+  cmapDiff,
+  diffTables,
+  diffKerns,
+  setupAnimation,
+};
+
+	var report = {"tables":{"GDEF":{"mark_glyph_sets":{"7":{"6":["uni0AB00ACD0A82","uni0AFD_uni0AFA"],"7":["uni0AC70AB00ACD0A82","uni0AFE_uni0AFA"],"8":["uni0AC80AB00ACD0A82","uni0AFD_uni0AFB"],"9":["uni0AFD_uni0AFA","uni0AFE_uni0AFB"],"10":["uni0AFE_uni0AFA","uni0AFD_uni0AFC"],"11":["uni0AFD_uni0AFB",null],"12":["uni0AFE_uni0AFB",null]}}},"GPOS":{"feature_list":{"blwm":{"4":[null,9],"5":[null,10],"6":[null,11]},"mark":{"0":[9,12],"1":[10,13],"2":[null,14],"3":[null,15],"4":[null,16]}},"lookup_list":{"0":{"0":{"error":"There are 138 changes, check manually!"},"1":{"classes":{"@CLASS_L_0":{"0":["uni0AA7","uni0AB60ACD0AB5"],"1":["uni0AAB0ACD0AAF","uni0AB2"],"2":["uni0AB20ACD0AAF","uni0A9E0ACD0AB0"],"4":["uni0AB60ACD0AB5","uni0AA40ACD0AA4"],"5":["uni0AB90ACD0AAE","uni0AA40ACD0AB8"],"6":["uni0A960ACD0AB0","uni0AA70ACD0AB0"],"7":["uni0AAA","uni0A950ACD0A96"],"8":["uni0A9A0ACD0AB0","uni0AA40ACD0AAE"],"9":["uni0AA30ACD0AB0","uni0AA3.calt"],"10":["uni0AAD0ACD0AB0","uni0AA20ACD0AAF"],"11":["uni0AA40ACD0AA40ACD0AAF","uni0AAF0ACD0AB0"],"12":["uni0AB80ACD0AA40ACD0AB0","uni0AB70ACD0AB0"],"14":["uni0A9F0ACD0AAF","uni0A950ACD0AB7"],"15":["uni0AB80ACD0AAE","uni0AB6"],"16":["uni0A9B0ACD0AAF","uni0AAC"],"17":["uni0AC0","uni0AB90ACD0AAE"],"18":["uni0AB3","uni0A9F0ACD0AAF"],"19":["uni0AAA0ACD0AA8","uni0A980ACD0AB0"],"20":["uni0A97","uni0A9B0ACD0AAF"],"21":["uni0AA40ACD0AAE","uni0A9A"],"22":["uni0AC9","uni0ABE"],"23":["uni0AA50ACD0AA8","uni0AA80ACD0AB0"],"24":["uni0A950ACD0AAF","uni0AAA0ACD0AB0"],"25":["uni0AA60ACD0AAF","uni0AB3"],"26":["uni0AB70ACD0AB0","uni0AA50ACD0AA8"],"27":["uni0A9C0ACD0A9E0ACD0AB0","uni0AAE0ACD0AA8"],"28":["uni0AAE","uni0A9E0ACD0A9C"],"29":["uni0AB80ACD0AB0","uni0AB80ACD0AA40ACD0AB0"],"30":["uni0A9E0ACD0AB0","uni0AB5"],"31":["uni0A9C0ABE","uni0AA3"],"32":["uni0AB30ACD0AB0","uni0AB20ACD0AAF"],"33":["uni0AA8","uni0AB20ACD0AB0"],"34":["uni0A98","uni0AB60ACD0AA8"],"35":["uni0AF90ABE","uni0AA60ACD0AAF"],"36":["uni0A950ACD0AB7","uni0AF90ABE"],"37":["uni0A9C0ACD0AAE","uni0AAA"],"38":["uni0AA10ACD0AAF","uni0AA5"],"39":["uni0A9C0ACD0AAF","uni0A9C0ACD0A9E0ACD0AB0"],"40":["uni0A950ACD0AB70ACD0AB0","uni0A9C0ACD0AAF"],"41":["uni0A9E","uni0A960ACD0AB0"],"42":["uni0A950ACD0AAA","uni0AB7"],"43":["uni0AB20ACD0AB8","uni0A9E0ACD0A9A"],"44":["uni0A980ACD0AB0","uni0AAD"],"45":["uni0AA40ACD0AA4","uni0AA40ACD0AAF"],"46":["uni0ABE","uni0AA80ACD0AA8"],"47":["uni0AA4","uni0AAA0ACD0AA4"],"48":["uni0AB5","uni0A96"],"49":["uni0AA3","uni0ACB"],"50":["uni0AA40ACD0AAF","uni0A9C0ACD0AB00ABE"],"51":["uni0AB60ACD0AA8","zh_ra_aaMatragujarati"],"52":["uni0AB20ACD0AB0","uni0AA40ACD0AB0"],"53":["uni0AAA0ACD0AA4","uni0AB60ACD0AB0"],"54":["uni0AB8","uni0A990ACD0AAF"],"55":["uni0AB7","uni0AA10ACD0AAF"],"56":["uni0A970ACD0AB0","uni0AAA0ACD0AA8"],"57":["uni0AA70ACD0AB0","uni0A980ACD0AA8"],"58":["uni0AA80ACD0AB8","uni0AB8"],"59":["uni0AA60ACD0AAE","uni0AAD0ACD0AB0"],"60":["zh_ra_aaMatragujarati","uni0A98"],"61":["uni0AA40ACD0AB0","uni0AA7"],"62":["uni0A96","uni0A9C0ABE"],"63":["uni0AAE0ACD0AB0","uni0A97"],"64":["uni0AA40ACD0AB8","uni0A970ACD0AB0"],"65":["uni0AAC0ACD0AB0","uni0A9A0ACD0AB0"],"66":["uni0A980ACD0AA8","uni0AA60ACD0AAE"],"67":["uni0AB90ACD0AAF","uni0AB20ACD0AB8"],"68":["uni0A950ACD0A96","uni0AB80ACD0AAE"],"69":["uni0AAD","uni0AC9"],"70":["uni0ACC","uni0A970ACD0AA8"],"71":["uni0AB60ACD0AB2","uni0AA40ACD0AA8"],"72":["uni0AAC","uni0ACC"],"73":["uni0AA30ACD0AB0.calt","uni0A9E"],"74":["uni0AB30ACD0AAF","uni0AA30ACD0AB0"],"75":["uni0A9E0ACD0A9C","uni0AA40ACD0AA40ACD0AAF"],"76":["uni0AAC0ACD0AB2","uni0AAF"],"77":["uni0AB50ACD0AB0","uni0AB60ACD0A9A"],"78":["uni0AA80ACD0AA8","uni0AB60ACD0AB2"],"79":["uni0AB60ACD0A9A","uni0AAE"],"80":["uni0AA5","uni0AA30ACD0AB0.calt"],"81":["uni0AA3.calt","uni0AAC0ACD0AB0"],"82":["uni0AA20ACD0AAF","uni0AA4"],"83":["uni0AB60ACD0AB0","uni0AA50ACD0AB0"],"84":["uni0AB6","uni0AB30ACD0AAF"],"85":["uni0A9A","uni0AC0"],"86":["uni0ACB","uni0AA8"],"87":["uni0A970ACD0AA8","uni0A9C0ACD0A9E"],"88":["uni0AAF0ACD0AB0","uni0A950ACD0AAF"],"89":["uni0AB2","uni0AB80ACD0AB0"],"90":["uni0AAA0ACD0AB0","uni0A950ACD0AB70ACD0AB0"],"91":["uni0A990ACD0AAF","uni0AB90ACD0AAF"],"92":["uni0A9E0ACD0A9A","uni0AAE0ACD0AB0"],"93":["uni0AAE0ACD0AA8","uni0AB30ACD0AB0"],"94":["uni0AA80ACD0AB0","uni0AAB0ACD0AAF"],"95":["uni0AA50ACD0AB0","uni0A950ACD0AAA"],"96":["uni0AAF","uni0AB50ACD0AB0"],"97":["uni0A9C0ACD0A9E","uni0AAC0ACD0AB2"],"98":["uni0AA40ACD0AA8","uni0A9C0ACD0AAE"],"99":["uni0A9C0ACD0AB00ABE","uni0AA80ACD0AB8"]},"@CLASS_L_2":{"0":["uni0AB90ACD0AA3","uni0AA6"],"1":["uni0AB90ACD0AA8","uni0A950ACD0AA6"],"2":["uni0AB90ACD0AB2","uni0AAA0ACD0AA6"],"3":["uni0AB90ACD0AB5","uni0AB50ACD0AA6"]},"@CLASS_L_3":{"0":["uni0AA6","uni0AB90ACD0AA3"],"1":["uni0A950ACD0AA6","uni0AB90ACD0AA8"],"2":["uni0AAA0ACD0AA6","uni0AB90ACD0AB2"],"3":["uni0AB50ACD0AA6","uni0AB90ACD0AB5"]},"@CLASS_L_4":{"0":["uni0AAF0ACD","uni0AAC0ACD"],"1":["uni0AAF0ACD0072","uni0AAC0ACD0072"]},"@CLASS_L_5":{"0":["uni0AB50ACD","uni0A9A0ACD"],"1":["uni0AB50ACD0072","uni0A9A0ACD0072"]},"@CLASS_L_6":{"0":["uni0AA50ACD","uni0A980ACD"],"1":["uni0AA50ACD0072","uni0A980ACD0072"]},"@CLASS_L_7":{"0":["uni0AAB0ACD","uni0A9C0ACD"],"1":["uni0AAB0ACD0072","uni0A9C0ACD0072"]},"@CLASS_L_8":{"0":["uni0AAA0ACD","uni0A950ACD"],"1":["uni0AAA0ACD0072","uni0A950ACD0072"]},"@CLASS_L_9":{"0":["uni0AA80ACD","uni0A960ACD"],"1":["uni0AA80ACD0072","uni0A960ACD0072"]},"@CLASS_L_10":{"0":["uni0AAE0ACD","uni0AB20ACD"],"1":["uni0AAE0ACD0072","uni0AB20ACD0072"]},"@CLASS_L_11":{"0":["uni0AB20ACD","uni0AAE0ACD"],"1":["uni0AB20ACD0072","uni0AAE0ACD0072"]},"@CLASS_L_12":{"0":["uni0A960ACD","uni0AA80ACD"],"1":["uni0A960ACD0072","uni0AA80ACD0072"]},"@CLASS_L_13":{"0":["uni0A950ACD","uni0AAA0ACD"],"1":["uni0A950ACD0072","uni0AAA0ACD0072"]},"@CLASS_L_14":{"0":["uni0A9C0ACD","uni0AAB0ACD"],"1":["uni0A9C0ACD0072","uni0AAB0ACD0072"]},"@CLASS_L_15":{"0":["uni0A980ACD","uni0AA50ACD"],"1":["uni0A980ACD0072","uni0AA50ACD0072"]},"@CLASS_L_16":{"0":["uni0A9A0ACD","uni0AB50ACD"],"1":["uni0A9A0ACD0072","uni0AB50ACD0072"]},"@CLASS_L_17":{"0":["uni0AAC0ACD","uni0AAF0ACD"],"1":["uni0AAC0ACD0072","uni0AAF0ACD0072"]},"@CLASS_L_18":{"0":["uni0AE6","uni0AEE"]},"@CLASS_L_19":{"0":["uni0AE8","uni0AEB"]},"@CLASS_L_20":{"0":["uni0AE9","uni0AEA"]},"@CLASS_L_21":{"0":["uni0AA40ACD0072","uni0ABF"]},"@CLASS_L_22":{"0":["uni0AA40ACD","uni0ABF.02"]},"@CLASS_L_23":{"0":["uni0AB60ACD","uni0ABF.04"]},"@CLASS_L_24":{"0":["uni0AED","uni0ABF.05"]},"@CLASS_L_25":{"0":["uni0AB80ACD","uni0ABF0A82"]},"@CLASS_L_26":{"0":["uni0AE7","uni0ABF0A82.04"]},"@CLASS_L_27":{"0":["uni0AEF","uni0ABF0A82.05"]},"@CLASS_L_28":{"0":["uni0ABF0AB00ACD0A82.05","uni0ABF0AB00ACD"]},"@CLASS_L_29":{"0":["uni0ABF0AB00ACD0A82.04","uni0ABF0AB00ACD.04"]},"@CLASS_L_30":{"0":["uni0ABF0AB00ACD0A82","uni0ABF0AB00ACD.05"]},"@CLASS_L_31":{"0":["uni0ABF0AB00ACD.05","uni0ABF0AB00ACD0A82"]},"@CLASS_L_32":{"0":["uni0ABF0AB00ACD.04","uni0ABF0AB00ACD0A82.04"]},"@CLASS_L_33":{"0":["uni0ABF0AB00ACD","uni0ABF0AB00ACD0A82.05"]},"@CLASS_L_34":{"0":["uni0ABF0A82.05","uni0AEF"]},"@CLASS_L_35":{"0":["uni0ABF0A82.04","uni0AE7"]},"@CLASS_L_36":{"0":["uni0ABF0A82","uni0AB80ACD"]},"@CLASS_L_37":{"0":["uni0ABF.05","uni0AED"]},"@CLASS_L_38":{"0":["uni0ABF.04","uni0AB60ACD"]},"@CLASS_L_39":{"0":["uni0ABF.02","uni0AA40ACD"]},"@CLASS_L_40":{"0":["uni0ABF","uni0AA40ACD0072"]},"@CLASS_L_41":{"0":["uni0AEA","uni0AE9"]},"@CLASS_L_42":{"0":["uni0AEB","uni0AE8"]},"@CLASS_L_43":{"0":["uni0AEE","uni0AE6"]},"@CLASS_R_4":{"0":["uni0AA4","uni0A9C"],"1":["uni0AA40ACD","uni0A9C0ABE"],"2":["uni0AA40ACD0A95","uni0A9C0AC0"],"3":["uni0AA40ACD0AA8","uni0A9C0ACD"],"4":["uni0AA40ACD0AAE","uni0A9C0ACD0A9C"],"5":["uni0AA40ACD0AAF","uni0A9C0ACD0AAE"],"6":["uni0AA40ACD0AB8","uni0A9C0ACD0AAF"]},"@CLASS_R_6":{"0":["uni0A9C","uni0AA4"],"1":["uni0A9C0ABE","uni0AA40ACD"],"2":["uni0A9C0AC0","uni0AA40ACD0A95"],"3":["uni0A9C0ACD","uni0AA40ACD0AA8"],"4":["uni0A9C0ACD0A9C","uni0AA40ACD0AAE"],"5":["uni0A9C0ACD0AAE","uni0AA40ACD0AAF"],"6":["uni0A9C0ACD0AAF","uni0AA40ACD0AB8"]},"@CLASS_R_7":{"0":["uni0AF9","uni0AA60AC3"],"1":["uni0AF90ABE","uni0AA60ACD0AB0"],"2":["uni0AF90AC0","uni0AA60ACD0A97"],"3":["zh_ragujarati","uni0AA60ACD0AA8"],"4":["zh_ra_aaMatragujarati","uni0AA60ACD0AAC"],"5":["zh_ra_iiMatragujarati","uni0AA60ACD0AB5"]},"@CLASS_R_8":{"0":["uni0AA40ACD0AA40ACD","uni0AA7"],"1":["uni0A9F0ACD0A9F","uni0AA70ACD"],"2":["uni0A9F0ACD0AA0","uni0AA70ACD0AB0"],"3":["uni0A9F0ACD0AB5","uni0AA60ACD0AAF"],"4":["uni0AA40ACD0AA4","uni0AA70ACD0AA8"],"5":["uni0AA40ACD0AA40ACD0AAF","uni0AA70ACD0072"]},"@CLASS_R_9":{"0":["uni0AB60ACD0AB0","uni0AA3"],"1":["uni0AB60ACD0A9A","uni0AA3.calt"],"2":["uni0AB60ACD0AA8","uni0AA30ACD"],"3":["uni0AB60ACD0AB2","uni0AA30ACD0AB0"],"4":["uni0AB60ACD0AB5","uni0AA30ACD0AB0.calt"],"5":["uni0AB60ACD0072","uni0AA30ACD0072"]},"@CLASS_R_10":{"0":["uni0AA3","uni0AB60ACD0AB0"],"1":["uni0AA3.calt","uni0AB60ACD0A9A"],"2":["uni0AA30ACD","uni0AB60ACD0AA8"],"3":["uni0AA30ACD0AB0","uni0AB60ACD0AB2"],"4":["uni0AA30ACD0AB0.calt","uni0AB60ACD0AB5"],"5":["uni0AA30ACD0072","uni0AB60ACD0072"]},"@CLASS_R_11":{"0":["uni0AA7","uni0AA40ACD0AA40ACD"],"1":["uni0AA70ACD","uni0A9F0ACD0A9F"],"2":["uni0AA70ACD0AB0","uni0A9F0ACD0AA0"],"3":["uni0AA60ACD0AAF","uni0A9F0ACD0AB5"],"4":["uni0AA70ACD0AA8","uni0AA40ACD0AA4"],"5":["uni0AA70ACD0072","uni0AA40ACD0AA40ACD0AAF"]},"@CLASS_R_12":{"0":["uni0AA60AC3","uni0AF9"],"1":["uni0AA60ACD0AB0","uni0AF90ABE"],"2":["uni0AA60ACD0A97","uni0AF90AC0"],"3":["uni0AA60ACD0AA8","zh_ragujarati"],"4":["uni0AA60ACD0AAC","zh_ra_aaMatragujarati"],"5":["uni0AA60ACD0AB5","zh_ra_iiMatragujarati"]},"@CLASS_R_13":{"0":["uni0AB5","uni0A99"],"1":["uni0AB50ACD","uni0AA1"],"2":["uni0AB50ACD0AB0","uni0A990ACD"],"3":["uni0AB50ACD0AA6","uni0A990ACD0AAF"],"4":["uni0AB50ACD0072","uni0AA10ACD0AAF"]},"@CLASS_R_14":{"0":["uni0AA5","uni0A98"],"1":["uni0AA50ACD","uni0A980ACD"],"2":["uni0AA50ACD0AB0","uni0A980ACD0AB0"],"3":["uni0AA50ACD0AA8","uni0A980ACD0AA8"],"4":["uni0AA50ACD0072","uni0A980ACD0072"]},"@CLASS_R_15":{"0":["uni0AAA0ACD0A9F","uni0AB3"],"1":["uni0AAA0ACD0AA0","uni0AB30ACD"],"2":["uni0AAA0ACD0AA4","uni0AB30ACD0AB0"],"3":["uni0AB70ACD0A9F","uni0AB30ACD0AAF"],"4":["uni0AB70ACD0AA0","uni0AB30ACD0072"]},"@CLASS_R_16":{"0":["uni0AB3","uni0AAA0ACD0A9F"],"1":["uni0AB30ACD","uni0AAA0ACD0AA0"],"2":["uni0AB30ACD0AB0","uni0AAA0ACD0AA4"],"3":["uni0AB30ACD0AAF","uni0AB70ACD0A9F"],"4":["uni0AB30ACD0072","uni0AB70ACD0AA0"]},"@CLASS_R_17":{"0":["uni0A98","uni0AA5"],"1":["uni0A980ACD","uni0AA50ACD"],"2":["uni0A980ACD0AB0","uni0AA50ACD0AB0"],"3":["uni0A980ACD0AA8","uni0AA50ACD0AA8"],"4":["uni0A980ACD0072","uni0AA50ACD0072"]},"@CLASS_R_18":{"0":["uni0A99","uni0AB5"],"1":["uni0AA1","uni0AB50ACD"],"2":["uni0A990ACD","uni0AB50ACD0AB0"],"3":["uni0A990ACD0AAF","uni0AB50ACD0AA6"],"4":["uni0AA10ACD0AAF","uni0AB50ACD0072"]},"@CLASS_R_19":{"0":["uni0AAF","uni0AAD"],"1":["uni0AAF0ACD","uni0AAD0ACD"],"2":["uni0AAF0ACD0AB0","uni0AAD0ACD0AB0"],"3":["uni0AAF0ACD0072","uni0AAD0ACD0072"]},"@CLASS_R_20":{"0":["uni0AB7","uni0A9A"],"1":["uni0AB70ACD","uni0A9A0ACD"],"2":["uni0AB70ACD0AB0","uni0A9A0ACD0AB0"],"3":["uni0AB70ACD0072","uni0A9A0ACD0072"]},"@CLASS_R_21":{"0":["uni0A950ACD0AB70ACD","uni0A9C0ACD0A9E0ACD"],"1":["uni0A950ACD0AB70ACD0AB0","uni0A9C0ACD0A9E0ACD0AB0"],"2":["uni0A950ACD0AB7","uni0A9C0ACD0A9E"],"3":["uni0A950ACD0AB70ACD0072","uni0A9C0ACD0A9E0ACD0072"]},"@CLASS_R_23":{"0":["uni0A9C0ACD0A9E0ACD","uni0A950ACD0AB70ACD"],"1":["uni0A9C0ACD0A9E0ACD0AB0","uni0A950ACD0AB70ACD0AB0"],"2":["uni0A9C0ACD0A9E","uni0A950ACD0AB7"],"3":["uni0A9C0ACD0A9E0ACD0072","uni0A950ACD0AB70ACD0072"]},"@CLASS_R_24":{"0":["uni0A9A","uni0AB7"],"1":["uni0A9A0ACD","uni0AB70ACD"],"2":["uni0A9A0ACD0AB0","uni0AB70ACD0AB0"],"3":["uni0A9A0ACD0072","uni0AB70ACD0072"]},"@CLASS_R_25":{"0":["uni0AAD","uni0AAF"],"1":["uni0AAD0ACD","uni0AAF0ACD"],"2":["uni0AAD0ACD0AB0","uni0AAF0ACD0AB0"],"3":["uni0AAD0ACD0072","uni0AAF0ACD0072"]},"@CLASS_R_26":{"0":["uni0A9F","uni0AAC"],"1":["uni0A9F0ACD","uni0AAC0ACD"],"2":["uni0A9F0ACD0AAF","uni0AAC0ACD0AB2"]},"@CLASS_R_27":{"0":["uni0AAA0ACD0AB0","uni0AA6"],"1":["uni0AAA0ACD0AA8","uni0AA60ACD"],"2":["uni0AAA0ACD0072","uni0AA60ACD0AA6"]},"@CLASS_R_28":{"0":["uni0AAA","uni0AA2"],"1":["uni0AAA0ACD","uni0AA20ACD"],"2":["uni0AAA0ACD0AA6","uni0AA20ACD0AAF"]},"@CLASS_R_30":{"0":["uni0AA2","uni0AAA"],"1":["uni0AA20ACD","uni0AAA0ACD"],"2":["uni0AA20ACD0AAF","uni0AAA0ACD0AA6"]},"@CLASS_R_31":{"0":["uni0AA6","uni0AAA0ACD0AB0"],"1":["uni0AA60ACD","uni0AAA0ACD0AA8"],"2":["uni0AA60ACD0AA6","uni0AAA0ACD0072"]},"@CLASS_R_32":{"0":["uni0AAC","uni0A9F"],"1":["uni0AAC0ACD","uni0A9F0ACD"],"2":["uni0AAC0ACD0AB2","uni0A9F0ACD0AAF"]},"@CLASS_R_33":{"0":["uni0AA0","uni0A9B"],"1":["uni0AA00ACD","uni0A9B0ACD0AAF"]},"@CLASS_R_34":{"0":["uni0AAE","uni0AA10ACD0AA1"],"1":["uni0AAE0ACD","uni0AA10ACD0AA2"]},"@CLASS_R_35":{"0":["uni0A960ACD0AB0","uni0A96"],"1":["uni0A960ACD0072","uni0A960ACD"]},"@CLASS_R_36":{"0":["uni0A96","uni0A960ACD0AB0"],"1":["uni0A960ACD","uni0A960ACD0072"]},"@CLASS_R_37":{"0":["uni0AA10ACD0AA1","uni0AAE"],"1":["uni0AA10ACD0AA2","uni0AAE0ACD"]},"@CLASS_R_38":{"0":["uni0A9B","uni0AA40ACD0072"],"1":["uni0A9B0ACD0AAF","uni0AA40ACD0AB0"]},"@CLASS_R_39":{"0":["uni0AE8","uni0AA0"],"1":[null,"uni0AA00ACD"]},"@CLASS_R_40":{"0":["uni0AA00ACD0AA0","uni0A9B0ACD0AB5"]},"@CLASS_R_41":{"0":["uni0AE9","uni0AA60ACD0AAD"]},"@CLASS_R_42":{"0":["uni0AED","uni0AA60ACD0AA7"]},"@CLASS_R_43":{"0":["uni0AE7","uni0AA60ACD0A98"]},"@CLASS_R_44":{"0":["uni0A990ACD0AAE","uni0AA60ACD0AAE"]},"@CLASS_R_45":{"0":["uni0A990ACD0A95","uni0AA20ACD0AA2"]},"@CLASS_R_46":{"0":["uni0A990ACD0A98","uni0AEB"]},"@CLASS_R_47":{"0":["uni0A990ACD0A97","uni0AEA"]},"@CLASS_R_49":{"0":["uni0AEA","uni0A990ACD0A97"]},"@CLASS_R_50":{"0":["uni0AEB","uni0A990ACD0A98"]},"@CLASS_R_51":{"0":["uni0AA20ACD0AA2","uni0A990ACD0A95"]},"@CLASS_R_52":{"0":["uni0AA60ACD0AAE","uni0A990ACD0AAE"]},"@CLASS_R_53":{"0":["uni0AA60ACD0A98","uni0AE7"]},"@CLASS_R_54":{"0":["uni0AA60ACD0AA7","uni0AED"]},"@CLASS_R_55":{"0":["uni0AA60ACD0AAD","uni0AE9"]},"@CLASS_R_56":{"0":["uni0A9B0ACD0AB5","uni0AA00ACD0AA0"]},"@CLASS_R_57":[null,["uni0AE8"]]},"kerns":{"@CLASS_L_0":{"@CLASS_R_3":{"x":[16,14]},"@CLASS_R_7":{"x":[60,47]},"@CLASS_R_8":{"x":[36,0]},"@CLASS_R_11":{"x":[0,34]},"@CLASS_R_12":{"x":[46,56]},"@CLASS_R_34":{"x":[0,47]},"@CLASS_R_37":{"x":[46,0]},"@CLASS_R_40":{"x":[36,0]},"@CLASS_R_41":{"x":[0,13]},"@CLASS_R_45":{"x":[0,7]},"@CLASS_R_47":{"x":[50,0]},"@CLASS_R_49":{"x":[0,46]},"@CLASS_R_51":{"x":[12,0]},"@CLASS_R_55":{"x":[14,0]},"@CLASS_R_56":{"x":[0,30]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_1":{"@CLASS_R_19":{"x":[4,0]},"@CLASS_R_20":{"x":[62,0]},"@CLASS_R_24":{"x":[0,58]},"@CLASS_R_25":{"x":[0,8]},"@CLASS_R_28":{"x":[62,0]},"@CLASS_R_30":{"x":[0,62]},"@CLASS_R_34":{"x":[34,0]},"@CLASS_R_35":{"x":[0,62]},"@CLASS_R_36":{"x":[62,0]},"@CLASS_R_37":{"x":[0,33]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_2":{"@CLASS_R_1":{"x":[14,0]},"@CLASS_R_3":{"x":[24,0]},"@CLASS_R_6":{"x":[-46,0]},"@CLASS_R_7":{"x":[56,0]},"@CLASS_R_8":{"x":[-16,0]},"@CLASS_R_9":{"x":[-12,0]},"@CLASS_R_10":{"x":[-26,0]},"@CLASS_R_11":{"x":[-44,30]},"@CLASS_R_12":{"x":[30,50]},"@CLASS_R_13":{"x":[-42,0]},"@CLASS_R_14":{"x":[-30,0]},"@CLASS_R_15":{"x":[-19,0]},"@CLASS_R_16":{"x":[-36,0]},"@CLASS_R_17":{"x":[-24,0]},"@CLASS_R_18":{"x":[18,0]},"@CLASS_R_19":{"x":[-30,0]},"@CLASS_R_20":{"x":[-50,0]},"@CLASS_R_21":{"x":[14,0]},"@CLASS_R_22":{"x":[-50,0]},"@CLASS_R_23":{"x":[24,0]},"@CLASS_R_24":{"x":[-20,0]},"@CLASS_R_26":{"x":[6,0]},"@CLASS_R_27":{"x":[28,0]},"@CLASS_R_28":{"x":[-66,0]},"@CLASS_R_29":{"x":[-12,0]},"@CLASS_R_32":{"x":[-8,0]},"@CLASS_R_33":{"x":[6,0]},"@CLASS_R_34":{"x":[-24,34]},"@CLASS_R_35":{"x":[-56,0]},"@CLASS_R_36":{"x":[-50,0]},"@CLASS_R_37":{"x":[19,0]},"@CLASS_R_40":{"x":[36,0]},"@CLASS_R_44":{"x":[50,0]},"@CLASS_R_48":{"x":[-12,0]},"@CLASS_R_49":{"x":[0,34]},"@CLASS_R_51":{"x":[19,0]},"@CLASS_R_52":{"x":[-36,0]},"@CLASS_R_56":{"x":[-20,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_3":{"@CLASS_R_1":{"x":[0,16]},"@CLASS_R_3":{"x":[0,26]},"@CLASS_R_4":{"x":[0,-47]},"@CLASS_R_7":{"x":[56,-13]},"@CLASS_R_8":{"x":[30,-46]},"@CLASS_R_9":{"x":[0,-24]},"@CLASS_R_10":{"x":[0,-11]},"@CLASS_R_11":{"x":[0,8]},"@CLASS_R_12":{"x":[0,61]},"@CLASS_R_13":{"x":[0,30]},"@CLASS_R_14":{"x":[0,-19]},"@CLASS_R_15":{"x":[0,-30]},"@CLASS_R_16":{"x":[0,-14]},"@CLASS_R_17":{"x":[0,-34]},"@CLASS_R_18":{"x":[0,-34]},"@CLASS_R_20":{"x":[0,-24]},"@CLASS_R_21":{"x":[0,30]},"@CLASS_R_22":{"x":[0,-54]},"@CLASS_R_23":{"x":[0,20]},"@CLASS_R_24":{"x":[0,-61]},"@CLASS_R_25":{"x":[0,-34]},"@CLASS_R_26":{"x":[0,-13]},"@CLASS_R_30":{"x":[0,-64]},"@CLASS_R_31":{"x":[0,33]},"@CLASS_R_32":{"x":[0,7]},"@CLASS_R_34":{"x":[0,14]},"@CLASS_R_35":{"x":[0,-50]},"@CLASS_R_36":{"x":[0,-50]},"@CLASS_R_37":{"x":[36,-19]},"@CLASS_R_38":{"x":[0,-11]},"@CLASS_R_39":{"x":[0,11]},"@CLASS_R_40":{"x":[0,-24]},"@CLASS_R_44":{"x":[0,-37]},"@CLASS_R_45":{"x":[0,11]},"@CLASS_R_47":{"x":[36,0]},"@CLASS_R_48":{"x":[0,-14]},"@CLASS_R_52":{"x":[0,50]},"@CLASS_R_56":{"x":[0,37]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_4":{"@CLASS_R_5":{"x":[24,13]},"@CLASS_R_19":{"x":[-10,0]},"@CLASS_R_27":{"x":[0,-19]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_5":{"@CLASS_R_3":{"x":[-49,0]},"@CLASS_R_5":{"x":[6,20]},"@CLASS_R_17":{"x":[-20,0]},"@CLASS_R_20":{"x":[0,-15]},"@CLASS_R_30":{"x":[0,-45]},"@CLASS_R_32":{"x":[0,-37]},"@CLASS_R_33":{"x":[0,-36]},"@CLASS_R_39":{"x":[0,-2]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_6":{"@CLASS_R_5":{"x":[0,21]},"@CLASS_R_11":{"x":[-6,0]},"@CLASS_R_13":{"x":[6,0]},"@CLASS_R_14":{"x":[0,2]},"@CLASS_R_25":{"x":[0,-13]},"@CLASS_R_28":{"x":[-10,0]},"@CLASS_R_33":{"x":[0,-15]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_7":{"@CLASS_R_1":{"x":[0,-70]},"@CLASS_R_4":{"x":[-4,1]},"@CLASS_R_16":{"x":[0,-50]},"@CLASS_R_18":{"x":[0,-9]},"@CLASS_R_22":{"x":[0,13]},"@CLASS_R_27":{"x":[0,-25]},"@CLASS_R_29":{"x":[0,-64]},"@CLASS_R_30":{"x":[0,-33]},"@CLASS_R_31":{"x":[0,-40]},"@CLASS_R_37":{"x":[0,-63]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_8":{"@CLASS_R_5":{"x":[6,23]},"@CLASS_R_18":{"x":[0,13]},"@CLASS_R_26":{"x":[0,15]},"@CLASS_R_27":{"x":[-43,0]},"@CLASS_R_28":{"x":[-33,0]},"@CLASS_R_36":{"x":[0,-21]},"@CLASS_R_37":{"x":[0,-31]},"@CLASS_R_38":{"x":[-68,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_9":{"@CLASS_R_3":{"x":[-37,0]},"@CLASS_R_6":{"x":[0,-9]},"@CLASS_R_15":{"x":[-48,0]},"@CLASS_R_25":{"x":[0,-27]},"@CLASS_R_27":{"x":[-14,-40]},"@CLASS_R_30":{"x":[0,-50]},"@CLASS_R_31":{"x":[-16,0]},"@CLASS_R_35":{"x":[0,-38]},"@CLASS_R_45":{"x":[0,-12]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_10":{"@CLASS_R_3":{"x":[0,-15]},"@CLASS_R_4":{"x":[0,13]},"@CLASS_R_5":{"x":[9,10]},"@CLASS_R_6":{"x":[0,-29]},"@CLASS_R_17":{"x":[0,-23]},"@CLASS_R_18":{"x":[0,13]},"@CLASS_R_19":{"x":[0,8]},"@CLASS_R_26":{"x":[0,9]},"@CLASS_R_28":{"x":[-40,0]},"@CLASS_R_30":{"x":[0,-6]},"@CLASS_R_31":{"x":[0,-13]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_11":{"@CLASS_R_3":{"x":[-24,0]},"@CLASS_R_4":{"x":[-34,0]},"@CLASS_R_5":{"x":[4,11]},"@CLASS_R_6":{"x":[8,0]},"@CLASS_R_13":{"x":[5,0]},"@CLASS_R_14":{"x":[-34,0]},"@CLASS_R_25":{"x":[5,0]},"@CLASS_R_27":{"x":[-22,0]},"@CLASS_R_28":{"x":[-12,0]},"@CLASS_R_30":{"x":[0,-40]},"@CLASS_R_32":{"x":[2,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_12":{"@CLASS_R_3":{"x":[0,-38]},"@CLASS_R_16":{"x":[0,-48]},"@CLASS_R_19":{"x":[-21,0]},"@CLASS_R_27":{"x":[0,-13]},"@CLASS_R_28":{"x":[-48,0]},"@CLASS_R_31":{"x":[-38,-13]},"@CLASS_R_36":{"x":[-34,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_13":{"@CLASS_R_5":{"x":[28,5]},"@CLASS_R_13":{"x":[20,0]},"@CLASS_R_30":{"x":[0,-34]},"@CLASS_R_31":{"x":[0,-47]},"@CLASS_R_32":{"x":[22,0]},"@CLASS_R_33":{"x":[0,-67]},"@CLASS_R_34":{"x":[-24,0]},"@CLASS_R_35":{"x":[-19,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_14":{"@CLASS_R_1":{"x":[-62,0]},"@CLASS_R_6":{"x":[12,-6]},"@CLASS_R_13":{"x":[1,0]},"@CLASS_R_15":{"x":[-42,0]},"@CLASS_R_22":{"x":[8,0]},"@CLASS_R_27":{"x":[-28,0]},"@CLASS_R_28":{"x":[-22,0]},"@CLASS_R_29":{"x":[-51,0]},"@CLASS_R_31":{"x":[-18,0]},"@CLASS_R_34":{"x":[-55,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_15":{"@CLASS_R_5":{"x":[18,0]},"@CLASS_R_8":{"x":[0,-7]},"@CLASS_R_19":{"x":[-8,0]},"@CLASS_R_30":{"x":[0,-14]},"@CLASS_R_38":{"x":[-11,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_16":{"@CLASS_R_3":{"x":[0,-38]},"@CLASS_R_5":{"x":[20,7]},"@CLASS_R_14":{"x":[0,-9]},"@CLASS_R_24":{"x":[-15,0]},"@CLASS_R_26":{"x":[-36,0]},"@CLASS_R_28":{"x":[-39,0]},"@CLASS_R_33":{"x":[-2,0]},"@CLASS_R_38":{"x":[-34,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_17":{"@CLASS_R_5":{"x":[12,27]},"@CLASS_R_25":{"x":[0,-14]},"@CLASS_R_31":{"x":[-20,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_18":{"@CLASS_R_41":{"x":[-20,0]},"@CLASS_R_50":{"x":[-32,0]},"@CLASS_R_53":{"x":[0,12]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_19":{"@CLASS_R_43":{"x":[9,0]},"@CLASS_R_47":{"x":[0,-25]},"@CLASS_R_50":{"x":[-12,0]},"@CLASS_R_54":{"x":[0,13]},"@CLASS_R_57":[null,{"x":-16}]},"@CLASS_L_20":{"@CLASS_R_42":{"x":[34,0]},"@CLASS_R_43":{"x":[4,0]},"@CLASS_R_46":{"x":[0,31]},"@CLASS_R_53":{"x":[0,38]},"@CLASS_R_54":{"x":[0,16]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_21":{"@CLASS_R_4":{"x":[26,0]},"@CLASS_R_5":{"x":[36,0]},"@CLASS_R_13":{"x":[30,0]},"@CLASS_R_16":{"x":[9,0]},"@CLASS_R_20":{"x":[-32,0]},"@CLASS_R_25":{"x":[40,0]},"@CLASS_R_49":{"x":[0,58]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_22":{"@CLASS_R_5":{"x":[12,0]},"@CLASS_R_7":{"x":[0,80]},"@CLASS_R_13":{"x":[6,0]},"@CLASS_R_17":{"x":[-37,0]},"@CLASS_R_27":{"x":[-18,0]},"@CLASS_R_28":{"x":[-13,0]},"@CLASS_R_29":{"x":[-42,0]},"@CLASS_R_32":{"x":[6,0]},"@CLASS_R_34":{"x":[0,62]},"@CLASS_R_36":{"x":[-30,0]},"@CLASS_R_50":{"x":[0,34]},"@CLASS_R_51":{"x":[0,9]},"@CLASS_R_52":{"x":[0,62]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_23":{"@CLASS_R_1":{"x":[-36,0]},"@CLASS_R_5":{"x":[0,22]},"@CLASS_R_6":{"x":[6,0]},"@CLASS_R_7":{"x":[20,0]},"@CLASS_R_10":{"x":[0,22]},"@CLASS_R_19":{"x":[-10,0]},"@CLASS_R_26":{"x":[-34,0]},"@CLASS_R_33":{"x":[-24,0]},"@CLASS_R_41":{"x":[0,31]},"@CLASS_R_42":{"x":[0,26]},"@CLASS_R_43":{"x":[0,26]},"@CLASS_R_44":{"x":[0,22]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_24":{"@CLASS_R_2":{"x":[0,28]},"@CLASS_R_10":{"x":[0,45]},"@CLASS_R_12":{"x":[0,64]},"@CLASS_R_18":{"x":[0,12]},"@CLASS_R_21":{"x":[0,38]},"@CLASS_R_49":{"x":[-26,0]},"@CLASS_R_50":{"x":[-36,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_25":{"@CLASS_R_4":{"x":[-6,0]},"@CLASS_R_5":{"x":[5,0]},"@CLASS_R_11":{"x":[-38,0]},"@CLASS_R_17":{"x":[-38,0]},"@CLASS_R_19":{"x":[-29,0]},"@CLASS_R_25":{"x":[2,0]},"@CLASS_R_27":{"x":[-32,0]},"@CLASS_R_28":{"x":[-20,0]},"@CLASS_R_30":{"x":[-28,0]},"@CLASS_R_31":{"x":[-21,0]},"@CLASS_R_36":{"x":[-22,0]},"@CLASS_R_38":{"x":[-32,0]},"@CLASS_R_49":{"x":[0,58]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_26":{"@CLASS_R_5":{"x":[0,22]},"@CLASS_R_10":{"x":[0,22]},"@CLASS_R_39":{"x":[-44,0]},"@CLASS_R_41":{"x":[2,31]},"@CLASS_R_42":{"x":[40,26]},"@CLASS_R_43":{"x":[0,26]},"@CLASS_R_44":{"x":[0,22]},"@CLASS_R_49":{"x":[-40,0]},"@CLASS_R_50":{"x":[-74,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_27":{"@CLASS_R_2":{"x":[0,28]},"@CLASS_R_10":{"x":[0,45]},"@CLASS_R_12":{"x":[0,64]},"@CLASS_R_18":{"x":[0,17]},"@CLASS_R_21":{"x":[0,38]},"@CLASS_R_43":{"x":[10,0]},"@CLASS_R_50":{"x":[-36,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_28":{"@CLASS_R_2":{"x":[38,0]},"@CLASS_R_7":{"x":[66,0]},"@CLASS_R_9":{"x":[38,0]},"@CLASS_R_23":{"x":[34,0]},"@CLASS_R_49":{"x":[0,58]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_29":{"@CLASS_R_5":{"x":[13,22]},"@CLASS_R_9":{"x":[13,0]},"@CLASS_R_10":{"x":[0,22]},"@CLASS_R_41":{"x":[0,31]},"@CLASS_R_42":{"x":[0,26]},"@CLASS_R_43":{"x":[0,26]},"@CLASS_R_44":{"x":[0,22]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_30":{"@CLASS_R_2":{"x":[0,28]},"@CLASS_R_10":{"x":[0,45]},"@CLASS_R_12":{"x":[0,64]},"@CLASS_R_18":{"x":[0,12]},"@CLASS_R_21":{"x":[0,38]},"@CLASS_R_47":{"x":[52,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_31":{"@CLASS_R_2":{"x":[38,0]},"@CLASS_R_7":{"x":[66,0]},"@CLASS_R_9":{"x":[38,0]},"@CLASS_R_23":{"x":[34,0]},"@CLASS_R_49":{"x":[0,58]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_32":{"@CLASS_R_5":{"x":[13,22]},"@CLASS_R_9":{"x":[13,0]},"@CLASS_R_10":{"x":[0,22]},"@CLASS_R_52":{"x":[13,0]},"@CLASS_R_53":{"x":[15,0]},"@CLASS_R_54":{"x":[15,0]},"@CLASS_R_55":{"x":[18,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_33":{"@CLASS_R_2":{"x":[0,28]},"@CLASS_R_10":{"x":[0,45]},"@CLASS_R_12":{"x":[0,64]},"@CLASS_R_18":{"x":[0,17]},"@CLASS_R_21":{"x":[0,38]},"@CLASS_R_47":{"x":[52,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_34":{"@CLASS_R_2":{"x":[38,0]},"@CLASS_R_7":{"x":[66,0]},"@CLASS_R_9":{"x":[38,0]},"@CLASS_R_23":{"x":[34,0]},"@CLASS_R_46":{"x":[0,-26]},"@CLASS_R_53":{"x":[0,14]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_35":{"@CLASS_R_5":{"x":[13,0]},"@CLASS_R_9":{"x":[13,0]},"@CLASS_R_46":{"x":[0,-70]},"@CLASS_R_47":{"x":[0,-33]},"@CLASS_R_52":{"x":[13,0]},"@CLASS_R_53":{"x":[15,0]},"@CLASS_R_54":{"x":[15,34]},"@CLASS_R_55":{"x":[18,6]},"@CLASS_R_57":[null,{"x":-39}]},"@CLASS_L_36":{"@CLASS_R_5":{"x":[0,5]},"@CLASS_R_6":{"x":[0,-5]},"@CLASS_R_8":{"x":[0,-35]},"@CLASS_R_14":{"x":[0,-37]},"@CLASS_R_19":{"x":[0,3]},"@CLASS_R_25":{"x":[0,-30]},"@CLASS_R_27":{"x":[0,-20]},"@CLASS_R_28":{"x":[0,-28]},"@CLASS_R_30":{"x":[0,-20]},"@CLASS_R_31":{"x":[0,-31]},"@CLASS_R_33":{"x":[0,-35]},"@CLASS_R_35":{"x":[0,-22]},"@CLASS_R_47":{"x":[52,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_37":{"@CLASS_R_2":{"x":[38,0]},"@CLASS_R_7":{"x":[66,0]},"@CLASS_R_9":{"x":[38,0]},"@CLASS_R_23":{"x":[34,0]},"@CLASS_R_46":{"x":[0,-35]},"@CLASS_R_47":{"x":[0,-25]},"@CLASS_R_53":{"x":[0,7]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_38":{"@CLASS_R_1":{"x":[0,-37]},"@CLASS_R_4":{"x":[0,11]},"@CLASS_R_5":{"x":[13,0]},"@CLASS_R_9":{"x":[13,0]},"@CLASS_R_12":{"x":[0,24]},"@CLASS_R_25":{"x":[0,-10]},"@CLASS_R_32":{"x":[0,-33]},"@CLASS_R_39":{"x":[0,-23]},"@CLASS_R_52":{"x":[13,0]},"@CLASS_R_53":{"x":[15,0]},"@CLASS_R_54":{"x":[15,0]},"@CLASS_R_55":{"x":[18,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_39":{"@CLASS_R_12":{"x":[78,0]},"@CLASS_R_14":{"x":[0,-48]},"@CLASS_R_18":{"x":[0,-4]},"@CLASS_R_29":{"x":[0,-59]},"@CLASS_R_30":{"x":[0,-30]},"@CLASS_R_31":{"x":[0,-47]},"@CLASS_R_35":{"x":[0,-46]},"@CLASS_R_37":{"x":[58,0]},"@CLASS_R_44":{"x":[58,0]},"@CLASS_R_45":{"x":[5,0]},"@CLASS_R_46":{"x":[30,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_40":{"@CLASS_R_5":{"x":[0,30]},"@CLASS_R_6":{"x":[0,18]},"@CLASS_R_15":{"x":[0,15]},"@CLASS_R_18":{"x":[0,36]},"@CLASS_R_19":{"x":[0,38]},"@CLASS_R_24":{"x":[0,-22]},"@CLASS_R_47":{"x":[52,0]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_41":{"@CLASS_R_42":{"x":[16,0]},"@CLASS_R_43":{"x":[34,0]},"@CLASS_R_50":{"x":[24,0]},"@CLASS_R_53":{"x":[0,6]},"@CLASS_R_54":{"x":[0,33]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_42":{"@CLASS_R_39":{"x":[-25,0]},"@CLASS_R_42":{"x":[16,0]},"@CLASS_R_46":{"x":[0,-11]},"@CLASS_R_49":{"x":[-22,0]},"@CLASS_R_53":{"x":[0,15]},"@CLASS_R_57":[null,{"x":0}]},"@CLASS_L_43":{"@CLASS_R_43":{"x":[19,0]},"@CLASS_R_46":{"x":[0,-19]},"@CLASS_R_55":{"x":[0,-13]},"@CLASS_R_57":[null,{"x":0}]}}}},"1":{"0":{"marks":{"anchor_0":{"uni0A81":[{"x":0,"y":592},null],"uni0A82":[{"x":0,"y":592},null],"uni0AC5":[{"x":0,"y":592},null],"uni0AFB":[{"x":-98,"y":592},null],"uni0AFD":[{"x":0,"y":592},null],"uni0AFE":[{"x":0,"y":592},null],"uni0AB00ACD0A82":{"x":[95,0],"y":[575,592]},"uni0AC70AB00ACD0A82":{"x":[102,0],"y":[575,592]},"uni0AC80AB00ACD0A82":{"x":[125,0],"y":[575,603]},"uni0AFD_uni0AFA":[{"x":0,"y":592},null],"uni0AFE_uni0AFA":[{"x":0,"y":592},null],"uni0AFD_uni0AFB":[{"x":0,"y":592},null],"uni0AFE_uni0AFB":[{"x":0,"y":592},null],"uni0AC7":[null,{"x":0,"y":592}],"uni0AC8":[null,{"x":0,"y":592}],"uni0AFA":[null,{"x":0,"y":592}],"uni0AB00ACD":[null,{"x":0,"y":592}],"uni0AC70AB00ACD":[null,{"x":0,"y":592}],"uni0AC80AB00ACD":[null,{"x":0,"y":603}],"udatta":[null,{"x":0,"y":592}],"uni0AFA_uni0AB00ACD":[null,{"x":0,"y":592}],"uni0AFD_evowelgujr":[null,{"x":1,"y":592}],"uni0AFD_aivowelgujr":[null,{"x":1,"y":592}],"uni0AFE_evowelgujr":[null,{"x":1,"y":592}],"uni0AFE_aivowelgujr":[null,{"x":1,"y":592}],"uni0AFD_rephgujr":[null,{"x":0,"y":592}],"uni0AFE_rephgujr":[null,{"x":0,"y":592}],"uni0AFD_evowelgujr_rephgujr":[null,{"x":1,"y":592}],"uni0AFD_aivowelgujr_rephgujr":[null,{"x":1,"y":592}],"uni0AFE_evowelgujr_rephgujr":[null,{"x":1,"y":592}],"uni0AFE_aivowelgujr_rephgujr":[null,{"x":1,"y":592}],"uni0A81.alt":[null,{"x":0,"y":592}],"uni0A82.alt":[null,{"x":0,"y":592}]}},"bases":{"error":"There are 180 changes, check manually!"}}},"2":{"0":{"marks":{"anchor_0":{"uni0AC7":[{"x":0,"y":592},null],"uni0AC8":[{"x":0,"y":592},null],"uni0AFA":[{"x":0,"y":592},null],"uni0AB00ACD":[{"x":0,"y":592},null],"uni0AB00ACD0A82":[{"x":0,"y":592},null],"uni0AC70AB00ACD":[{"x":0,"y":592},null],"uni0AC70AB00ACD0A82":[{"x":0,"y":592},null],"uni0AC80AB00ACD":[{"x":0,"y":603},null],"uni0AC80AB00ACD0A82":[{"x":0,"y":603},null],"udatta":[{"x":0,"y":592},null],"uni0AFA_uni0AB00ACD":[{"x":0,"y":592},null],"uni0AFD_evowelgujr":[{"x":1,"y":592},null],"uni0AFD_aivowelgujr":[{"x":1,"y":592},null],"uni0AFE_evowelgujr":[{"x":1,"y":592},null],"uni0AFE_aivowelgujr":[{"x":1,"y":592},null],"uni0AFD_rephgujr":[{"x":0,"y":592},null],"uni0AFE_rephgujr":[{"x":0,"y":592},null],"uni0AFD_evowelgujr_rephgujr":[{"x":1,"y":592},null],"uni0AFD_aivowelgujr_rephgujr":[{"x":1,"y":592},null],"uni0AFE_evowelgujr_rephgujr":[{"x":1,"y":592},null],"uni0AFE_aivowelgujr_rephgujr":[{"x":1,"y":592},null],"uni0A81.alt":[{"x":0,"y":592},null],"uni0A82.alt":[{"x":0,"y":592},null],"uni0A81":[null,{"x":0,"y":592}],"uni0A82":[null,{"x":0,"y":592}],"uni0AC5":[null,{"x":0,"y":592}],"uni0AFB":[null,{"x":-98,"y":592}],"uni0AFD":[null,{"x":0,"y":592}],"uni0AFE":[null,{"x":0,"y":592}],"uni0AFD_uni0AFA":[null,{"x":0,"y":592}],"uni0AFE_uni0AFA":[null,{"x":0,"y":592}],"uni0AFD_uni0AFB":[null,{"x":0,"y":592}],"uni0AFE_uni0AFB":[null,{"x":0,"y":592}],"uni0AFD_uni0AFC":[null,{"x":-148,"y":592}]}},"bases":{"error":"There are 180 changes, check manually!"}}},"3":{"0":{"basemarks":{"uni0AC7":{"anchor_0":{"x":[64,58]}},"uni0AC8":{"anchor_0":{"x":[129,133]}},"uni0AFD_evowelgujr":[{"anchor_0":{"x":16,"y":642}},null],"uni0AFD_aivowelgujr":[{"anchor_0":{"x":61,"y":592}},null],"uni0AFE_evowelgujr":[{"anchor_0":{"x":16,"y":642}},null],"uni0AFE_aivowelgujr":[{"anchor_0":{"x":69,"y":592}},null]}}},"4":{"0":{"marks":{"anchor_0":{"uni0AB00ACD0A82":[{"x":95,"y":575},null],"uni0AC70AB00ACD0A82":[{"x":102,"y":575},null],"uni0AC80AB00ACD0A82":[{"x":125,"y":575},null],"uni0AFD_uni0AFC":[null,{"x":-148,"y":592}]}},"basemarks":{"uni0AC5":{"anchor_0":{"x":[314,315]}}}}},"5":{"0":{"marks":{"anchor_0":{"uni0ABC":[{"x":0,"y":0},null],"uni0AC1":[null,{"x":0,"y":0}],"uni0AC2":[null,{"x":0,"y":0}],"uni0ACD":[null,{"x":0,"y":0}],"uni0AE2":[null,{"x":0,"y":0}],"uni0AE3":[null,{"x":0,"y":0}],"uni0AC1.alt":[null,{"x":0,"y":0}],"uni0AC2.alt":[null,{"x":0,"y":0}],"uni0AC1.calt":[null,{"x":0,"y":0}],"anudatta":[null,{"x":0,"y":0}]},"anchor_1":[{"uni0AC1":{"x":0,"y":0},"uni0AC2":{"x":0,"y":0},"uni0ACD":{"x":0,"y":0},"uni0AE2":{"x":0,"y":0},"uni0AE3":{"x":0,"y":0},"uni0AC1.alt":{"x":0,"y":0},"uni0AC2.alt":{"x":0,"y":0},"uni0AC1.calt":{"x":0,"y":0},"anudatta":{"x":0,"y":0}},null],"anchor_2":[{"uni0AC3":{"x":0,"y":0},"uni0AC4":{"x":0,"y":0}},null],"anchor_3":[{"uni0ACD0AB0":{"x":0,"y":0},"uni0ACD0AB00AC1":{"x":0,"y":0},"uni0ACD0AB00AC2":{"x":0,"y":0},"uni0ACD0AB00AC3":{"x":0,"y":0},"uni0ACD0AB00AC4":{"x":0,"y":0},"uni0ACD0AB00ACD":{"x":0,"y":0},"uni0ACD0AB00AE2":{"x":0,"y":0},"uni0ACD0AB00AE3":{"x":0,"y":0}},null]},"bases":{"error":"There are 218 changes, check manually!"}}},"6":{"0":{"type":["mark_to_mark","mark_to_base"],"marks":{"anchor_0":{"uni0AC1":[{"x":0,"y":0},null],"uni0AC2":[{"x":0,"y":0},null],"uni0ACD":[{"x":0,"y":0},null],"uni0AE2":[{"x":0,"y":0},null],"uni0AE3":[{"x":0,"y":0},null],"uni0AC1.alt":[{"x":0,"y":0},null],"uni0AC2.alt":[{"x":0,"y":0},null],"uni0AC1.calt":[{"x":0,"y":0},null],"anudatta":[{"x":0,"y":0},null],"uni0ABC":[null,{"x":0,"y":0}]}},"basemarks":[{"uni0ABC":{"anchor_0":{"x":0,"y":-62}}},null],"bases":[null,{"uni0A95":{"anchor_0":{"x":279,"y":-125}},"uni0A96":{"anchor_0":{"x":270,"y":40}},"uni0A97":{"anchor_0":{"x":206,"y":53}},"uni0A98":{"anchor_0":{"x":272,"y":0}},"uni0A99":{"anchor_0":{"x":285,"y":-125}},"uni0A9A":{"anchor_0":{"x":163,"y":49}},"uni0A9B":{"anchor_0":{"x":360,"y":-166}},"uni0A9C":{"anchor_0":{"x":175,"y":97}},"uni0A9D":{"anchor_0":{"x":224,"y":0}},"uni0A9E":{"anchor_0":{"x":198,"y":0}},"uni0A9F":{"anchor_0":{"x":287,"y":-125}},"uni0AA0":{"anchor_0":{"x":271,"y":-125}},"uni0AA1":{"anchor_0":{"x":285,"y":-125}},"uni0AA2":{"anchor_0":{"x":296,"y":-125}},"uni0AA3":{"anchor_0":{"x":270,"y":-82}},"uni0AA3.calt":{"anchor_0":{"x":246,"y":-69}},"uni0AA4":{"anchor_0":{"x":187,"y":-105}},"uni0AA5":{"anchor_0":{"x":185,"y":44}},"uni0AA6":{"anchor_0":{"x":285,"y":-125}},"uni0AA7":{"anchor_0":{"x":207,"y":9}},"uni0AA8":{"anchor_0":{"x":186,"y":73}},"uni0AAA":{"anchor_0":{"x":241,"y":63}},"uni0AAB":{"anchor_0":{"x":267,"y":-246}},"uni0AAC":{"anchor_0":{"x":263,"y":24}},"uni0AAD":{"anchor_0":{"x":397,"y":49}},"uni0AAE":{"anchor_0":{"x":231,"y":19}},"uni0AAF":{"anchor_0":{"x":208,"y":34}},"uni0AB0":{"anchor_0":{"x":134,"y":6}},"uni0AB2":{"anchor_0":{"x":178,"y":-18}},"uni0AB3":{"anchor_0":{"x":262,"y":29}},"uni0AB5":{"anchor_0":{"x":205,"y":44}},"uni0AB6":{"anchor_0":{"x":176,"y":-44}},"uni0AB7":{"anchor_0":{"x":248,"y":60}},"uni0AB8":{"anchor_0":{"x":143,"y":9}},"uni0AB9":{"anchor_0":{"x":168,"y":-5}},"uni0AF1":{"anchor_0":{"x":87,"y":-93}},"uni0A9C0ABE":{"anchor_0":{"x":175,"y":97}},"uni0A9C0AC0":{"anchor_0":{"x":175,"y":-144}},"uni0AF90ABE":{"anchor_0":{"x":186,"y":-230}},"zh_ra_aaMatragujarati":{"anchor_0":{"x":264,"y":-227}},"uni0AA60AC3":{"anchor_0":{"x":190,"y":-31}},"uni0AB00AC1":{"anchor_0":{"x":140,"y":-1}},"uni0AB00AC2":{"anchor_0":{"x":87,"y":-93}},"uni0AB90AC3":{"anchor_0":{"x":208,"y":-189}},"uni0A950ACD":{"anchor_0":{"x":271,"y":-125}},"uni0A960ACD":{"anchor_0":{"x":270,"y":40}},"uni0A970ACD":{"anchor_0":{"x":206,"y":53}},"uni0A980ACD":{"anchor_0":{"x":272,"y":0}},"uni0A990ACD":{"anchor_0":{"x":285,"y":-125}},"uni0A9A0ACD":{"anchor_0":{"x":163,"y":49}},"uni0A9C0ACD":{"anchor_0":{"x":175,"y":97}},"uni0A9D0ACD":{"anchor_0":{"x":224,"y":0}},"uni0A9E0ACD":{"anchor_0":{"x":198,"y":0}},"uni0A9F0ACD":{"anchor_0":{"x":287,"y":-125}},"uni0AA00ACD":{"anchor_0":{"x":271,"y":-125}},"uni0AA10ACD":{"anchor_0":{"x":285,"y":-263}},"uni0AA20ACD":{"anchor_0":{"x":296,"y":-125}},"uni0AA30ACD":{"anchor_0":{"x":270,"y":-82}},"uni0AA40ACD":{"anchor_0":{"x":187,"y":-105}},"uni0AA50ACD":{"anchor_0":{"x":185,"y":44}},"uni0AA60ACD":{"anchor_0":{"x":285,"y":-125}},"uni0AA70ACD":{"anchor_0":{"x":207,"y":9}},"uni0AA80ACD":{"anchor_0":{"x":186,"y":73}},"uni0AAA0ACD":{"anchor_0":{"x":241,"y":63}},"uni0AAB0ACD":{"anchor_0":{"x":267,"y":-246}},"uni0AAC0ACD":{"anchor_0":{"x":263,"y":24}},"uni0AAD0ACD":{"anchor_0":{"x":397,"y":49}},"uni0AAE0ACD":{"anchor_0":{"x":231,"y":19}},"uni0AAF0ACD":{"anchor_0":{"x":208,"y":34}},"rgujarati":{"anchor_0":{"x":134,"y":6}},"uni0AB20ACD":{"anchor_0":{"x":178,"y":-18}},"uni0AB30ACD":{"anchor_0":{"x":262,"y":29}},"uni0AB50ACD":{"anchor_0":{"x":205,"y":44}},"uni0AB60ACD":{"anchor_0":{"x":176,"y":-44}},"uni0AB70ACD":{"anchor_0":{"x":248,"y":60}},"uni0AB80ACD":{"anchor_0":{"x":143,"y":9}},"uni0AB90ACD":{"anchor_0":{"x":168,"y":-183}},"zhgujarati":{"anchor_0":{"x":155,"y":-210}},"uni0A950ACD0AB70ACD":{"anchor_0":{"x":169,"y":-100}},"uni0A950ACD0AB0":{"anchor_0":{"x":279,"y":-125}},"uni0A960ACD0AB0":{"anchor_0":{"x":211,"y":40}},"uni0A970ACD0AB0":{"anchor_0":{"x":99,"y":121}},"uni0A980ACD0AB0":{"anchor_0":{"x":121,"y":-86}},"uni0A9A0ACD0AB0":{"anchor_0":{"x":167,"y":-105}},"uni0A9C0ACD0AB0":{"anchor_0":{"x":175,"y":97}},"uni0A9C0ACD0AB00ABE":{"anchor_0":{"x":175,"y":97}},"uni0A9C0ACD0AB00AC0":{"anchor_0":{"x":175,"y":-144}},"uni0A9D0ACD0AB0":{"anchor_0":{"x":224,"y":13}},"uni0A9E0ACD0AB0":{"anchor_0":{"x":187,"y":-35}},"uni0AA30ACD0AB0":{"anchor_0":{"x":258,"y":-78}},"uni0AA30ACD0AB0.calt":{"anchor_0":{"x":246,"y":-69}},"uni0AA40ACD0AB0":{"anchor_0":{"x":265,"y":37}},"uni0AA50ACD0AB0":{"anchor_0":{"x":185,"y":-34}},"uni0AA60ACD0AB0":{"anchor_0":{"x":318,"y":-144}},"uni0AA70ACD0AB0":{"anchor_0":{"x":204,"y":-60}},"uni0AA80ACD0AB0":{"anchor_0":{"x":180,"y":-105}},"uni0AAA0ACD0AB0":{"anchor_0":{"x":136,"y":-94}},"uni0AAB0ACD0AB0":{"anchor_0":{"x":267,"y":-246}},"uni0AAC0ACD0AB0":{"anchor_0":{"x":171,"y":-30}},"uni0AAD0ACD0AB0":{"anchor_0":{"x":249,"y":-43}},"uni0AAE0ACD0AB0":{"anchor_0":{"x":165,"y":-97}},"uni0AAF0ACD0AB0":{"anchor_0":{"x":156,"y":-42}},"uni0AB20ACD0AB0":{"anchor_0":{"x":200,"y":-109}},"uni0AB30ACD0AB0":{"anchor_0":{"x":206,"y":1}},"uni0AB50ACD0AB0":{"anchor_0":{"x":228,"y":-37}},"uni0AB60ACD0AB0":{"anchor_0":{"x":153,"y":-83}},"uni0AB70ACD0AB0":{"anchor_0":{"x":248,"y":-24}},"uni0AB80ACD0AB0":{"anchor_0":{"x":159,"y":9}},"uni0AB90ACD0AB0":{"anchor_0":{"x":456,"y":-81}},"uni0A950ACD0AB70ACD0AB0":{"anchor_0":{"x":253,"y":-112}},"uni0A9C0ACD0A9E0ACD0AB0":{"anchor_0":{"x":476,"y":-98}},"uni0A950ACD0A95":{"anchor_0":{"x":280,"y":-125}},"uni0A950ACD0A96":{"anchor_0":{"x":279,"y":-125}},"uni0A950ACD0AA6":{"anchor_0":{"x":279,"y":-125}},"uni0A950ACD0AAA":{"anchor_0":{"x":279,"y":-125}},"uni0A950ACD0AAF":{"anchor_0":{"x":279,"y":-125}},"uni0A950ACD0AB7":{"anchor_0":{"x":169,"y":-100}},"uni0A970ACD0AA8":{"anchor_0":{"x":103,"y":115}},"uni0A980ACD0AA8":{"anchor_0":{"x":237,"y":-93}},"uni0A990ACD0A95":{"anchor_0":{"x":325,"y":-383}},"uni0A990ACD0A97":{"anchor_0":{"x":269,"y":-180}},"uni0A990ACD0A98":{"anchor_0":{"x":232,"y":-286}},"uni0A990ACD0AAE":{"anchor_0":{"x":293,"y":-224}},"uni0A990ACD0AAF":{"anchor_0":{"x":651,"y":28}},"uni0A9B0ACD0AAF":{"anchor_0":{"x":783,"y":18}},"uni0A9B0ACD0AB5":{"anchor_0":{"x":323,"y":-254}},"uni0A9C0ACD0A9C":{"anchor_0":{"x":175,"y":97}},"uni0A9C0ACD0A9E":{"anchor_0":{"x":455,"y":-20}},"uni0A9C0ACD0AAE":{"anchor_0":{"x":175,"y":97}},"uni0A9C0ACD0AAF":{"anchor_0":{"x":175,"y":97}},"uni0A9E0ACD0A9A":{"anchor_0":{"x":218,"y":-65}},"uni0A9E0ACD0A9C":{"anchor_0":{"x":171,"y":0}},"uni0A9F0ACD0A9F":{"anchor_0":{"x":290,"y":-341}},"uni0A9F0ACD0AA0":{"anchor_0":{"x":284,"y":-345}},"uni0A9F0ACD0AAF":{"anchor_0":{"x":607,"y":12}},"uni0A9F0ACD0AB5":{"anchor_0":{"x":243,"y":-214}},"uni0AA00ACD0AA0":{"anchor_0":{"x":289,"y":-344}},"uni0AA10ACD0AA1":{"anchor_0":{"x":289,"y":-334}},"uni0AA10ACD0AA2":{"anchor_0":{"x":291,"y":-347}},"uni0AA10ACD0AAF":{"anchor_0":{"x":285,"y":-125}},"uni0AA20ACD0AA2":{"anchor_0":{"x":327,"y":-344}},"uni0AA20ACD0AAF":{"anchor_0":{"x":636,"y":12}},"uni0AA40ACD0A95":{"anchor_0":{"x":552,"y":-125}},"uni0AA40ACD0AA4":{"anchor_0":{"x":259,"y":-105}},"uni0AA40ACD0AA40ACD0AAF":{"anchor_0":{"x":548,"y":34}},"uni0AA40ACD0AA8":{"anchor_0":{"x":187,"y":-105}},"uni0AA40ACD0AAE":{"anchor_0":{"x":187,"y":-105}},"uni0AA40ACD0AAF":{"anchor_0":{"x":187,"y":-105}},"uni0AA40ACD0AB8":{"anchor_0":{"x":187,"y":-105}},"uni0AA50ACD0AA8":{"anchor_0":{"x":204,"y":-59}},"uni0AA60ACD0A97":{"anchor_0":{"x":352,"y":-195}},"uni0AA60ACD0A98":{"anchor_0":{"x":280,"y":-173}},"uni0AA60ACD0AA6":{"anchor_0":{"x":218,"y":-125}},"uni0AA60ACD0AA7":{"anchor_0":{"x":201,"y":-128}},"uni0AA60ACD0AA8":{"anchor_0":{"x":348,"y":-206}},"uni0AA60ACD0AAC":{"anchor_0":{"x":372,"y":-238}},"uni0AA60ACD0AAD":{"anchor_0":{"x":505,"y":-170}},"uni0AA60ACD0AAE":{"anchor_0":{"x":124,"y":130}},"uni0AA60ACD0AAF":{"anchor_0":{"x":173,"y":2}},"uni0AA60ACD0AB5":{"anchor_0":{"x":318,"y":-237}},"uni0AA70ACD0AA8":{"anchor_0":{"x":220,"y":-91}},"uni0AA80ACD0A9F":{"anchor_0":{"x":518,"y":-125}},"uni0AA80ACD0AA8":{"anchor_0":{"x":201,"y":-43}},"uni0AA80ACD0AB8":{"anchor_0":{"x":431,"y":9}},"uni0AAA0ACD0A9F":{"anchor_0":{"x":331,"y":-125}},"uni0AAA0ACD0AA0":{"anchor_0":{"x":340,"y":-125}},"uni0AAA0ACD0AA4":{"anchor_0":{"x":225,"y":-120}},"uni0AAA0ACD0AA6":{"anchor_0":{"x":568,"y":-125}},"uni0AAA0ACD0AA8":{"anchor_0":{"x":213,"y":-112}},"uni0AAB0ACD0AAF":{"anchor_0":{"x":267,"y":-246}},"uni0AAC0ACD0AB2":{"anchor_0":{"x":638,"y":-15}},"uni0AAE0ACD0AA8":{"anchor_0":{"x":251,"y":-84}},"uni0AB20ACD0A95":{"anchor_0":{"x":651,"y":-125}},"uni0AB20ACD0AAF":{"anchor_0":{"x":567,"y":35}},"uni0AB20ACD0AB8":{"anchor_0":{"x":523,"y":2}},"uni0AB30ACD0AAF":{"anchor_0":{"x":610,"y":36}},"uni0AB50ACD0AA6":{"anchor_0":{"x":613,"y":-125}},"uni0AB60ACD0A9A":{"anchor_0":{"x":326,"y":7}},"uni0AB60ACD0AA8":{"anchor_0":{"x":214,"y":-24}},"uni0AB60ACD0AB2":{"anchor_0":{"x":582,"y":-18}},"uni0AB60ACD0AB5":{"anchor_0":{"x":248,"y":-3}},"uni0AB70ACD0A9F":{"anchor_0":{"x":331,"y":-125}},"uni0AB70ACD0AA0":{"anchor_0":{"x":342,"y":-125}},"uni0AB80ACD0A95":{"anchor_0":{"x":636,"y":-125}},"uni0AB80ACD0A9F":{"anchor_0":{"x":675,"y":-125}},"uni0AB80ACD0AA0":{"anchor_0":{"x":665,"y":-125}},"uni0AB80ACD0AA1":{"anchor_0":{"x":681,"y":-125}},"uni0AB80ACD0AA40ACD0AB0":{"anchor_0":{"x":313,"y":0}},"uni0AB80ACD0AA5":{"anchor_0":{"x":605,"y":47}},"uni0AB80ACD0AAE":{"anchor_0":{"x":653,"y":19}},"uni0AB90ACD0AA3":{"anchor_0":{"x":416,"y":-92}},"uni0AB90ACD0AA8":{"anchor_0":{"x":409,"y":-84}},"uni0AB90ACD0AAE":{"anchor_0":{"x":443,"y":-63}},"uni0AB90ACD0AAF":{"anchor_0":{"x":442,"y":-105}},"uni0AB90ACD0AB2":{"anchor_0":{"x":437,"y":-143}},"uni0AB90ACD0AB5":{"anchor_0":{"x":439,"y":-127}},"uni0A950ACD0072":{"anchor_0":{"x":279,"y":-125}},"uni0A960ACD0072":{"anchor_0":{"x":211,"y":40}},"uni0A970ACD0072":{"anchor_0":{"x":99,"y":121}},"uni0A9C0ACD0072":{"anchor_0":{"x":175,"y":97}},"uni0AAB0ACD0072":{"anchor_0":{"x":267,"y":-246}}}]}},"7":{"0":{"type":["mark_to_mark","mark_to_base"],"marks":{"anchor_0":{"uni0ABC":[{"x":0,"y":0},null],"uni0AC3":[null,{"x":0,"y":0}],"uni0AC4":[null,{"x":0,"y":0}]}},"basemarks":[{"uni0AC1.alt":{"anchor_0":{"x":0,"y":-389}},"uni0AC2.alt":{"anchor_0":{"x":0,"y":-389}},"uni0ACD0AB0":{"anchor_0":{"x":0,"y":-299}},"uni0ACD0AB00AC1":{"anchor_0":{"x":0,"y":-547}},"uni0ACD0AB00AC2":{"anchor_0":{"x":0,"y":-547}}},null],"bases":[null,{"uni0A95":{"anchor_0":{"x":291,"y":0}},"uni0A96":{"anchor_0":{"x":716,"y":0}},"uni0A97":{"anchor_0":{"x":572,"y":0}},"uni0A98":{"anchor_0":{"x":532,"y":0}},"uni0A99":{"anchor_0":{"x":279,"y":0}},"uni0A9A":{"anchor_0":{"x":572,"y":0}},"uni0A9B":{"anchor_0":{"x":351,"y":0}},"uni0A9C":{"anchor_0":{"x":468,"y":0}},"uni0A9D":{"anchor_0":{"x":482,"y":0}},"uni0A9E":{"anchor_0":{"x":630,"y":0}},"uni0A9F":{"anchor_0":{"x":286,"y":0}},"uni0AA0":{"anchor_0":{"x":270,"y":0}},"uni0AA1":{"anchor_0":{"x":271,"y":0}},"uni0AA2":{"anchor_0":{"x":282,"y":0}},"uni0AA3":{"anchor_0":{"x":780,"y":0}},"uni0AA3.calt":{"anchor_0":{"x":780,"y":0}},"uni0AA4":{"anchor_0":{"x":490,"y":0}},"uni0AA5":{"anchor_0":{"x":529,"y":0}},"uni0AA6":{"anchor_0":{"x":265,"y":0}},"uni0AA7":{"anchor_0":{"x":520,"y":0}},"uni0AA8":{"anchor_0":{"x":484,"y":0}},"uni0AAA":{"anchor_0":{"x":500,"y":0}},"uni0AAB":{"anchor_0":{"x":356,"y":-57}},"uni0AAC":{"anchor_0":{"x":647,"y":0}},"uni0AAD":{"anchor_0":{"x":704,"y":0}},"uni0AAE":{"anchor_0":{"x":524,"y":0}},"uni0AAF":{"anchor_0":{"x":517,"y":0}},"uni0AB0":{"anchor_0":{"x":243,"y":0}},"uni0AB2":{"anchor_0":{"x":591,"y":0}},"uni0AB3":{"anchor_0":{"x":665,"y":0}},"uni0AB5":{"anchor_0":{"x":502,"y":0}},"uni0AB6":{"anchor_0":{"x":660,"y":0}},"uni0AB7":{"anchor_0":{"x":521,"y":0}},"uni0AB8":{"anchor_0":{"x":556,"y":0}},"uni0AB9":{"anchor_0":{"x":328,"y":0}},"uni0AF9":{"anchor_0":{"x":471,"y":-10}},"uni0A990ACD":{"anchor_0":{"x":279,"y":0}},"uni0A9D0ACD":{"anchor_0":{"x":482,"y":0}},"uni0A9F0ACD":{"anchor_0":{"x":286,"y":0}},"uni0AA00ACD":{"anchor_0":{"x":270,"y":0}},"uni0AA10ACD":{"anchor_0":{"x":271,"y":0}},"uni0AA20ACD":{"anchor_0":{"x":282,"y":0}},"uni0AA60ACD":{"anchor_0":{"x":265,"y":0}},"rgujarati":{"anchor_0":{"x":243,"y":0}},"uni0A950ACD0AB0":{"anchor_0":{"x":291,"y":0}},"uni0A9C0ACD0AB0":{"anchor_0":{"x":565,"y":0}},"uni0A950ACD0A95":{"anchor_0":{"x":655,"y":0}},"uni0A950ACD0A96":{"anchor_0":{"x":1182,"y":0}},"uni0A950ACD0AA6":{"anchor_0":{"x":761,"y":0}},"uni0A950ACD0AAA":{"anchor_0":{"x":961,"y":0}},"uni0A950ACD0AAF":{"anchor_0":{"x":975,"y":0}},"uni0A950ACD0AB7":{"anchor_0":{"x":687,"y":0}},"uni0A970ACD0AA8":{"anchor_0":{"x":572,"y":0}},"uni0A980ACD0AA8":{"anchor_0":{"x":532,"y":0}},"uni0A990ACD0A95":{"anchor_0":{"x":325,"y":-254}},"uni0A990ACD0A97":{"anchor_0":{"x":435,"y":-229}},"uni0A990ACD0A98":{"anchor_0":{"x":420,"y":-229}},"uni0A990ACD0AAE":{"anchor_0":{"x":407,"y":-229}},"uni0A990ACD0AAF":{"anchor_0":{"x":972,"y":0}},"uni0A9B0ACD0AAF":{"anchor_0":{"x":1171,"y":0}},"uni0A9B0ACD0AB5":{"anchor_0":{"x":506,"y":-198}},"uni0A9C0ACD0A9C":{"anchor_0":{"x":1054,"y":0}},"uni0A9C0ACD0A9E":{"anchor_0":{"x":623,"y":0}},"uni0A9C0ACD0AAE":{"anchor_0":{"x":1126,"y":0}},"uni0A9C0ACD0AAF":{"anchor_0":{"x":1151,"y":0}},"uni0A9E0ACD0A9A":{"anchor_0":{"x":754,"y":0}},"uni0A9E0ACD0A9C":{"anchor_0":{"x":707,"y":0}},"uni0A9F0ACD0A9F":{"anchor_0":{"x":290,"y":-216}},"uni0A9F0ACD0AA0":{"anchor_0":{"x":284,"y":-216}},"uni0A9F0ACD0AAF":{"anchor_0":{"x":971,"y":0}},"uni0A9F0ACD0AB5":{"anchor_0":{"x":388,"y":-194}},"uni0AA00ACD0AA0":{"anchor_0":{"x":289,"y":-216}},"uni0AA10ACD0AA1":{"anchor_0":{"x":289,"y":-216}},"uni0AA10ACD0AA2":{"anchor_0":{"x":291,"y":-223}},"uni0AA10ACD0AAF":{"anchor_0":{"x":972,"y":0}},"uni0AA20ACD0AA2":{"anchor_0":{"x":328,"y":-216}},"uni0AA20ACD0AAF":{"anchor_0":{"x":991,"y":0}},"uni0AA40ACD0A95":{"anchor_0":{"x":552,"y":0}},"uni0AA40ACD0AA4":{"anchor_0":{"x":572,"y":0}},"uni0AA40ACD0AA40ACD0AAF":{"anchor_0":{"x":858,"y":0}},"uni0AA40ACD0AA8":{"anchor_0":{"x":531,"y":0}},"uni0AA40ACD0AAE":{"anchor_0":{"x":774,"y":0}},"uni0AA40ACD0AAF":{"anchor_0":{"x":785,"y":0}},"uni0AA40ACD0AB8":{"anchor_0":{"x":933,"y":0}},"uni0AA50ACD0AA8":{"anchor_0":{"x":529,"y":0}},"uni0AA60ACD0A97":{"anchor_0":{"x":416,"y":-63}},"uni0AA60ACD0A98":{"anchor_0":{"x":620,"y":-84}},"uni0AA60ACD0AA6":{"anchor_0":{"x":356,"y":-24}},"uni0AA60ACD0AA7":{"anchor_0":{"x":656,"y":-105}},"uni0AA60ACD0AA8":{"anchor_0":{"x":415,"y":-72}},"uni0AA60ACD0AAC":{"anchor_0":{"x":486,"y":-104}},"uni0AA60ACD0AAD":{"anchor_0":{"x":569,"y":-74}},"uni0AA60ACD0AAE":{"anchor_0":{"x":599,"y":0}},"uni0AA60ACD0AAF":{"anchor_0":{"x":458,"y":0}},"uni0AA60ACD0AB5":{"anchor_0":{"x":437,"y":-95}},"uni0AA70ACD0AA8":{"anchor_0":{"x":520,"y":0}},"uni0AA80ACD0A9F":{"anchor_0":{"x":518,"y":0}},"uni0AA80ACD0AA8":{"anchor_0":{"x":519,"y":0}},"uni0AA80ACD0AB8":{"anchor_0":{"x":931,"y":0}},"uni0AAA0ACD0A9F":{"anchor_0":{"x":331,"y":0}},"uni0AAA0ACD0AA0":{"anchor_0":{"x":340,"y":0}},"uni0AAA0ACD0AA4":{"anchor_0":{"x":508,"y":0}},"uni0AAA0ACD0AA6":{"anchor_0":{"x":570,"y":0}},"uni0AAA0ACD0AA8":{"anchor_0":{"x":510,"y":0}},"uni0AAB0ACD0AAF":{"anchor_0":{"x":955,"y":0}},"uni0AAC0ACD0AB2":{"anchor_0":{"x":1051,"y":0}},"uni0AAE0ACD0AA8":{"anchor_0":{"x":524,"y":0}},"uni0AB20ACD0A95":{"anchor_0":{"x":650,"y":0}},"uni0AB20ACD0AAF":{"anchor_0":{"x":880,"y":0}},"uni0AB20ACD0AB8":{"anchor_0":{"x":1020,"y":0}},"uni0AB30ACD0AAF":{"anchor_0":{"x":960,"y":0}},"uni0AB50ACD0AA6":{"anchor_0":{"x":613,"y":0}},"uni0AB60ACD0A9A":{"anchor_0":{"x":672,"y":0}},"uni0AB60ACD0AA8":{"anchor_0":{"x":622,"y":0}},"uni0AB60ACD0AB2":{"anchor_0":{"x":996,"y":0}},"uni0AB60ACD0AB5":{"anchor_0":{"x":631,"y":0}},"uni0AB70ACD0A9F":{"anchor_0":{"x":332,"y":0}},"uni0AB70ACD0AA0":{"anchor_0":{"x":342,"y":0}},"uni0AB80ACD0A95":{"anchor_0":{"x":635,"y":0}},"uni0AB80ACD0A9F":{"anchor_0":{"x":675,"y":0}},"uni0AB80ACD0AA0":{"anchor_0":{"x":665,"y":0}},"uni0AB80ACD0AA1":{"anchor_0":{"x":682,"y":0}},"uni0AB80ACD0AA40ACD0AB0":{"anchor_0":{"x":830,"y":0}},"uni0AB80ACD0AA5":{"anchor_0":{"x":936,"y":0}},"uni0AB80ACD0AAB":{"anchor_0":{"x":748,"y":-57}},"uni0AB80ACD0AAE":{"anchor_0":{"x":926,"y":0}},"uni0AB90ACD0AA3":{"anchor_0":{"x":582,"y":-6}},"uni0AB90ACD0AA8":{"anchor_0":{"x":542,"y":-6}},"uni0AB90ACD0AAE":{"anchor_0":{"x":705,"y":0}},"uni0AB90ACD0AAF":{"anchor_0":{"x":705,"y":0}},"uni0AB90ACD0AB2":{"anchor_0":{"x":588,"y":-14}},"uni0AB90ACD0AB5":{"anchor_0":{"x":554,"y":-9}}}]}},"8":{"0":{"type":["mark_to_mark","mark_to_base"],"marks":{"anchor_0":{"uni0AC3":[{"x":0,"y":0},null],"uni0AC4":[{"x":0,"y":0},null],"uni0ACD0AB0":[null,{"x":0,"y":0}],"uni0ACD0AB00AC1":[null,{"x":0,"y":0}],"uni0ACD0AB00AC2":[null,{"x":0,"y":0}],"uni0ACD0AB00AC3":[null,{"x":0,"y":0}],"uni0ACD0AB00AC4":[null,{"x":0,"y":0}],"uni0ACD0AB00ACD":[null,{"x":0,"y":0}],"uni0ACD0AB00AE2":[null,{"x":0,"y":0}],"uni0ACD0AB00AE3":[null,{"x":0,"y":0}]}},"basemarks":[{"uni0ABC":{"anchor_0":{"x":0,"y":-62}}},null],"bases":[null,{"uni0A95":{"anchor_0":{"x":279,"y":72}},"uni0A99":{"anchor_0":{"x":285,"y":72}},"uni0A9B":{"anchor_0":{"x":346,"y":59}},"uni0A9F":{"anchor_0":{"x":287,"y":72}},"uni0AA0":{"anchor_0":{"x":272,"y":73}},"uni0AA1":{"anchor_0":{"x":285,"y":72}},"uni0AA2":{"anchor_0":{"x":296,"y":72}},"uni0AA6":{"anchor_0":{"x":285,"y":72}},"uni0AB0":{"anchor_0":{"x":220,"y":46}},"zh_ra_aaMatragujarati":{"anchor_0":{"x":554,"y":0}},"uni0A990ACD":{"anchor_0":{"x":285,"y":72}},"uni0A9F0ACD":{"anchor_0":{"x":287,"y":72}},"uni0AA00ACD":{"anchor_0":{"x":272,"y":73}},"uni0AA10ACD":{"anchor_0":{"x":285,"y":72}},"uni0AA20ACD":{"anchor_0":{"x":296,"y":72}},"uni0AA60ACD":{"anchor_0":{"x":285,"y":72}},"rgujarati":{"anchor_0":{"x":220,"y":46}},"uni0A950ACD0AB0":{"anchor_0":{"x":279,"y":72}},"uni0A9C0ACD0AB00ABE":{"anchor_0":{"x":554,"y":0}},"uni0A950ACD0A95":{"anchor_0":{"x":656,"y":72}},"uni0A950ACD0AA6":{"anchor_0":{"x":761,"y":72}},"uni0A9F0ACD0A9F":{"anchor_0":{"x":290,"y":-146}},"uni0A9F0ACD0AA0":{"anchor_0":{"x":284,"y":-140}},"uni0AA00ACD0AA0":{"anchor_0":{"x":289,"y":-140}},"uni0AA10ACD0AA1":{"anchor_0":{"x":289,"y":-138}},"uni0AA10ACD0AA2":{"anchor_0":{"x":291,"y":-149}},"uni0AA20ACD0AA2":{"anchor_0":{"x":327,"y":-147}},"uni0AA40ACD0A95":{"anchor_0":{"x":552,"y":72}},"uni0AA60ACD0AA6":{"anchor_0":{"x":294,"y":72}},"uni0AA80ACD0A9F":{"anchor_0":{"x":517,"y":72}},"uni0AAA0ACD0A9F":{"anchor_0":{"x":330,"y":72}},"uni0AAA0ACD0AA0":{"anchor_0":{"x":341,"y":73}},"uni0AAA0ACD0AA6":{"anchor_0":{"x":568,"y":72}},"uni0AB20ACD0A95":{"anchor_0":{"x":651,"y":72}},"uni0AB50ACD0AA6":{"anchor_0":{"x":613,"y":72}},"uni0AB70ACD0A9F":{"anchor_0":{"x":330,"y":72}},"uni0AB70ACD0AA0":{"anchor_0":{"x":342,"y":73}},"uni0AB80ACD0A95":{"anchor_0":{"x":636,"y":72}},"uni0AB80ACD0A9F":{"anchor_0":{"x":674,"y":72}},"uni0AB80ACD0AA0":{"anchor_0":{"x":666,"y":73}},"uni0AB80ACD0AA1":{"anchor_0":{"x":681,"y":72}}}]}},"9":{"0":{"type":["mark_to_base","mark_to_mark"],"marks":{"anchor_0":{"uni0A81":[{"x":0,"y":592},null],"uni0A82":[{"x":0,"y":592},null],"uni0AC5":[{"x":0,"y":592},null],"uni0AFB":[{"x":-98,"y":592},null],"uni0AFD":[{"x":0,"y":592},null],"uni0AFE":[{"x":0,"y":592},null],"uni0AB00ACD0A82":[{"x":95,"y":575},null],"uni0AC70AB00ACD0A82":[{"x":102,"y":575},null],"uni0AC80AB00ACD0A82":[{"x":125,"y":575},null],"uni0AFD_uni0AFA":[{"x":0,"y":592},null],"uni0AFE_uni0AFA":[{"x":0,"y":592},null],"uni0AFD_uni0AFB":[{"x":0,"y":592},null],"uni0AFE_uni0AFB":[{"x":0,"y":592},null],"uni0AC1":[null,{"x":0,"y":0}],"uni0AC2":[null,{"x":0,"y":0}],"uni0ACD":[null,{"x":0,"y":0}],"uni0AE2":[null,{"x":0,"y":0}],"uni0AE3":[null,{"x":0,"y":0}],"uni0AC1.alt":[null,{"x":0,"y":0}],"uni0AC2.alt":[null,{"x":0,"y":0}],"uni0AC1.calt":[null,{"x":0,"y":0}],"anudatta":[null,{"x":0,"y":0}]}},"bases":[{"uni25CC":{"anchor_0":{"x":298,"y":592}}},null],"basemarks":[null,{"uni0ABC":{"anchor_0":{"x":0,"y":-62}}}]}},"10":{"0":{"type":["mark_to_base","mark_to_mark"],"marks":{"anchor_1":[{"uni0AC1":{"x":0,"y":0},"uni0AC2":{"x":0,"y":0},"uni0ACD":{"x":0,"y":0},"uni0AE2":{"x":0,"y":0},"uni0AE3":{"x":0,"y":0},"uni0AC1.alt":{"x":0,"y":0},"uni0AC2.alt":{"x":0,"y":0},"uni0AC1.calt":{"x":0,"y":0},"anudatta":{"x":0,"y":0}},null],"anchor_2":[{"uni0AC3":{"x":0,"y":0},"uni0AC4":{"x":0,"y":0}},null],"anchor_3":[{"uni0AC7":{"x":0,"y":592},"uni0AC8":{"x":0,"y":592},"uni0AFA":{"x":0,"y":592},"uni0AB00ACD":{"x":0,"y":592},"uni0AB00ACD0A82":{"x":0,"y":592},"uni0AC70AB00ACD":{"x":0,"y":592},"uni0AC70AB00ACD0A82":{"x":0,"y":592},"uni0AC80AB00ACD":{"x":0,"y":603},"uni0AC80AB00ACD0A82":{"x":0,"y":603},"udatta":{"x":0,"y":592},"uni0AFA_uni0AB00ACD":{"x":0,"y":592},"uni0AFD_evowelgujr":{"x":1,"y":592},"uni0AFD_aivowelgujr":{"x":1,"y":592},"uni0AFE_evowelgujr":{"x":1,"y":592},"uni0AFE_aivowelgujr":{"x":1,"y":592},"uni0AFD_rephgujr":{"x":0,"y":592},"uni0AFE_rephgujr":{"x":0,"y":592},"uni0AFD_evowelgujr_rephgujr":{"x":1,"y":592},"uni0AFD_aivowelgujr_rephgujr":{"x":1,"y":592},"uni0AFE_evowelgujr_rephgujr":{"x":1,"y":592},"uni0AFE_aivowelgujr_rephgujr":{"x":1,"y":592},"uni0A81.alt":{"x":0,"y":592},"uni0A82.alt":{"x":0,"y":592}},null]},"bases":[{"uni25CC":{"anchor_0":{"x":298,"y":-64},"anchor_1":{"x":298,"y":0},"anchor_2":{"x":298,"y":0},"anchor_3":{"x":456,"y":592}}},null],"basemarks":[null,{"uni0AC1.alt":{"anchor_0":{"x":0,"y":-383}},"uni0AC2.alt":{"anchor_0":{"x":0,"y":-383}},"uni0ACD0AB0":{"anchor_0":{"x":0,"y":-300}},"uni0ACD0AB00AC1":{"anchor_0":{"x":0,"y":-548}},"uni0ACD0AB00AC2":{"anchor_0":{"x":0,"y":-548}}}]}},"11":[null,[{"type":"mark_to_mark","marks":{"anchor_0":{"uni0AC3":{"x":0,"y":0},"uni0AC4":{"x":0,"y":0}}},"basemarks":{"uni0ABC":{"anchor_0":{"x":0,"y":-62}}}}]],"12":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"uni0AC1":{"x":0,"y":0},"uni0AC2":{"x":0,"y":0},"uni0ACD":{"x":0,"y":0},"uni0AE2":{"x":0,"y":0},"uni0AE3":{"x":0,"y":0},"uni0AC1.alt":{"x":0,"y":0},"uni0AC2.alt":{"x":0,"y":0},"uni0AC1.calt":{"x":0,"y":0},"anudatta":{"x":0,"y":0}}},"bases":{"uni25CC":{"anchor_0":{"x":298,"y":0}}}}]],"13":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"uni0ABC":{"x":0,"y":0}}},"bases":{"uni25CC":{"anchor_0":{"x":298,"y":-64}}}}]],"14":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"uni0AC3":{"x":0,"y":0},"uni0AC4":{"x":0,"y":0}}},"bases":{"uni25CC":{"anchor_0":{"x":298,"y":0}}}}]],"15":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"uni0AC7":{"x":0,"y":592},"uni0AC8":{"x":0,"y":592},"uni0AFA":{"x":0,"y":592},"uni0AB00ACD":{"x":0,"y":592},"uni0AB00ACD0A82":{"x":0,"y":592},"uni0AC70AB00ACD":{"x":0,"y":592},"uni0AC70AB00ACD0A82":{"x":0,"y":592},"uni0AC80AB00ACD":{"x":0,"y":603},"uni0AC80AB00ACD0A82":{"x":0,"y":603},"udatta":{"x":0,"y":592},"uni0AFA_uni0AB00ACD":{"x":0,"y":592},"uni0AFD_evowelgujr":{"x":1,"y":592},"uni0AFD_aivowelgujr":{"x":1,"y":592},"uni0AFE_evowelgujr":{"x":1,"y":592},"uni0AFE_aivowelgujr":{"x":1,"y":592},"uni0AFD_rephgujr":{"x":0,"y":592},"uni0AFE_rephgujr":{"x":0,"y":592},"uni0AFD_evowelgujr_rephgujr":{"x":1,"y":592},"uni0AFD_aivowelgujr_rephgujr":{"x":1,"y":592},"uni0AFE_evowelgujr_rephgujr":{"x":1,"y":592},"uni0AFE_aivowelgujr_rephgujr":{"x":1,"y":592},"uni0A81.alt":{"x":0,"y":592},"uni0A82.alt":{"x":0,"y":592}}},"bases":{"uni25CC":{"anchor_0":{"x":456,"y":592}}}}]],"16":[null,[{"type":"mark_to_base","marks":{"anchor_0":{"uni0A81":{"x":0,"y":592},"uni0A82":{"x":0,"y":592},"uni0AC5":{"x":0,"y":592},"uni0AFB":{"x":-98,"y":592},"uni0AFD":{"x":0,"y":592},"uni0AFE":{"x":0,"y":592},"uni0AFD_uni0AFA":{"x":0,"y":592},"uni0AFE_uni0AFA":{"x":0,"y":592},"uni0AFD_uni0AFB":{"x":0,"y":592},"uni0AFE_uni0AFB":{"x":0,"y":592},"uni0AFD_uni0AFC":{"x":-148,"y":592}}},"bases":{"uni25CC":{"anchor_0":{"x":298,"y":592}}}}]]}},"GSUB":{"lookup_list":{"40":{"0":{"rules":{"1":["uni0ABF' lookup lookup_41 uni0AB80ACD uni0AA6",null],"2":["uni0ABF' lookup lookup_41 uni0AAA0ACD uni0AAA",null],"3":["uni0ABF' lookup lookup_41 uni0AA80ACD [uni0AA4 uni0AAF uni0AB5 uni0AB9]",null],"4":["uni0ABF' lookup lookup_41 uni0A970ACD uni0AA6",null],"5":["uni0ABF' lookup lookup_41 uni0AA40ACD uni0AAA",null]}},"1":[null,{"type":"chained_sequence_context","rules":["uni0ABF' lookup lookup_41 uni0AB80ACD uni0AA6"]}],"2":[null,{"type":"chained_sequence_context","rules":["uni0ABF' lookup lookup_41 uni0AAA0ACD uni0AAA"]}],"3":[null,{"type":"chained_sequence_context","rules":["uni0ABF' lookup lookup_41 uni0AA80ACD [uni0AA4 uni0AAF uni0AB5 uni0AB9]"]}],"4":[null,{"type":"chained_sequence_context","rules":["uni0ABF' lookup lookup_41 uni0A970ACD uni0AA6"]}],"5":[null,{"type":"chained_sequence_context","rules":["uni0ABF' lookup lookup_41 uni0AA40ACD uni0AAA"]}]}}},"OS/2":{"s_cap_height":[598,596]},"cmap":{"U+0AF0":["abbreviationgujarati","uni0AF0"]},"head":{"checksum_adjustment":[733831786,852808577],"modified":[3781161071,3813909382],"x_min":[-936,-923],"x_max":[1659,1672],"y_max":[1046,1052]},"hhea":{"advance_width_max":[1321,1319],"min_left_side_bearing":[-936,-923],"min_right_side_bearing":[-1377,-1390],"x_max_extent":[1659,1672],"caret_slope_rise":[1,1000]},"hmtx":{"error":"There are 241 changes, check manually!"},"loca":{"offsets":{"error":"There are 445 changes, check manually!"}},"maxp":{"max_composite_points":[132,130]}},"kerns":{"error":"There are 5138 changes, check manually!"},"cmap_diff":{},"locations":[{"location":"Default","glyphs":[{"string":"ૹ","name":"GUJARATI LETTER ZHA","unicode":"U+0AF9","differing_pixels":130},{"string":"ૡ","name":"GUJARATI LETTER VOCALIC LL","unicode":"U+0AE1","differing_pixels":106},{"string":"ઌ","name":"GUJARATI LETTER VOCALIC L","unicode":"U+0A8C","differing_pixels":101},{"string":"3","name":"DIGIT THREE","unicode":"U+0033","differing_pixels":96},{"string":"જ","name":"GUJARATI LETTER JA","unicode":"U+0A9C","differing_pixels":96},{"string":"₹","name":"INDIAN RUPEE SIGN","unicode":"U+20B9","differing_pixels":87},{"string":"0","name":"DIGIT ZERO","unicode":"U+0030","differing_pixels":82},{"string":"2","name":"DIGIT TWO","unicode":"U+0032","differing_pixels":81},{"string":"(","name":"LEFT PARENTHESIS","unicode":"U+0028","differing_pixels":78},{"string":"ૈ","name":"GUJARATI VOWEL SIGN AI","unicode":"U+0AC8","differing_pixels":74},{"string":"8","name":"DIGIT EIGHT","unicode":"U+0038","differing_pixels":73},{"string":"6","name":"DIGIT SIX","unicode":"U+0036","differing_pixels":70},{"string":"*","name":"ASTERISK","unicode":"U+002A","differing_pixels":66},{"string":"9","name":"DIGIT NINE","unicode":"U+0039","differing_pixels":65},{"string":"ૣ","name":"GUJARATI VOWEL SIGN VOCALIC LL","unicode":"U+0AE3","differing_pixels":64},{"string":"4","name":"DIGIT FOUR","unicode":"U+0034","differing_pixels":63},{"string":"#","name":"NUMBER SIGN","unicode":"U+0023","differing_pixels":63},{"string":"ૢ","name":"GUJARATI VOWEL SIGN VOCALIC L","unicode":"U+0AE2","differing_pixels":62},{"string":"|","name":"VERTICAL LINE","unicode":"U+007C","differing_pixels":62},{"string":")","name":"RIGHT PARENTHESIS","unicode":"U+0029","differing_pixels":62},{"string":">","name":"GREATER-THAN SIGN","unicode":"U+003E","differing_pixels":60},{"string":"=","name":"EQUALS SIGN","unicode":"U+003D","differing_pixels":60},{"string":"૧","name":"GUJARATI DIGIT ONE","unicode":"U+0AE7","differing_pixels":56},{"string":"ઐ","name":"GUJARATI LETTER AI","unicode":"U+0A90","differing_pixels":55},{"string":"5","name":"DIGIT FIVE","unicode":"U+0035","differing_pixels":53},{"string":"૬","name":"GUJARATI DIGIT SIX","unicode":"U+0AEC","differing_pixels":51},{"string":"7","name":"DIGIT SEVEN","unicode":"U+0037","differing_pixels":51},{"string":"1","name":"DIGIT ONE","unicode":"U+0031","differing_pixels":50},{"string":"ઔ","name":"GUJARATI LETTER AU","unicode":"U+0A94","differing_pixels":49},{"string":"૽","name":"GUJARATI SIGN THREE-DOT NUKTA ABOVE","unicode":"U+0AFD","differing_pixels":48},{"string":"^","name":"CIRCUMFLEX ACCENT","unicode":"U+005E","differing_pixels":47},{"string":"ૌ","name":"GUJARATI VOWEL SIGN AU","unicode":"U+0ACC","differing_pixels":45},{"string":"<","name":"LESS-THAN SIGN","unicode":"U+003C","differing_pixels":44},{"string":"॥","name":"DEVANAGARI DOUBLE DANDA","unicode":"U+0965","differing_pixels":42},{"string":"?","name":"QUESTION MARK","unicode":"U+003F","differing_pixels":41},{"string":"×","name":"MULTIPLICATION SIGN","unicode":"U+00D7","differing_pixels":40},{"string":";","name":"SEMICOLON","unicode":"U+003B","differing_pixels":39},{"string":"%","name":"PERCENT SIGN","unicode":"U+0025","differing_pixels":38},{"string":"…","name":"HORIZONTAL ELLIPSIS","unicode":"U+2026","differing_pixels":38},{"string":"!","name":"EXCLAMATION MARK","unicode":"U+0021","differing_pixels":37},{"string":"{","name":"LEFT CURLY BRACKET","unicode":"U+007B","differing_pixels":36},{"string":"\"","name":"QUOTATION MARK","unicode":"U+0022","differing_pixels":33},{"string":"”","name":"RIGHT DOUBLE QUOTATION MARK","unicode":"U+201D","differing_pixels":32},{"string":"}","name":"RIGHT CURLY BRACKET","unicode":"U+007D","differing_pixels":30},{"string":"~","name":"TILDE","unicode":"U+007E","differing_pixels":30},{"string":"“","name":"LEFT DOUBLE QUOTATION MARK","unicode":"U+201C","differing_pixels":30},{"string":"[","name":"LEFT SQUARE BRACKET","unicode":"U+005B","differing_pixels":26},{"string":"]","name":"RIGHT SQUARE BRACKET","unicode":"U+005D","differing_pixels":26},{"string":",","name":"COMMA","unicode":"U+002C","differing_pixels":26},{"string":"ૉ","name":"GUJARATI VOWEL SIGN CANDRA O","unicode":"U+0AC9","differing_pixels":24},{"string":":","name":"COLON","unicode":"U+003A","differing_pixels":23},{"string":"૱","name":"GUJARATI RUPEE SIGN","unicode":"U+0AF1","differing_pixels":21},{"string":"।","name":"DEVANAGARI DANDA","unicode":"U+0964","differing_pixels":21},{"string":"÷","name":"DIVISION SIGN","unicode":"U+00F7","differing_pixels":20},{"string":"ઑ","name":"GUJARATI VOWEL CANDRA O","unicode":"U+0A91","differing_pixels":20},{"string":"\\","name":"REVERSE SOLIDUS","unicode":"U+005C","differing_pixels":19},{"string":"+","name":"PLUS SIGN","unicode":"U+002B","differing_pixels":19},{"string":"ૻ","name":"GUJARATI SIGN SHADDA","unicode":"U+0AFB","differing_pixels":17}],"words":{"Gujarati":[{"word":"ર્સ્ફૂિત","buffer_a":"113|316|98@-248,-118|415|38|","buffer_b":"113|316|98@-253,-121|415|38|","differing_pixels":377},{"word":"સ્ટારફ્રૂટ","buffer_a":"311|60|49|224|98@-262,-118|32|","buffer_b":"311|60|49|224|98@-265,-121|32|","differing_pixels":194},{"word":"બદ્દૂર","buffer_a":"45|279|98@-215,-50|49|","buffer_b":"45|279|98@-202,-53|49|","differing_pixels":186},{"word":"ફૂ઼ડ","buffer_a":"44|98@-244,-118|58@-244,-507|34|","buffer_b":"44|98@-246,-121|58@-246,-504|34|","differing_pixels":131},{"word":"રાજ઼્મા","buffer_a":"49|60|255|58@-1033,96|60|","buffer_b":"49|60|255|58@-1032,97|60|","differing_pixels":46},{"word":"ડાઇહાઇડ્રોક્સિફિનાઇલએલાનાઇનમાંથી","buffer_a":"34|60|10|56|60|10|34|140@-215,72|71|105|168|55|99|44|42|60|10|50|17|50|60|42|60|10|42|47|60|6@-145,0|39|62|","buffer_b":"34|60|10|56|60|10|34|140@-214,72|71|105|168|55|99|44|42|60|10|50|17|50|60|42|60|10|42|47|60|6@-145,0|39|62|","differing_pixels":42},{"word":"જ્યોતિર્લિંગોમાંનું","buffer_a":"256|71|100|38|121|50|415|24|71|47|60|6@-145,0|42|63@-146,0|6@-146,0|","differing_pixels":42},{"word":"વજ્જિસંઘની","buffer_a":"52|107|253|55|6@-146,0|25|42|62|","differing_pixels":40},{"word":"ઉજ્જૈનનો","buffer_a":"12|253|69@-84,0|42|42|71|","differing_pixels":40},{"word":"જ્યોતિર્લિઁગ","buffer_a":"256|71|100|38|111|50|415|5|24|","differing_pixels":39},{"word":"રિપુઞ્જય","buffer_a":"99|49|43|63@-145,0|258|48|","buffer_b":"99|49|43|63@-146,0|258|48|","differing_pixels":39},{"word":"કરોડરજ્જૂને","buffer_a":"22|49|71|34|49|253|64@-265,0|42|68@-146,0|","buffer_b":"22|49|71|34|49|253|64@-266,0|42|68@-146,0|","differing_pixels":36},{"word":"લિજ્જતની","buffer_a":"101|50|253|38|42|62|","differing_pixels":36},{"word":"કરોડરજ્જૂમાં","buffer_a":"22|49|71|34|49|253|64@-299,0|47|60|6@-145,0|","differing_pixels":33},{"word":"ઇન્સિટટ્યૂટ","buffer_a":"10|104|290|32|261|64@-146,0|32|","differing_pixels":33},{"word":"પોલિયોકરોડરજ્જુશોથ","buffer_a":"43|71|101|50|48|71|22|49|71|34|49|253|63@-265,0|53|71|39|","buffer_b":"43|71|101|50|48|71|22|49|71|34|49|253|63@-266,0|53|71|39|","differing_pixels":32},{"word":"કરોડરજ્જુમાંથી","buffer_a":"22|49|71|34|49|253|63@-299,0|47|60|6@-145,0|39|62|","differing_pixels":32},{"word":"ઔરંગજ્જેબ","buffer_a":"21|49|6@-221,0|24|253|68@-84,0|45|","buffer_b":"21|49|6@-225,0|24|253|68@-84,0|45|","differing_pixels":31},{"word":"જૌલ્જિબિ","buffer_a":"157|69@-182,0|105|194|29|101|45|","differing_pixels":31},{"word":"કૈજ઼ુએરિના","buffer_a":"22|69@-172,0|29|58@-559,96|63@-559,34|17|99|49|42|60|","buffer_b":"22|69@-172,0|29|58@-559,97|63@-559,35|17|99|49|42|60|","differing_pixels":30},{"word":"જૈૈૈન","buffer_a":"29|69@-68,0|69@61,0|69@190,0|42|","buffer_b":"29|69@-69,0|69@64,0|69@197,0|42|","differing_pixels":29},{"word":"વૈ઼જ્ઞાનિકોએ","buffer_a":"52|69@-145,0|58@-378,44|254|60|100|42|22|71|17|","differing_pixels":28},{"word":"જિમ્નેસ્ટિ્સ","buffer_a":"101|29|298|68@-145,0|103|311|73@-213,0|55|","buffer_b":"101|29|298|68@-146,0|103|311|73@-213,0|55|","differing_pixels":28},{"word":"જૈંંતિયા","buffer_a":"29|69@-68,0|454@61,0|6@-273,0|100|38|48|60|","buffer_b":"29|69@-69,0|454@64,0|6@-274,0|100|38|48|60|","differing_pixels":28},{"word":"એસીટૈલ્ડિહાઈટમાં","buffer_a":"17|55|62|32|69@-136,0|103|194|34|56|60|11|32|47|60|6@-145,0|","buffer_b":"17|55|62|32|69@-140,0|103|194|34|56|60|11|32|47|60|6@-145,0|","differing_pixels":26},{"word":"જૂયબાર","buffer_a":"29|64@-270,0|48|45|60|49|","buffer_b":"29|64@-274,0|48|45|60|49|","differing_pixels":26},{"word":"વિશ્લેષણમૂલક","buffer_a":"100|52|306|68@-146,0|54|36|47|64@-145,0|50|22|","buffer_b":"100|52|306|68@-146,0|54|36|47|64@-146,0|50|22|","differing_pixels":25},{"word":"એરેન્જ્મેન્ટ","buffer_a":"17|49|68@-126,0|186|255|68@-148,0|288|","buffer_b":"17|49|68@-130,0|186|255|68@-148,0|288|","differing_pixels":24},{"word":"સૈદ્વાન્તિક","buffer_a":"55|69@-192,0|286|60|102|186|38|22|","buffer_b":"55|69@-193,0|286|60|102|186|38|22|","differing_pixels":24},{"word":"રેઇનવોટરહાર્વેસ્ટિંગ","buffer_a":"49|68@-126,0|10|42|52|71|32|49|56|60|52|152@-145,0|133|311|415|24|","buffer_b":"49|68@-130,0|10|42|52|71|32|49|56|60|52|152@-145,0|133|311|415|24|","differing_pixels":23},{"word":"વડીલોપાર્જિત","buffer_a":"52|34|62|50|71|43|60|111|29|415|38|","differing_pixels":23},{"word":"વિશિષ્ટદ્વૈત","buffer_a":"100|52|101|53|308|286|69@-158,0|38|","buffer_b":"100|52|101|53|308|286|69@-151,0|38|","differing_pixels":22},{"word":"ડિફરન્સિંગનો","buffer_a":"99|34|44|49|134|290|415|24|42|71|","differing_pixels":22},{"word":"અૈતિહાસિક","buffer_a":"8|414|69@-140,0|100|38|56|60|101|55|22|","differing_pixels":22},{"word":"જૈમેત્ર","buffer_a":"29|69@-102,0|47|68@-145,0|218|","buffer_b":"29|69@-102,0|47|68@-146,0|218|","differing_pixels":22},{"word":"અંજૈયા","buffer_a":"8|6@-146,0|29|69@-72,0|48|60|","buffer_b":"8|6@-145,0|29|69@-77,0|48|60|","differing_pixels":22},{"word":"જૈવપ્રતિક્રિયાકારકો","buffer_a":"29|69@-68,0|52|223|100|38|100|206|48|60|22|60|49|22|71|","buffer_b":"29|69@-69,0|52|223|100|38|100|206|48|60|22|60|49|22|71|","differing_pixels":21},{"word":"વાસુપૂજ્યનું","buffer_a":"52|60|55|63@-146,0|43|64@-145,0|256|42|63@-146,0|6@-146,0|","buffer_b":"52|60|55|63@-146,0|43|64@-146,0|256|42|63@-146,0|6@-146,0|","differing_pixels":21},{"word":"વાર્ષિકદિનની","buffer_a":"52|60|110|54|415|22|99|40|42|42|62|","differing_pixels":21},{"word":"સ્કૈનિંગ","buffer_a":"310|69@-181,0|129|42|415|24|","buffer_b":"310|69@-182,0|129|42|415|24|","differing_pixels":21},{"word":"જૈપોર","buffer_a":"29|69@-130,0|43|71|49|","buffer_b":"29|69@-131,0|43|71|49|","differing_pixels":21},{"word":"પૂર્ણિમાબેને","buffer_a":"43|64@-145,0|112|36|415|47|60|45|68@-146,0|42|68@-146,0|","buffer_b":"43|64@-146,0|112|36|415|47|60|45|68@-146,0|42|68@-146,0|","differing_pixels":20},{"word":"ફિરૈં","buffer_a":"99|44|49|69@-126,0|454@3,0|","buffer_b":"99|44|49|69@-130,0|454@3,0|","differing_pixels":20},{"word":"તત્વજ્ઞાનાન્નિશ્ર્શ્રેયસાધિગમઃ","buffer_a":"38|182|52|254|60|42|60|61|289|344|232|68@-145,0|48|55|60|61|41|24|47|7|","differing_pixels":19},{"word":"જ્યારેયજ઼્દેગર્દએ","buffer_a":"256|60|49|68@-126,0|48|174|58@-486,96|40|68@-137,0|24|40|148@-137,0|17|","buffer_b":"256|60|49|68@-130,0|48|174|58@-481,97|40|68@-137,0|24|40|148@-137,0|17|","differing_pixels":19},{"word":"ફ્ેસ્ટિવલમાં","buffer_a":"44|73@-244,-118|414|68@-140,0|103|311|52|50|47|60|6@-145,0|","buffer_b":"44|73@-246,-121|414|68@-140,0|103|311|52|50|47|60|6@-145,0|","differing_pixels":19},{"word":"ક્ષદસ્જ્દૈસ્ફ્ક્દસ્ફ્હ","buffer_a":"243|40|199|174|40|69@-137,0|199|188|240|199|188|56|","differing_pixels":18},{"word":"ઑક્સિપેન્ટફ્લોરોનિઓબેટ","buffer_a":"19|105|168|55|43|68@-145,0|288|188|50|71|49|71|100|42|20|45|68@-146,0|32|","buffer_b":"19|105|168|55|43|68@-146,0|288|188|50|71|49|71|100|42|20|45|68@-146,0|32|","differing_pixels":18},{"word":"રીયલક્લિયરસ્પોર્ટ્સનો","buffer_a":"49|62|48|50|105|168|50|48|49|199|43|71|177|55|148@-146,0|42|71|","differing_pixels":18},{"word":"નિર્જંતુનીકરણ","buffer_a":"100|42|29|149@-68,0|38|63@-146,0|42|62|22|49|36|","buffer_b":"100|42|29|149@-69,0|38|63@-145,0|42|62|22|49|36|","differing_pixels":18},{"word":"મિરિજ઼્જ઼િ","buffer_a":"61|47|99|49|61|174|58@-516,96|29|58@-559,96|","buffer_b":"61|47|99|49|61|174|58@-507,97|29|58@-559,97|","differing_pixels":18},{"word":"ટૅંજિયર","buffer_a":"32|67@-231,0|6@83,53|101|29|48|49|","buffer_b":"32|67@-223,0|6@92,53|101|29|48|49|","differing_pixels":18},{"word":"જેેમાં","buffer_a":"29|68@-102,0|68@-38,50|47|60|6@-145,0|","buffer_b":"29|68@-102,0|68@-44,50|47|60|6@-145,0|","differing_pixels":18},{"word":"જેંમા","buffer_a":"29|68@-102,0|454@-38,50|47|60|","buffer_b":"29|68@-102,0|454@-44,50|47|60|","differing_pixels":18},{"word":"જૅય","buffer_a":"29|67@-277,0|48|","buffer_b":"29|67@-282,0|48|","differing_pixels":18},{"word":"જ્ઞાનમંજૂષાનું","buffer_a":"254|60|42|47|6@-145,0|29|64@-328,0|54|60|42|63@-146,0|6@-146,0|","buffer_b":"254|60|42|47|6@-146,0|29|64@-324,0|54|60|42|63@-146,0|6@-146,0|","differing_pixels":17},{"word":"વિશ્વૈશ્વરા","buffer_a":"100|52|307|69@-146,18|307|49|60|","buffer_b":"100|52|307|69@-146,19|307|49|60|","differing_pixels":17},{"word":"ઇન્ડ્સટ્રિઝ","buffer_a":"10|186|179|55|99|32|140@-216,72|30|","buffer_b":"10|186|179|55|99|32|140@-214,72|30|","differing_pixels":17},{"word":"ઇન્ટેલિજિબલ","buffer_a":"10|288|68@-170,0|101|50|101|29|45|50|","differing_pixels":17},{"word":"ઇનડસ્ટ્રિયલ","buffer_a":"10|42|34|103|311|140@-214,72|48|50|","differing_pixels":17},{"word":"સ્વીઅરિજંન","buffer_a":"199|52|62|8|99|49|29|6@-273,0|42|","buffer_b":"199|52|62|8|99|49|29|6@-274,0|42|","differing_pixels":17},{"word":"રૌસીઔસની","buffer_a":"49|72|55|62|21|55|42|62|","differing_pixels":17},{"word":"પૅંગ્વિન","buffer_a":"43|67@-145,0|6@169,53|103|170|52|42|","buffer_b":"43|67@-146,0|6@169,53|103|170|52|42|","differing_pixels":17},{"word":"જ઼મીની","buffer_a":"29|58@-593,96|47|62|42|62|","buffer_b":"29|58@-592,97|47|62|42|62|","differing_pixels":17},{"word":"રિજ઼ૉલ્યૂશંસ","buffer_a":"99|49|29|58@-559,96|70|300|64@-146,0|53|6@-145,0|55|","buffer_b":"99|49|29|58@-559,97|70|300|64@-146,0|53|6@-145,0|55|","differing_pixels":16},{"word":"મોલબ્લિંગમાં","buffer_a":"47|71|50|135|297|415|24|47|60|6@-145,0|","differing_pixels":16},{"word":"ભિંતચિત્રમાં","buffer_a":"132|46|415|38|61|27|218|47|60|6@-145,0|","differing_pixels":16},{"word":"બર્મિંગહામથી","buffer_a":"45|120|47|415|24|56|60|47|39|62|","differing_pixels":16},{"word":"ફેલિમિર્ઝેર્","buffer_a":"44|68@-175,0|101|50|61|47|30|152@-185,0|193|","buffer_b":"44|68@-176,0|101|50|61|47|30|152@-185,0|193|","differing_pixels":16},{"word":"શોબોટિંગ","buffer_a":"53|71|45|71|128|32|415|24|","differing_pixels":16},{"word":"વિસ્ર્જન","buffer_a":"100|52|346|29|42|","differing_pixels":16},{"word":"રાજુપુરા","buffer_a":"49|60|29|63@-328,0|43|63@-145,0|49|60|","buffer_b":"49|60|29|63@-328,0|43|63@-146,0|49|60|","differing_pixels":16},{"word":"શ્રીરાસપઞ્ચાધ્યાયીવિમર્શઃ","buffer_a":"232|62|49|60|55|43|257|60|185|48|60|48|62|100|52|47|53|148@-145,0|7|","differing_pixels":15},{"word":"વાદ્યજૂથ","buffer_a":"52|60|285|29|64@-266,0|39|","differing_pixels":15},{"word":"ક્રૈપુલા","buffer_a":"206|69@-173,0|43|63@-145,0|50|60|","buffer_b":"206|69@-173,0|43|63@-146,0|50|60|","differing_pixels":15},{"word":"જહ્નુની","buffer_a":"29|319|156@-136,-14|42|62|","buffer_b":"29|319|156@-137,-6|42|62|","differing_pixels":15},{"word":"પ્રજોત્પત્તિશાસ્ત્રજ્ઞ","buffer_a":"223|157|68@-182,0|182|43|101|270|53|60|314|254|","differing_pixels":14},{"word":"વિષમલૈંગિકતા","buffer_a":"100|52|54|47|50|69@-146,0|454@-17,0|61|24|22|38|60|","buffer_b":"100|52|54|47|50|69@-146,0|454@-13,0|61|24|22|38|60|","differing_pixels":14},{"word":"ફ઼્રૈંસિસ્કો","buffer_a":"224|58@-264,-243|69@-177,0|454@-48,0|101|55|310|71|","buffer_b":"224|58@-265,-246|69@-175,0|454@-42,0|101|55|310|71|","differing_pixels":14},{"word":"શિવપત્ની","buffer_a":"101|53|52|43|272|62|","differing_pixels":14},{"word":"ગુર્જયેફ","buffer_a":"24|63@-107,0|29|148@-72,0|48|68@-146,0|44|","buffer_b":"24|63@-82,0|29|148@-77,0|48|68@-146,0|44|","differing_pixels":14},{"word":"વાઙ્મય","buffer_a":"52|60|249|48|","differing_pixels":14},{"word":"સૌરાષ્ટ્રવિશ્વવિદ્યાલયના","buffer_a":"55|72|49|60|308|140@-228,72|100|52|307|100|52|285|60|50|48|42|60|","buffer_b":"55|72|49|60|308|140@-223,72|100|52|307|100|52|285|60|50|48|42|60|","differing_pixels":13},{"word":"બેક્ટેરીયારૂધિરકાણિકાઓના","buffer_a":"45|68@-146,0|168|32|68@-136,0|49|62|48|60|166|61|41|49|22|60|102|36|22|60|20|42|60|","buffer_b":"45|68@-146,0|168|32|68@-140,0|49|62|48|60|166|61|41|49|22|60|102|36|22|60|20|42|60|","differing_pixels":13},{"word":"ખ્રિસ્તીવિશ્વનાં","buffer_a":"102|207|199|38|62|100|52|307|42|60|6@-145,0|","differing_pixels":13},{"word":"વૅઈટલિફ્ટીંગ","buffer_a":"52|67@-145,0|11|32|101|50|188|32|62|6@-55,50|24|","differing_pixels":13},{"word":"પ્રિકૈટોરિયસ","buffer_a":"100|223|22|69@-172,0|32|71|99|49|48|55|","differing_pixels":13},{"word":"ઇન્સિગ્નિયા","buffer_a":"10|104|290|61|244|48|60|","differing_pixels":13},{"word":"હાઇજૅકરોને","buffer_a":"56|60|10|29|67@-273,0|22|49|71|42|68@-146,0|","buffer_b":"56|60|10|29|67@-274,0|22|49|71|42|68@-146,0|","differing_pixels":13},{"word":"જન્મજંયતિ","buffer_a":"29|186|47|29|6@-277,0|48|100|38|","buffer_b":"29|186|47|29|6@-282,0|48|100|38|","differing_pixels":13},{"word":"મેનેજેંગ","buffer_a":"47|68@-145,0|42|68@-146,0|29|68@-68,0|454@-4,50|24|","buffer_b":"47|68@-146,0|42|68@-146,0|29|68@-69,0|454@-11,50|24|","differing_pixels":13},{"word":"દ્રૈતવાદ","buffer_a":"220|69@-154,0|38|52|60|40|","buffer_b":"220|69@-149,0|38|52|60|40|","differing_pixels":13},{"word":"ઙ્કલ્ઙ્ખ","buffer_a":"246|194|172|23|","differing_pixels":13},{"word":"ટ્વૈન","buffer_a":"262|69@-179,0|42|","buffer_b":"262|69@-178,0|42|","differing_pixels":13},{"word":"છૈત્ર","buffer_a":"28|69@-220,0|218|","differing_pixels":13},{"word":"સ્ટુડીયોનાએક્ઝિક્યુટિવો","buffer_a":"311|63@-213,0|34|62|48|71|42|60|17|61|168|30|242|63@-146,0|99|32|52|71|","differing_pixels":12},{"word":"રાષ્ટ્ર્ધ્વજનાં","buffer_a":"49|60|308|145@-228,72|185|52|29|42|60|6@-145,0|","buffer_b":"49|60|308|145@-223,72|185|52|29|42|60|6@-145,0|","differing_pixels":12},{"word":"વિજયાલક્ષ્મી","buffer_a":"100|52|29|48|60|50|202|47|62|","differing_pixels":12},{"word":"નૈર્ઋત્યમાં","buffer_a":"42|69@-146,0|14|148@-426,0|274|47|60|6@-145,0|","differing_pixels":12},{"word":"આર્ગોનૉટિકા","buffer_a":"9|24|60|152@-145,0|42|70|99|32|22|60|","differing_pixels":12},{"word":"નૄસિંહદેવ","buffer_a":"42|66@-108,0|131|55|415|56|40|68@-137,0|52|","buffer_b":"42|66@-81,0|131|55|415|56|40|68@-137,0|52|","differing_pixels":12},{"word":"સંયોજિઓત","buffer_a":"55|6@-146,0|48|71|101|29|20|38|","differing_pixels":12},{"word":"શિંદોંગા","buffer_a":"131|53|415|40|71|6@-81,49|24|60|","buffer_b":"131|53|415|40|71|6@-87,49|24|60|","differing_pixels":12},{"word":"નૈર્ૠત્ય","buffer_a":"42|69@-146,0|75|148@-504,0|274|","differing_pixels":12},{"word":"ગુ઼જરાતી","buffer_a":"24|97@-107,0|58@-107,-389|29|49|60|38|62|","buffer_b":"24|97@-82,0|58@-82,-383|29|49|60|38|62|","differing_pixels":12},{"word":"જઁગલોનો","buffer_a":"29|5@-273,0|24|50|71|42|71|","buffer_b":"29|5@-274,0|24|50|71|42|71|","differing_pixels":12},{"word":"રૌદ્દ્","buffer_a":"49|72|279|73@-215,-50|","buffer_b":"49|72|279|73@-202,-53|","differing_pixels":12},{"word":"નૂટૈંસ","buffer_a":"42|64@-146,0|32|69@-136,0|454@-7,0|55|","buffer_b":"42|64@-146,0|32|69@-140,0|454@-7,0|55|","differing_pixels":12},{"word":"પૂજૌં","buffer_a":"43|64@-145,0|157|69@-182,0|454@-53,0|","buffer_b":"43|64@-146,0|157|69@-182,0|454@-49,0|","differing_pixels":12},{"word":"સ્વામિનારાયણદર્શનાભિમતતત્વવિવેચનમ્","buffer_a":"199|52|60|61|47|42|60|49|60|48|36|40|53|148@-145,0|42|60|102|46|47|38|38|182|52|100|52|52|68@-145,0|27|42|47|73@-145,0|","buffer_b":"199|52|60|61|47|42|60|49|60|48|36|40|53|148@-145,0|42|60|102|46|47|38|38|182|52|100|52|52|68@-145,0|27|42|47|73@-146,0|","differing_pixels":11},{"word":"વૅલિંગફોર્ડે","buffer_a":"52|67@-145,0|131|50|415|24|44|71|34|152@-137,0|","differing_pixels":11},{"word":"લાઠીચાર્જમાં","buffer_a":"50|60|33|62|27|60|29|148@-102,0|47|60|6@-145,0|","differing_pixels":11},{"word":"પ્રાગઐતહાસિક","buffer_a":"223|60|24|18|38|56|60|101|55|22|","differing_pixels":11},{"word":"ન્યૂજ઼ીલૈંડ","buffer_a":"186|48|64@-146,0|158|58@-730,-146|50|69@-146,0|454@-17,0|34|","buffer_b":"186|48|64@-146,0|158|58@-732,-144|50|69@-146,0|454@-13,0|34|","differing_pixels":11},{"word":"ઓૈદ્યોગિકૃત","buffer_a":"20|69|285|71|61|24|22|65@-238,0|38|","buffer_b":"20|69@-86,50|285|71|61|24|22|65@-238,0|38|","differing_pixels":11},{"word":"પ્રસ્ફુટિત","buffer_a":"223|316|97@-248,-118|99|32|38|","buffer_b":"223|316|97@-253,-121|99|32|38|","differing_pixels":11},{"word":"પશ્ચિમાઞ્લ","buffer_a":"43|102|304|47|60|176|50|","differing_pixels":11},{"word":"વેલબિઈંગ","buffer_a":"52|68@-145,0|50|101|45|11|6@-349,0|24|","differing_pixels":11},{"word":"ફ઼િર્દૌસ","buffer_a":"99|44|58@-246,-243|40|60|154@-145,-11|55|","buffer_b":"99|44|58@-246,-246|40|60|154@-145,-11|55|","differing_pixels":11},{"word":"જંમ્પીંગ","buffer_a":"29|6@-307,0|191|43|62|6@-55,50|24|","differing_pixels":11},{"word":"કૈંસર","buffer_a":"22|69@-172,0|454@-43,0|55|49|","buffer_b":"22|69@-172,0|454@-39,0|55|49|","differing_pixels":11},{"word":"ઔંસથી","buffer_a":"21|6@-122,0|55|39|62|","buffer_b":"21|6@-121,0|55|39|62|","differing_pixels":11},{"word":"બર્ટન્ડલંગ્સેસેન્સિએન્ટેન","buffer_a":"45|32|148@-136,0|186|34|50|6@-146,0|170|55|68@-146,0|55|68@-146,0|104|290|17|288|68@-170,0|42|","buffer_b":"45|32|148@-140,0|186|34|50|6@-146,0|170|55|68@-146,0|55|68@-146,0|104|290|17|288|68@-170,0|42|","differing_pixels":10},{"word":"ક્રુષ્ણાભિપ્રાયબોધિનિ","buffer_a":"206|63@-250,0|198|36|60|102|46|223|60|48|45|71|61|41|100|42|","buffer_b":"206|63@-251,0|198|36|60|102|46|223|60|48|45|71|61|41|100|42|","differing_pixels":10},{"word":"રાજવિદ્યારાજગૃહ્યયોગ","buffer_a":"49|60|29|100|52|285|60|49|60|29|24|65@-123,0|321|48|71|24|","buffer_b":"49|60|29|100|52|285|60|49|60|29|24|65@-96,0|321|48|71|24|","differing_pixels":10},{"word":"પાર્શ્વનાથચારિત્રની","buffer_a":"43|60|307|148@-146,18|42|60|39|27|60|99|49|218|42|62|","buffer_b":"43|60|307|148@-146,19|42|60|39|27|60|99|49|218|42|62|","differing_pixels":10},{"word":"રિવોલ્યુ઼શનની","buffer_a":"99|49|52|71|300|97@-146,0|58@-146,-389|53|42|42|62|","buffer_b":"99|49|52|71|300|97@-146,0|58@-146,-383|53|42|42|62|","differing_pixels":10},{"word":"જેપીમોર્ગનની","buffer_a":"29|68@-130,0|43|62|47|71|24|148@-146,0|42|42|62|","buffer_b":"29|68@-131,0|43|62|47|71|24|148@-146,0|42|42|62|","differing_pixels":10},{"word":"ફ્રંટિયર્સઃ","buffer_a":"224|6@-223,0|99|32|48|55|148@-146,0|7|","buffer_b":"224|6@-220,0|99|32|48|55|148@-146,0|7|","differing_pixels":10},{"word":"આર્જેંટેંટમ","buffer_a":"9|29|153@-68,0|32|68@-136,0|454@-72,50|32|47|","buffer_b":"9|29|153@-69,0|32|68@-140,0|454@-82,50|32|47|","differing_pixels":10},{"word":"હૈંડબુકમાં","buffer_a":"56|69@-185,0|454@-56,0|34|45|63@-146,0|22|47|60|6@-145,0|","buffer_b":"56|69@-184,0|454@-51,0|34|45|63@-146,0|22|47|60|6@-145,0|","differing_pixels":10},{"word":"રિક્કેંમેન","buffer_a":"99|49|238|68@-180,0|454@-116,50|47|68@-145,0|42|","buffer_b":"99|49|238|68@-181,0|454@-123,50|47|68@-146,0|42|","differing_pixels":10},{"word":"સ્ટુ઼ડિયો","buffer_a":"311|97@-213,0|58@-213,-389|99|34|48|71|","buffer_b":"311|97@-213,0|58@-213,-383|99|34|48|71|","differing_pixels":10},{"word":"ભૃઙ્ગદૂતમ","buffer_a":"46|65@-157,0|247|40|64@-150,0|38|47|","buffer_b":"46|65@-127,0|247|40|64@-153,0|38|47|","differing_pixels":10},{"word":"બખ઼્તિયાર","buffer_a":"45|104|169|58@-285,40|38|48|60|49|","buffer_b":"45|104|169|58@-276,40|38|48|60|49|","differing_pixels":10},{"word":"સંધિખર્ક","buffer_a":"55|6@-146,0|61|41|23|22|148@-172,0|","differing_pixels":10},{"word":"શૈષાદ્રી","buffer_a":"53|69@-145,0|54|60|220|62|","differing_pixels":10},{"word":"વાર્ંવાર","buffer_a":"52|60|193|6@-221,0|52|60|49|","buffer_b":"52|60|193|6@-225,0|52|60|49|","differing_pixels":10},{"word":"ક્રૌંચમિથુનાદેકમવધીઃ","buffer_a":"206|72|6@-16,0|27|61|47|39|63@-146,0|42|60|40|68@-137,0|22|47|52|41|62|7|","buffer_b":"206|72|6@-13,0|27|61|47|39|63@-146,0|42|60|40|68@-137,0|22|47|52|41|62|7|","differing_pixels":9},{"word":"સૌન્દર્યદ્રષ્ટિનો","buffer_a":"55|72|186|40|48|148@-192,0|220|100|308|42|71|","buffer_b":"55|72|186|40|48|148@-193,0|220|100|308|42|71|","differing_pixels":9},{"word":"રેડિયોઍક્ટિવિટીના","buffer_a":"49|68@-126,0|99|34|48|71|16|61|168|32|100|52|32|62|42|60|","buffer_b":"49|68@-130,0|99|34|48|71|16|61|168|32|100|52|32|62|42|60|","differing_pixels":9},{"word":"સ્કૅન્ડિનેવિઅન","buffer_a":"310|67@-239,0|101|186|34|42|68@-146,0|100|52|8|42|","buffer_b":"310|67@-241,0|101|186|34|42|68@-146,0|100|52|8|42|","differing_pixels":9},{"word":"રિક્રૂટમેન્ટ","buffer_a":"99|49|206|64@-250,0|32|47|68@-145,0|288|","buffer_b":"99|49|206|64@-251,0|32|47|68@-146,0|288|","differing_pixels":9},{"word":"મોન્ટગોલ્ફૈર","buffer_a":"47|71|288|24|71|194|44|69@-175,0|49|","buffer_b":"47|71|288|24|71|194|44|69@-176,0|49|","differing_pixels":9},{"word":"બ્રિન્ઘર્સ્ટ","buffer_a":"101|225|186|25|311|148@-169,0|","differing_pixels":9},{"word":"બુજુમ્બુરાની","buffer_a":"45|63@-146,0|29|63@-300,0|191|45|63@-146,0|49|60|42|62|","buffer_b":"45|63@-146,0|29|63@-299,0|191|45|63@-146,0|49|60|42|62|","differing_pixels":9},{"word":"ઇતિહાસસિદ્ધ્","buffer_a":"10|100|38|56|60|55|101|55|280|73@-147,-130|","buffer_b":"10|100|38|56|60|55|101|55|280|73@-146,-133|","differing_pixels":9},{"word":"રાજેદ્રશાહ્","buffer_a":"49|60|29|68@-68,0|220|53|60|56|73@-223,0|","buffer_b":"49|60|29|68@-69,0|220|53|60|56|73@-223,0|","differing_pixels":9},{"word":"પાર્આંપારિક","buffer_a":"43|60|9|149@-155,0|43|60|99|49|22|","buffer_b":"43|60|9|149@-154,0|43|60|99|49|22|","differing_pixels":9},{"word":"જગદ્ગુરુત્વ","buffer_a":"29|24|277|97@-156,-121|165|182|52|","buffer_b":"29|24|277|97@-159,-120|165|182|52|","differing_pixels":9},{"word":"એન્ડ્રૂજનું","buffer_a":"17|186|34|142@-215,72|29|42|63@-146,0|6@-146,0|","buffer_b":"17|186|34|142@-214,72|29|42|63@-146,0|6@-146,0|","differing_pixels":9},{"word":"આાદિત્યકેતુ","buffer_a":"9|60|99|40|274|22|68@-172,0|38|63@-146,0|","buffer_b":"9|60|99|40|274|22|68@-172,0|38|63@-145,0|","differing_pixels":9},{"word":"આકસ્મિતરીતે","buffer_a":"9|22|104|317|38|49|62|38|68@-146,0|","buffer_b":"9|22|104|317|38|49|62|38|68@-145,0|","differing_pixels":9},{"word":"અર્જેણ્ટીની","buffer_a":"8|29|152@-68,0|181|32|62|42|62|","buffer_b":"8|29|152@-69,0|181|32|62|42|62|","differing_pixels":9},{"word":"અર્જુનલાલની","buffer_a":"8|29|63@-266,0|148@-68,0|42|50|60|50|42|62|","buffer_b":"8|29|63@-266,0|148@-69,0|42|50|60|50|42|62|","differing_pixels":9},{"word":"વેબસર્ફિંગ","buffer_a":"52|68@-145,0|45|55|118|44|415|24|","differing_pixels":9},{"word":"જંપલાવ્યું","buffer_a":"29|6@-335,0|43|50|60|196|48|63@-146,0|6@-146,0|","buffer_b":"29|6@-336,0|43|50|60|196|48|63@-146,0|6@-146,0|","differing_pixels":9},{"word":"કૌટ્ટ્રોન","buffer_a":"22|72|259|140@-229,-144|71|42|","buffer_b":"22|72|259|140@-224,-146|71|42|","differing_pixels":9},{"word":"રૈયતવારી","buffer_a":"49|69@-126,0|48|38|52|60|49|62|","buffer_b":"49|69@-130,0|48|38|52|60|49|62|","differing_pixels":9},{"word":"અજ઼્કબાન","buffer_a":"8|174|58@-442,96|22|45|60|42|","buffer_b":"8|174|58@-436,97|22|45|60|42|","differing_pixels":9},{"word":"દિબાંગ્","buffer_a":"99|40|45|60|6@-145,0|24|73@-107,0|","buffer_b":"99|40|45|60|6@-145,0|24|73@-82,0|","differing_pixels":9}]}}]};
+		function buildLocation_statichtml(loc) {
+  // Set font styles to appropriate axis locations
+  let rule = document.styleSheets[0].cssRules[2].style;
+  let cssSetting = "";
+  let textLocation = "Default";
+  if (loc.coords) {
+    cssSetting = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `"${axis}" ${value}`;
+      })
+      .join(", ");
+    textLocation = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `${axis}=${value}`;
+      })
+      .join(" ");
+    rule.setProperty("font-variation-settings", cssSetting);
+  }
+
+  $("#main").empty();
+
+  $("#title").html(`<h4 class="mt-2">${textLocation}</h2>`);
+
+  if (loc.glyphs) {
+    $("#main").append("<h4>Modified Glyphs</h4>");
+    let glyphs = $("<div>");
+    for (let glyph of loc.glyphs) {
+      addAGlyph(glyph, glyphs);
+    }
+    $("#main").append(glyphs);
+  }
+
+  if (loc.words) {
+    $("#main").append("<h4>Modified Words</h4>");
+    for (let [script, words] of Object.entries(loc.words)) {
+      let scriptTitle = $(`<h6>${script}</h6>`);
+      $("#main").append(scriptTitle);
+      let worddiv = $("<div>");
+      for (let word of words) {
+        addAWord(word, worddiv);
+      }
+      $("#main").append(worddiv);
+    }
+  }
+  $('[data-toggle="tooltip"]').tooltip();
+}
+
+$(function () {
+  if (report["tables"]) {
+    diffTables(report);
+  }
+  if (report["kerns"]) {
+    diffKerns(report);
+  }
+  cmapDiff(report);
+  $('[data-toggle="tooltip"]').tooltip();
+  if (!report["locations"]) {
+    $("#title").html("<h4 class='mt-2'>No differences found</h4>");
+    $("#ui-nav").hide();
+    return;
+  }
+
+  for (var [index, loc] of report["locations"].entries()) {
+    var loc_nav = $(`<li class="nav-item">
+		<a class="nav-link text-secondary" href="#" data-index="${index}">${loc.location.replaceAll(
+      ",",
+      ",\u200b"
+    )}</a>
+	</li>`);
+    $("#locationnav").append(loc_nav);
+  }
+  $("#locationnav li a").on("click", function (e) {
+    $("#locationnav li a").removeClass("active");
+    $(this).addClass("active");
+    buildLocation_statichtml(report.locations[$(this).data("index")]);
+  });
+  $("#locationnav li a").eq(0).click();
+
+  document.styleSheets[0].cssRules[0].style.setProperty(
+    "src",
+    "url(old-NotoSerifGujarati-SemiBold.ttf)"
+  );
+  document.styleSheets[0].cssRules[1].style.setProperty(
+    "src",
+    "url(new-NotoSerifGujarati-SemiBold.ttf)"
+  );
+  setupAnimation();
+});
+
+	</script>
+</body>
+
+</html>
